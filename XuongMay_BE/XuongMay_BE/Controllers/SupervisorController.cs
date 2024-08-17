@@ -60,5 +60,58 @@ namespace XuongMay_BE.Controllers
 
             return Ok(supervisor);
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteSupervisor(int id)
+        {
+            // Tìm kiếm supervisor theo ID
+            var supervisor = await _context.Supervisors.FindAsync(id);
+
+            if (supervisor == null)
+            {
+                return NotFound();
+            }
+
+            // Xóa supervisor
+            _context.Supervisors.Remove(supervisor);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateSupervisor(int id, Supervisor supervisor)
+        {
+            // Kiểm tra xem đối tượng cần cập nhật có tồn tại không
+            if (id != supervisor.SupervisorID)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(supervisor).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!SupervisorExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // Kiểm tra xem Supervisor có tồn tại không
+        private bool SupervisorExists(int id)
+        {
+            return _context.Supervisors.Any(e => e.SupervisorID == id);
+        }
+
     }
 }

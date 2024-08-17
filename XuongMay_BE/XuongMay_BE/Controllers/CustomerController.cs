@@ -3,6 +3,7 @@ using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace XuongMay_BE.Controllers
 {
@@ -60,6 +61,64 @@ namespace XuongMay_BE.Controllers
             }
 
             return Ok(customer); 
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCustomer(int id)
+        {
+            // Tìm kiếm customer theo ID
+            var customer = await _context.Customers.FindAsync(id);
+
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            // Xóa customer
+            _context.Customers.Remove(customer);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCustomer(int id, Customer customer)
+        {
+            // Kiểm tra xem ID từ URL có khớp với ID trong body không
+            if (id != customer.CustomerID)
+            {
+                return BadRequest("ID mismatch");
+            }
+
+            // Kiểm tra tính hợp lệ của mô hình
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            _context.Entry(customer).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CustomerExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+
+        private bool CustomerExists(int id)
+        {
+            return _context.Customers.Any(e => e.CustomerID == id);
         }
     }
 }

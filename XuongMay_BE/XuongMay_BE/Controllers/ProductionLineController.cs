@@ -60,5 +60,58 @@ namespace XuongMay_BE.Controllers
 
             return Ok(productionLine);
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProductionLine(int id)
+        {
+            // Tìm kiếm production line theo ID
+            var productionLine = await _context.ProductionLines.FindAsync(id);
+
+            if (productionLine == null)
+            {
+                return NotFound();
+            }
+
+            // Xóa production line
+            _context.ProductionLines.Remove(productionLine);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProductionLine(int id, ProductionLine productionLine)
+        {
+            // Kiểm tra xem đối tượng cần cập nhật có tồn tại không
+            if (id != productionLine.LineID)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(productionLine).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ProductionLineExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // Kiểm tra xem Production Line có tồn tại không
+        private bool ProductionLineExists(int id)
+        {
+            return _context.ProductionLines.Any(e => e.LineID == id);
+        }
+
     }
 }
