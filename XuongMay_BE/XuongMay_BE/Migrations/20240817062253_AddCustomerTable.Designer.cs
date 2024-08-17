@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using XuongMay_BE.Data;
 
@@ -11,9 +12,11 @@ using XuongMay_BE.Data;
 namespace XuongMay_BE.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240817062253_AddCustomerTable")]
+    partial class AddCustomerTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,6 +31,9 @@ namespace XuongMay_BE.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("CategoryID1")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("CategoryName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -36,7 +42,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasIndex("CategoryID1");
 
-                    b.ToTable("Category", (string)null);
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Customer", b =>
@@ -62,71 +68,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasKey("CustomerID");
 
-                    b.ToTable("Customer", (string)null);
-
-                    b.ToTable("Category");
-
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.OrderDetail", b =>
-                {
-                    b.Property<Guid>("OrderDetailID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid>("ProductID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("SupervisorID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("OrderDetailID");
-
-                    b.HasIndex("OrderID");
-
-                    b.HasIndex("ProductID");
-
-                    b.ToTable("OrderDetail");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Orders", b =>
-                {
-                    b.Property<Guid>("OrderID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CustomerID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("DeliveryDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int>("TotalQuantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("OrderID");
-
-                    b.ToTable("Orders");
+                    b.ToTable("Customer");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Product", b =>
@@ -152,7 +94,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("Product", (string)null);
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.ProductionLine", b =>
@@ -177,7 +119,7 @@ namespace XuongMay_BE.Migrations
                         .IsUnique()
                         .HasFilter("[SupervisorID] IS NOT NULL");
 
-                    b.ToTable("ProductionLine", (string)null);
+                    b.ToTable("ProductionLine");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Supervisor", b =>
@@ -198,32 +140,20 @@ namespace XuongMay_BE.Migrations
 
                     b.HasKey("SupervisorID");
 
-                    b.ToTable("Supervisor", (string)null);
+                    b.ToTable("Supervisor");
                 });
 
-            modelBuilder.Entity("XuongMay_BE.Data.OrderDetail", b =>
+            modelBuilder.Entity("XuongMay_BE.Data.Category", b =>
                 {
-                    b.HasOne("XuongMay_BE.Data.Orders", "Orders")
-                        .WithMany("OrderDetail")
-                        .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("XuongMay_BE.Data.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Orders");
-
-                    b.Navigation("Product");
+                    b.HasOne("XuongMay_BE.Data.Category", null)
+                        .WithMany("Categories")
+                        .HasForeignKey("CategoryID1");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Product", b =>
                 {
                     b.HasOne("XuongMay_BE.Data.Category", "Category")
-                        .WithMany("Products")
+                        .WithMany()
                         .HasForeignKey("CategoryID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -242,12 +172,7 @@ namespace XuongMay_BE.Migrations
 
             modelBuilder.Entity("XuongMay_BE.Data.Category", b =>
                 {
-                    b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Orders", b =>
-                {
-                    b.Navigation("OrderDetail");
+                    b.Navigation("Categories");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Supervisor", b =>
