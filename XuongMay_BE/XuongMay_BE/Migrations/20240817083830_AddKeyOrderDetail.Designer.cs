@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using XuongMay_BE.Data;
 
@@ -11,9 +12,11 @@ using XuongMay_BE.Data;
 namespace XuongMay_BE.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240817083830_AddKeyOrderDetail")]
+    partial class AddKeyOrderDetail
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,38 +37,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.HasIndex("CategoryID1");
-
-                    b.ToTable("Category", (string)null);
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Customer", b =>
-                {
-                    b.Property<int>("CustomerID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerID"));
-
-                    b.Property<string>("Address")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("CustomerName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Phone")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.HasKey("CustomerID");
-
-                    b.ToTable("Customer", (string)null);
-
                     b.ToTable("Category");
-
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.OrderDetail", b =>
@@ -93,10 +65,6 @@ namespace XuongMay_BE.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("OrderDetailID");
-
-                    b.HasIndex("OrderID");
-
-                    b.HasIndex("ProductID");
 
                     b.ToTable("OrderDetail");
                 });
@@ -152,72 +120,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("Product", (string)null);
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.ProductionLine", b =>
-                {
-                    b.Property<int>("LineID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LineID"));
-
-                    b.Property<string>("LineName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int?>("SupervisorID")
-                        .HasColumnType("int");
-
-                    b.HasKey("LineID");
-
-                    b.HasIndex("SupervisorID")
-                        .IsUnique()
-                        .HasFilter("[SupervisorID] IS NOT NULL");
-
-                    b.ToTable("ProductionLine", (string)null);
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Supervisor", b =>
-                {
-                    b.Property<int>("SupervisorID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupervisorID"));
-
-                    b.Property<int?>("LineID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SupervisorName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("SupervisorID");
-
-                    b.ToTable("Supervisor", (string)null);
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.OrderDetail", b =>
-                {
-                    b.HasOne("XuongMay_BE.Data.Orders", "Orders")
-                        .WithMany("OrderDetail")
-                        .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("XuongMay_BE.Data.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Orders");
-
-                    b.Navigation("Product");
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Product", b =>
@@ -231,28 +134,9 @@ namespace XuongMay_BE.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("XuongMay_BE.Data.ProductionLine", b =>
-                {
-                    b.HasOne("XuongMay_BE.Data.Supervisor", "Supervisor")
-                        .WithOne("ProductionLine")
-                        .HasForeignKey("XuongMay_BE.Data.ProductionLine", "SupervisorID");
-
-                    b.Navigation("Supervisor");
-                });
-
             modelBuilder.Entity("XuongMay_BE.Data.Category", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Orders", b =>
-                {
-                    b.Navigation("OrderDetail");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Supervisor", b =>
-                {
-                    b.Navigation("ProductionLine");
                 });
 #pragma warning restore 612, 618
         }

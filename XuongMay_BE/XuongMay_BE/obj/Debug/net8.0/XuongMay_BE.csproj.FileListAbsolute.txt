@@ -1,0 +1,549 @@
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\appsettings.Development.json
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\appsettings.json
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.exe
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.deps.json
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.runtimeconfig.json
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.pdb
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Azure.Core.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Azure.Identity.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Humanizer.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.OpenApi.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Mono.TextTemplating.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.CodeDom.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Convention.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Hosting.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Runtime.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.TypedParts.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Drawing.Common.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Memory.Data.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Runtime.Caching.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Security.Permissions.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Text.Json.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Windows.Extensions.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.csproj.AssemblyReference.cache
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.GeneratedMSBuildEditorConfig.editorconfig
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.AssemblyInfoInputs.cache
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.AssemblyInfo.cs
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.csproj.CoreCompileInputs.cache
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.MvcApplicationPartsAssemblyInfo.cs
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.MvcApplicationPartsAssemblyInfo.cache
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.build.json
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.development.json
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.XuongMay_BE.Microsoft.AspNetCore.StaticWebAssets.props
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.build.XuongMay_BE.props
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.XuongMay_BE.props
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.XuongMay_BE.props
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.pack.json
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\scopedcss\bundle\XuongMay_BE.styles.css
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay.92279DF4.Up2Date
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\refint\XuongMay_BE.dll
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.pdb
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.genruntimeconfig.cache
+G:\HK7\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\ref\XuongMay_BE.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\appsettings.Development.json
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\appsettings.json
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.exe
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.deps.json
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.runtimeconfig.json
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.pdb
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Azure.Core.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Azure.Identity.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Humanizer.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.OpenApi.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Mono.TextTemplating.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.CodeDom.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Convention.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Hosting.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Runtime.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.TypedParts.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Drawing.Common.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Memory.Data.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Runtime.Caching.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Security.Permissions.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Text.Json.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Windows.Extensions.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.csproj.AssemblyReference.cache
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.GeneratedMSBuildEditorConfig.editorconfig
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.AssemblyInfoInputs.cache
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.AssemblyInfo.cs
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.csproj.CoreCompileInputs.cache
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.MvcApplicationPartsAssemblyInfo.cs
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.MvcApplicationPartsAssemblyInfo.cache
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.sourcelink.json
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.build.json
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.development.json
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.XuongMay_BE.Microsoft.AspNetCore.StaticWebAssets.props
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.build.XuongMay_BE.props
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.XuongMay_BE.props
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.XuongMay_BE.props
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.pack.json
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\scopedcss\bundle\XuongMay_BE.styles.css
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay.92279DF4.Up2Date
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\refint\XuongMay_BE.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.pdb
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.genruntimeconfig.cache
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\ref\XuongMay_BE.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\appsettings.Development.json
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\appsettings.json
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.exe
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.deps.json
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.runtimeconfig.json
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.pdb
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Azure.Core.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Azure.Identity.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Humanizer.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.CodeDom.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Memory.Data.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.csproj.AssemblyReference.cache
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.GeneratedMSBuildEditorConfig.editorconfig
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.AssemblyInfoInputs.cache
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.AssemblyInfo.cs
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.csproj.CoreCompileInputs.cache
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.MvcApplicationPartsAssemblyInfo.cs
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.MvcApplicationPartsAssemblyInfo.cache
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.sourcelink.json
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.build.json
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.development.json
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.XuongMay_BE.Microsoft.AspNetCore.StaticWebAssets.props
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.build.XuongMay_BE.props
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.XuongMay_BE.props
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.XuongMay_BE.props
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.pack.json
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\scopedcss\bundle\XuongMay_BE.styles.css
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay.92279DF4.Up2Date
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\refint\XuongMay_BE.dll
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.pdb
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.genruntimeconfig.cache
+D:\HuynhHuuDuc_2001207422\demo\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\ref\XuongMay_BE.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\appsettings.Development.json
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\appsettings.json
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.exe
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.deps.json
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.runtimeconfig.json
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\XuongMay_BE.pdb
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Azure.Core.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Azure.Identity.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Humanizer.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.CodeDom.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Memory.Data.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.csproj.AssemblyReference.cache
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.GeneratedMSBuildEditorConfig.editorconfig
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.AssemblyInfoInputs.cache
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.AssemblyInfo.cs
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.csproj.CoreCompileInputs.cache
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.MvcApplicationPartsAssemblyInfo.cs
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.MvcApplicationPartsAssemblyInfo.cache
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.sourcelink.json
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.build.json
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.development.json
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.XuongMay_BE.Microsoft.AspNetCore.StaticWebAssets.props
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.build.XuongMay_BE.props
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.XuongMay_BE.props
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.XuongMay_BE.props
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\staticwebassets.pack.json
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\scopedcss\bundle\XuongMay_BE.styles.css
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay.92279DF4.Up2Date
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\refint\XuongMay_BE.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.pdb
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.genruntimeconfig.cache
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\ref\XuongMay_BE.dll
