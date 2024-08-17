@@ -26,3 +26,18 @@ bld/
 
 # Include your specific cache file
 XuongMay_BE/.vs/
+
+# Ignore Visual Studio files
+*.suo
+*.bin
+*.pdb
+*.dll
+*.exe
+*.cache
+*.json
+*.txt
+
+# Ignore bin and obj folders
+bin/
+obj/
+.vs/
