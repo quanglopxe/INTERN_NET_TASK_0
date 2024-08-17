@@ -1,19 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace XuongMay_BE.Data
+namespace XuongMay_BE.Models
 {
-    [Table("Supervisor")]
-    public class Supervisor
+    public class SupervisorModel
     {
-        [Key]
-        public Guid SupervisorID { get; set; }
+        [Required]
+        public int SupervisorID { get; set; }
 
         [Required]
         [StringLength(100)]
         public string SupervisorName { get; set; }
 
         public int? LineID { get; set; }
-
     }
 }

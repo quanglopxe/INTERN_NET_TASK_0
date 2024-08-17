@@ -21,6 +21,19 @@ namespace XuongMay_BE.Controllers
             var listCategory = _context.Categories.ToList();
             return Ok(listCategory);
         }
+        [HttpGet("{id}")]
+        public IActionResult GetByID(Guid id)
+        {
+            var category = _context.Categories.FirstOrDefault(ca => ca.CategoryID == id);
+            if(category != null)
+            {
+                return Ok(category);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
         [HttpPost]
         public IActionResult Create(CategoryModel model)
         {
@@ -37,6 +50,21 @@ namespace XuongMay_BE.Controllers
             catch
             {
                 return BadRequest();
+            }
+        }
+        [HttpPut("{id}")]
+        public IActionResult UpdateByID(Guid id, CategoryModel model)
+        {
+            var category = _context.Categories.FirstOrDefault(ca => ca.CategoryID == id);
+            if (category != null)
+            {
+                category.CategoryName = model.CategoryName;
+                _context.SaveChanges();
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
             }
         }
     }
