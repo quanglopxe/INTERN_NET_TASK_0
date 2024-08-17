@@ -26,23 +26,29 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "XuongMay_BE.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
+    "Method": "getAll",
+    "RelativePath": "api/Employee",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
+    "Method": "createEmp",
+    "RelativePath": "api/Employee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[XuongMay_BE.WeatherForecast, XuongMay_BE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "model",
+        "Type": "XuongMay_BE.Models.EmployeeModel",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
   }
 ]

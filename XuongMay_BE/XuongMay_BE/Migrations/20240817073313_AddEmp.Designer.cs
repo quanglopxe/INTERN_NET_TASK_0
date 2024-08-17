@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using XuongMay_BE.Data;
 
@@ -11,9 +12,11 @@ using XuongMay_BE.Data;
 namespace XuongMay_BE.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240817073313_AddEmp")]
+    partial class AddEmp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -114,28 +117,6 @@ namespace XuongMay_BE.Migrations
                     b.HasIndex("SupervisorID");
 
                     b.ToTable("ProductionLines");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Stage", b =>
-                {
-                    b.Property<Guid>("StageID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Sequence")
-                        .HasColumnType("int");
-
-                    b.Property<string>("StageName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("StageID");
-
-                    b.ToTable("Stage");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Supervisor", b =>
