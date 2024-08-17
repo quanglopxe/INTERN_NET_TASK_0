@@ -10,6 +10,6 @@ namespace XuongMay_BE.Data
         public Guid CategoryID { get; set; }
         [Required]
         public string CategoryName { get; set; }
-        public virtual ICollection<Category> Categories { get; set;}
+        public virtual ICollection<Product> Products { get; set;}
     }
 }
