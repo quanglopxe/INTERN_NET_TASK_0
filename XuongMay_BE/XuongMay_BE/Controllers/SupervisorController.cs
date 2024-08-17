@@ -48,7 +48,7 @@ namespace XuongMay_BE.Controllers
 
         // API GET để tìm Supervisor theo ID
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             var supervisor = await _context.Supervisors
                 .FirstOrDefaultAsync(s => s.SupervisorID == id);
@@ -61,7 +61,7 @@ namespace XuongMay_BE.Controllers
             return Ok(supervisor);
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteSupervisor(int id)
+        public async Task<IActionResult> DeleteSupervisor(Guid id)
         {
             // Tìm kiếm supervisor theo ID
             var supervisor = await _context.Supervisors.FindAsync(id);
@@ -78,7 +78,7 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateSupervisor(int id, Supervisor supervisor)
+        public async Task<IActionResult> UpdateSupervisor(Guid id, Supervisor supervisor)
         {
             // Kiểm tra xem đối tượng cần cập nhật có tồn tại không
             if (id != supervisor.SupervisorID)
@@ -108,7 +108,7 @@ namespace XuongMay_BE.Controllers
         }
 
         // Kiểm tra xem Supervisor có tồn tại không
-        private bool SupervisorExists(int id)
+        private bool SupervisorExists(Guid id)
         {
             return _context.Supervisors.Any(e => e.SupervisorID == id);
         }

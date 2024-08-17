@@ -48,7 +48,7 @@ namespace XuongMay_BE.Controllers
 
         // API GET để tìm ProductionLine theo ID
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             var productionLine = await _context.ProductionLines
                 .FirstOrDefaultAsync(pl => pl.LineID == id);
@@ -78,7 +78,7 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProductionLine(int id, ProductionLine productionLine)
+        public async Task<IActionResult> UpdateProductionLine(Guid id, ProductionLine productionLine)
         {
             // Kiểm tra xem đối tượng cần cập nhật có tồn tại không
             if (id != productionLine.LineID)
@@ -108,7 +108,7 @@ namespace XuongMay_BE.Controllers
         }
 
         // Kiểm tra xem Production Line có tồn tại không
-        private bool ProductionLineExists(int id)
+        private bool ProductionLineExists(Guid id)
         {
             return _context.ProductionLines.Any(e => e.LineID == id);
         }
