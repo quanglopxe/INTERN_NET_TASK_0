@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "G:\\INTERN NET\\XuongMay_BE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\migrations\\mydbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\migrations\\mydbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProductModel.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\ProductModel.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Models\\ProductModel.cs",
@@ -74,12 +74,11 @@
               "RelativeToolTip": "XuongMay_BE\\Models\\ProductModel.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T04:42:42.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T04:42:42.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CategoryModel.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\CategoryModel.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Models\\CategoryModel.cs",
@@ -87,12 +86,11 @@
               "RelativeToolTip": "XuongMay_BE\\Models\\CategoryModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T02:20:54.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T02:20:54.657Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Product.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Product.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Product.cs",
@@ -100,12 +98,11 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\Product.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAA+wBAAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T02:03:27.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T02:03:27.318Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Category.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Category.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Category.cs",
@@ -113,12 +110,11 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\Category.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T01:49:45.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T01:49:45.376Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\CategoryController.cs",
@@ -126,12 +122,24 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\CategoryController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T02:15:59.995Z",
+              "WhenOpened": "2024-08-17T02:15:59.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\appsettings.json",
+              "RelativeDocumentMoniker": "XuongMay_BE\\appsettings.json",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\appsettings.json",
+              "RelativeToolTip": "XuongMay_BE\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-17T01:54:13.107Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ProductController.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\ProductController.cs",
@@ -139,12 +147,11 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\ProductController.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAawC4AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T04:40:39.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T04:40:39.215Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MyDbContextModelSnapshot.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\MyDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\MyDbContextModelSnapshot.cs",
@@ -152,8 +159,7 @@
               "RelativeToolTip": "XuongMay_BE\\Migrations\\MyDbContextModelSnapshot.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T04:39:14.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T04:39:14.482Z"
             },
             {
               "$type": "Document",
@@ -165,8 +171,7 @@
               "RelativeToolTip": "XuongMay_BE\\Migrations\\20240817021200_AddTableProduct.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T02:37:47.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T02:37:47.36Z"
             },
             {
               "$type": "Document",
@@ -178,21 +183,7 @@
               "RelativeToolTip": "XuongMay_BE\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T01:56:28.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\appsettings.json",
-              "RelativeDocumentMoniker": "XuongMay_BE\\appsettings.json",
-              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\appsettings.json",
-              "RelativeToolTip": "XuongMay_BE\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-17T01:54:13.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T01:56:28.667Z"
             },
             {
               "$type": "Document",
@@ -204,8 +195,7 @@
               "RelativeToolTip": "XuongMay_BE\\Migrations\\20240817031435_UpdateTableCategory.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T03:14:35.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T03:14:35.478Z"
             },
             {
               "$type": "Document",
@@ -217,8 +207,7 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\MyDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T01:52:08.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T01:52:08.577Z"
             },
             {
               "$type": "Document",
