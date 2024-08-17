@@ -11,7 +11,7 @@ namespace XuongMay_BE.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductionLine> ProductionLines { get; set; }
         public DbSet<Supervisor> Supervisors { get; set; }
-
+        public DbSet<Customer> Customers { get; set; }
         #endregion
     }
 }

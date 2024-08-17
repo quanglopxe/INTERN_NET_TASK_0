@@ -36,11 +36,7 @@ namespace XuongMay_BE.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Supervisor", x => x.SupervisorID);
-                    table.ForeignKey(
-                        name: "FK_Supervisor_ProductionLine_LineID",
-                        column: x => x.LineID,
-                        principalTable: "ProductionLine",
-                        principalColumn: "LineID");
+                   
                 });
 
             migrationBuilder.CreateIndex(

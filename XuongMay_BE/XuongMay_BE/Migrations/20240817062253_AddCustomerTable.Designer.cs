@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using XuongMay_BE.Data;
 
@@ -11,9 +12,11 @@ using XuongMay_BE.Data;
 namespace XuongMay_BE.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240817062253_AddCustomerTable")]
+    partial class AddCustomerTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,7 +42,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasIndex("CategoryID1");
 
-                    b.ToTable("Category", (string)null);
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Customer", b =>
@@ -65,7 +68,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasKey("CustomerID");
 
-                    b.ToTable("Customer", (string)null);
+                    b.ToTable("Customer");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Product", b =>
@@ -91,7 +94,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("Product", (string)null);
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.ProductionLine", b =>
@@ -116,7 +119,7 @@ namespace XuongMay_BE.Migrations
                         .IsUnique()
                         .HasFilter("[SupervisorID] IS NOT NULL");
 
-                    b.ToTable("ProductionLine", (string)null);
+                    b.ToTable("ProductionLine");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Supervisor", b =>
@@ -137,7 +140,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasKey("SupervisorID");
 
-                    b.ToTable("Supervisor", (string)null);
+                    b.ToTable("Supervisor");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Category", b =>
