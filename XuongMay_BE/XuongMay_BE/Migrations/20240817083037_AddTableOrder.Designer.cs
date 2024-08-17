@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using XuongMay_BE.Data;
 
@@ -11,9 +12,11 @@ using XuongMay_BE.Data;
 namespace XuongMay_BE.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240817083037_AddTableOrder")]
+    partial class AddTableOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,39 +38,6 @@ namespace XuongMay_BE.Migrations
                     b.HasKey("CategoryID");
 
                     b.ToTable("Category");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.OrderDetail", b =>
-                {
-                    b.Property<Guid>("OrderDetailID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid>("ProductID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("SupervisorID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("OrderDetailID");
-
-                    b.HasIndex("OrderID");
-
-                    b.HasIndex("ProductID");
-
-                    b.ToTable("OrderDetail");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Orders", b =>
@@ -124,25 +94,6 @@ namespace XuongMay_BE.Migrations
                     b.ToTable("Product");
                 });
 
-            modelBuilder.Entity("XuongMay_BE.Data.OrderDetail", b =>
-                {
-                    b.HasOne("XuongMay_BE.Data.Orders", "Orders")
-                        .WithMany("OrderDetail")
-                        .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("XuongMay_BE.Data.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Orders");
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("XuongMay_BE.Data.Product", b =>
                 {
                     b.HasOne("XuongMay_BE.Data.Category", "Category")
@@ -157,11 +108,6 @@ namespace XuongMay_BE.Migrations
             modelBuilder.Entity("XuongMay_BE.Data.Category", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Orders", b =>
-                {
-                    b.Navigation("OrderDetail");
                 });
 #pragma warning restore 612, 618
         }
