@@ -3,8 +3,25 @@
   "WorkspaceRootPath": "G:\\INTERN NET\\XuongMay_BE\\",
   "Documents": [
     {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\data\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\data\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\data\\stage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\data\\stage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\stagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\stagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
       "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+>>>>>>> 4aefa86d418632ebba2fedfd8ac8af66429d7c87
     }
   ],
   "DocumentGroupContainers": [
@@ -19,6 +36,55 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
+              "Title": "Tasks.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Tasks.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Tasks.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Tasks.cs",
+              "RelativeToolTip": "XuongMay_BE\\Data\\Tasks.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T16:28:29.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Stage.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Stage.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Stage.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Stage.cs",
+              "RelativeToolTip": "XuongMay_BE\\Data\\Stage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T16:28:25.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StageController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\StageController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\StageController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\StageController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\StageController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T09:34:40.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\EmployeeController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T09:30:33.291Z"
+=======
               "Title": "appsettings.json",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\appsettings.json",
               "RelativeDocumentMoniker": "XuongMay_BE\\appsettings.json",
@@ -28,6 +94,7 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-08-17T16:18:59.578Z",
               "EditorCaption": ""
+>>>>>>> 4aefa86d418632ebba2fedfd8ac8af66429d7c87
             }
           ]
         }

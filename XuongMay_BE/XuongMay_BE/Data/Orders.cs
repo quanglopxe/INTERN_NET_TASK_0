@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -15,6 +15,9 @@ namespace XuongMay_BE.Data
 
         public Guid CustomerID { get; set; }
 
+        [ForeignKey("CustomerID")]
+        public Customers Customers { get; set; }
+
         public int TotalQuantity { get; set; }
 
         [MaxLength(100)]
@@ -26,3 +29,4 @@ namespace XuongMay_BE.Data
         //public virtual ICollection<OrderDetail> OrderDetail { get; set; }
     }
 }
+

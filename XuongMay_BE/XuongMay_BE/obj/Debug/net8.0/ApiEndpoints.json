@@ -26,6 +26,11 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
+    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
+    "Method": "getAll",
+    "RelativePath": "api/Employee",
+=======
     "ContainingType": "XuongMay_BE.Controllers.CategoryController",
     "Method": "GetByID",
     "RelativePath": "api/Category/{id}",
@@ -66,6 +71,7 @@
     "ContainingType": "XuongMay_BE.Controllers.CustomerController",
     "Method": "GetAll",
     "RelativePath": "api/Customer",
+>>>>>>> 4aefa86d418632ebba2fedfd8ac8af66429d7c87
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -73,20 +79,32 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
+    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
+    "Method": "createEmp",
+    "RelativePath": "api/Employee",
+=======
     "ContainingType": "XuongMay_BE.Controllers.CustomerController",
     "Method": "Create",
     "RelativePath": "api/Customer",
+>>>>>>> 4aefa86d418632ebba2fedfd8ac8af66429d7c87
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "model",
+<<<<<<< HEAD
+        "Type": "XuongMay_BE.Models.EmployeeModel",
+=======
         "Type": "XuongMay_BE.Models.CustomerModel",
+>>>>>>> 4aefa86d418632ebba2fedfd8ac8af66429d7c87
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
+<<<<<<< HEAD
+=======
   },
   {
     "ContainingType": "XuongMay_BE.Controllers.CustomerController",
@@ -519,5 +537,6 @@
       }
     ],
     "ReturnTypes": []
+>>>>>>> 4aefa86d418632ebba2fedfd8ac8af66429d7c87
   }
 ]

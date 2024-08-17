@@ -13,6 +13,8 @@ namespace XuongMay_BE.Data
         #region DbSet
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Stage> Stage { get; set; }
         public DbSet<ProductionLine> ProductionLines { get; set; }
         public DbSet<Supervisor> Supervisors { get; set; }
         public DbSet<Customer> Customers { get; set; }

@@ -7,13 +7,13 @@ namespace XuongMay_BE.Data
     public class ProductionLine
     {
         [Key]
-        public int LineID { get; set; }
+        public Guid LineID { get; set; }
 
         [Required]
         [StringLength(100)]
         public string LineName { get; set; }
 
-        public int? SupervisorID { get; set; }
+        public Guid? SupervisorID { get; set; }
 
         [ForeignKey("SupervisorID")]
         public Supervisor? Supervisor { get; set; }

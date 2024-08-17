@@ -129,6 +129,34 @@ namespace XuongMay_BE.Migrations
                     b.ToTable("Orders");
                 });
 
+            modelBuilder.Entity("XuongMay_BE.Data.Employee", b =>
+                {
+                    b.Property<Guid>("EmpID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("EmpName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("LineID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("EmpID");
+
+                    b.HasIndex("LineID");
+
+                    b.ToTable("Employee");
+                });
+
             modelBuilder.Entity("XuongMay_BE.Data.Product", b =>
                 {
                     b.Property<Guid>("ProductID")
@@ -154,6 +182,7 @@ namespace XuongMay_BE.Migrations
 
                     b.ToTable("Product", (string)null);
                 });
+
 
             modelBuilder.Entity("XuongMay_BE.Data.ProductionLine", b =>
                 {
@@ -220,6 +249,17 @@ namespace XuongMay_BE.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("XuongMay_BE.Data.Employee", b =>
+                {
+                    b.HasOne("XuongMay_BE.Data.ProductionLines", "ProductionLines")
+                        .WithMany()
+                        .HasForeignKey("LineID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProductionLines");
+                });
+
             modelBuilder.Entity("XuongMay_BE.Data.Product", b =>
                 {
                     b.HasOne("XuongMay_BE.Data.Category", "Category")
@@ -230,6 +270,7 @@ namespace XuongMay_BE.Migrations
 
                     b.Navigation("Category");
                 });
+
 
             modelBuilder.Entity("XuongMay_BE.Data.ProductionLine", b =>
                 {

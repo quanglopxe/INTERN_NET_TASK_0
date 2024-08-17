@@ -1,6 +1,6 @@
 -- T?o c? s? d? li?u
-CREATE DATABASE QL_XUONGMAY;
-USE QL_XUONGMAY;
+--CREATE DATABASE QL_XUONGMAY;
+--USE QL_XUONGMAY;
 
 -- B?ng Customers (Khách hàng)
 CREATE TABLE Customer (

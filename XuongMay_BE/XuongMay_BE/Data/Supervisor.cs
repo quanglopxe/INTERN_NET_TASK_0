@@ -7,7 +7,7 @@ namespace XuongMay_BE.Data
     public class Supervisor
     {
         [Key]
-        public int SupervisorID { get; set; }
+        public Guid SupervisorID { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -15,6 +15,5 @@ namespace XuongMay_BE.Data
 
         public int? LineID { get; set; }
 
-  
     }
 }
