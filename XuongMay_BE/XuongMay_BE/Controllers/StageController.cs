@@ -18,6 +18,21 @@ namespace XuongMay_BE.Controllers
             var lstStage = _context.Stage.ToList();
             return Ok(lstStage);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetByID(Guid id)
+        {
+            var stage = _context.Employees.FirstOrDefault(st => st.EmpID == id);
+            if (stage != null)
+            {
+                return Ok(stage);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
         [HttpPost]
         public IActionResult createStage(StageModel model)
         {
@@ -36,6 +51,22 @@ namespace XuongMay_BE.Controllers
             catch
             {
                 return BadRequest();
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateByID(Guid id, StageModel model)
+        {
+            var stage = _context.Stage.FirstOrDefault(st => st.StageID == id);
+            if (stage != null)
+            {
+                stage.StageName = model.StageName;
+                _context.SaveChanges();
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
             }
         }
     }

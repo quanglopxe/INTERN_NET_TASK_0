@@ -20,6 +20,21 @@ namespace XuongMay_BE.Controllers
             var lstEmp = _context.Employees.ToList();
             return Ok(lstEmp);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetByID(Guid id)
+        {
+            var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);
+            if (employee != null)
+            {
+                return Ok(employee);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
         [HttpPost]
         public IActionResult createEmp(EmployeeModel model)
         {
@@ -36,6 +51,22 @@ namespace XuongMay_BE.Controllers
             catch
             {
                 return BadRequest();
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateByID(Guid id, EmployeeModel model)
+        {
+            var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);
+            if (employee != null)
+            {
+                employee.EmpName = model.EmpName;
+                _context.SaveChanges();
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
             }
         }
 
