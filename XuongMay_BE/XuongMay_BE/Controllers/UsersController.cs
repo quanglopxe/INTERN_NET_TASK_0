@@ -1,10 +1,12 @@
 ﻿using Azure.Core;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
+using RegisterRequest = XuongMay_BE.Models.RegisterRequest;
 
 namespace XuongMay_BE.Controllers
 {
@@ -14,7 +16,7 @@ namespace XuongMay_BE.Controllers
     {
         private readonly MyDbContext _context;
 
-        public UsersController(MyDbContext context) 
+        public UsersController(MyDbContext context)
         {
             _context = context;
         }
@@ -28,7 +30,7 @@ namespace XuongMay_BE.Controllers
 
 
         [HttpPost]
-        public  IActionResult CreateUser([FromForm] RegisterRequest model)
+        public IActionResult CreateUser([FromForm] RegisterRequest model)
         {
             try
             {
@@ -44,7 +46,7 @@ namespace XuongMay_BE.Controllers
                 if (dsUser == null)
                 {
                     //Kiểm tra Password và ConfirmPassword có giống không
-                    if(newbie.Password == newbie.ConfirmPassword)
+                    if (newbie.Password == newbie.ConfirmPassword)
                     {
                         _context.Add(newbie);
                         _context.SaveChanges();
@@ -66,6 +68,6 @@ namespace XuongMay_BE.Controllers
             }
 
         }
-        
+
     }
 }
