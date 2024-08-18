@@ -33,6 +33,8 @@ namespace XuongMay_BE.Data
         public DateTime DeliveryDate { get; set; }
 
         public ICollection<OrderDetail> OrderDetails { get; set; }
+        public ICollection<Task> Tasks { get; set; }
+
 
         public Orders()
         {

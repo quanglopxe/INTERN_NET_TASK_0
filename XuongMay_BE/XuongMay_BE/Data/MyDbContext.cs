@@ -19,8 +19,8 @@ namespace XuongMay_BE.Data
         public DbSet<Supervisor> Supervisors { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Orders> Orders { get; set; }
-
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Task> Tasks { get; set; }
 
         #endregion
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -47,13 +47,7 @@ namespace XuongMay_BE.Data
 
             });
 
-            //modelBuilder.Entity<Product>(entity =>
-            //{
-            //    entity.HasOne(e => e.Category)
-            //        .WithMany(e => e.Products)
-            //        .HasForeignKey(e => e.CategoryID)
-            //        .HasConstraintName("FK_Product_Category");
-            //});
+            
         }
     }
 }
