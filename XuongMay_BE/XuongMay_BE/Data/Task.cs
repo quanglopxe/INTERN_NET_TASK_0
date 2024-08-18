@@ -3,26 +3,26 @@ using System.ComponentModel.DataAnnotations;
 
 namespace XuongMay_BE.Data
 {
-    public class Tasks
+    [Table("Task")]
+    public class Task
     {
         [Key]
         public Guid TaskID { get; set; }
-
         public Guid OrderID { get; set; }
         [ForeignKey("OrderID")]
         public Orders Orders { get; set; }
 
         public Guid StageID { get; set; }
         [ForeignKey("StageID")]
-        public Stage Stage { get; set; }
+        public Stage Stages { get; set; }
 
-        public int AssignedTo { get; set; }
+        public Guid AssignedTo { get; set; }
         [ForeignKey("EmpID")]
-        public Employee Employee { get; set; }
+        public Employee Employees { get; set; }
 
-        public int AssignedBy { get; set; }
+        public Guid AssignedBy { get; set; }
         [ForeignKey("SupervisorID")]
-        public Supervisor Supervisor { get; set; }
+        public Supervisor Supervisors { get; set; }
 
         [Required]
         public string Status { get; set; }
@@ -30,5 +30,7 @@ namespace XuongMay_BE.Data
         public DateTime EndTime { get; set; }
         
         public string Remarks { get; set; }
+
+
     }
 }

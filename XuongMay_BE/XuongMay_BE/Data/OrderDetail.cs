@@ -1,8 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace XuongMay_BE.Data
+﻿namespace XuongMay_BE.Data
 {
     public class OrderDetail
     {
@@ -10,15 +6,8 @@ namespace XuongMay_BE.Data
         public Guid ProductID { get; set; }
         public Guid SupervisorID { get; set; }
         public int Quantity { get; set; }
-        public decimal Price { get; set; }
-        public decimal TotalPrice { get; set; }
-
-        //[ForeignKey("OrderID")]
-        //public Orders Orders { get; set; }
-
-        //[ForeignKey("ProductID")]
-        //public Product Product { get; set; }
-
+        public double Price { get; set; }
+        public double TotalPrice { get; set; }
         public Orders Orders { get; set; }
 
         public Product Product { get; set; }

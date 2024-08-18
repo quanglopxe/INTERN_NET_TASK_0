@@ -10,5 +10,7 @@ namespace XuongMay_BE.Data
         public string StageName { get; set; }
         public string Description { get; set; }
         public int Sequence { get; set; }
+        public ICollection<Task> Tasks { get; set; }
+
     }
 }
