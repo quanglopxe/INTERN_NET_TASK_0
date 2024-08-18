@@ -25,7 +25,7 @@ namespace XuongMay_BE.Controllers
         public IActionResult GetByID(Guid id)
         {
             var category = _context.Categories.FirstOrDefault(ca => ca.CategoryID == id);
-            if(category != null)
+            if (category != null)
             {
                 return Ok(category);
             }
