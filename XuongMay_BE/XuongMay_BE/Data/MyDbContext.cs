@@ -19,7 +19,41 @@ namespace XuongMay_BE.Data
         public DbSet<Supervisor> Supervisors { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Orders> Orders { get; set; }
+
         public DbSet<OrderDetail> OrderDetails { get; set; }
+
         #endregion
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<OrderDetail>(entity =>
+            {
+                entity.ToTable("OrderDetail");
+                entity.HasKey(e => new { e.OrderID, e.ProductID, e.SupervisorID });
+
+                entity.HasOne(e => e.Orders)
+                    .WithMany(e => e.OrderDetails)
+                    .HasForeignKey(e => e.OrderID)
+                    .HasConstraintName("FK_OrderDetail_Order");
+
+                entity.HasOne(e => e.Product)
+                    .WithMany(e => e.OrderDetails)
+                    .HasForeignKey(e => e.ProductID)
+                    .HasConstraintName("FK_OrderDetail_Product");
+
+                entity.HasOne(e => e.Supervisor)
+                    .WithMany(e => e.OrderDetails)
+                    .HasForeignKey(e => e.SupervisorID)
+                    .HasConstraintName("FK_OrderDetail_Supervisor");
+
+            });
+
+            //modelBuilder.Entity<Product>(entity =>
+            //{
+            //    entity.HasOne(e => e.Category)
+            //        .WithMany(e => e.Products)
+            //        .HasForeignKey(e => e.CategoryID)
+            //        .HasConstraintName("FK_Product_Category");
+            //});
+        }
     }
 }

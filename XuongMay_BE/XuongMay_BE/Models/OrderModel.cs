@@ -2,6 +2,11 @@
 
 namespace XuongMay_BE.Models
 {
+
+    public enum Statuss
+    {
+        New = 0, Payment = 1, Complete = 2, Cancel = -1
+    }
     public class OrderModel
     {
         [Required]
@@ -10,8 +15,6 @@ namespace XuongMay_BE.Models
         public Guid CustomerID { get; set; }
 
         public int TotalQuantity { get; set; }
-
-        [MaxLength(100)]
         public string Status { get; set; }
 
         [Required]
