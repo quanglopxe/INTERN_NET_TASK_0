@@ -19,9 +19,10 @@ namespace XuongMay_BE.Data
         public DateTime OrderDate { get; set; }
 
         public Guid CustomerID { get; set; }
-
         [ForeignKey("CustomerID")]
+
         public Customer Customers { get; set; }
+
 
         public int TotalQuantity { get; set; }
 

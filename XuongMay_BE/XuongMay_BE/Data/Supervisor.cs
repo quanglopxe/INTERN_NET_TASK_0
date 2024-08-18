@@ -21,6 +21,5 @@ namespace XuongMay_BE.Data
         {
             OrderDetails = new HashSet<OrderDetail>();
         }
-
     }
 }

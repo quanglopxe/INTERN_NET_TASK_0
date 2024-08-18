@@ -63,7 +63,7 @@ namespace XuongMay_BE.Controllers
             return Ok(customer); 
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCustomer(int id)
+        public async Task<IActionResult> DeleteCustomer(Guid id)
         {
             // Tìm kiếm customer theo ID
             var customer = await _context.Customers.FindAsync(id);
