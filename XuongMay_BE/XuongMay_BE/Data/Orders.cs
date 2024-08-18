@@ -4,6 +4,11 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace XuongMay_BE.Data
 {
+    public enum Statuss
+    {
+        New = 0, Payment = 1, Complete = 2, Cancel = -1
+    }
+
     [Table("Orders")]
     public class Orders
     {
@@ -26,7 +31,12 @@ namespace XuongMay_BE.Data
         [Required]
         public DateTime DeliveryDate { get; set; }
 
-        //public virtual ICollection<OrderDetail> OrderDetail { get; set; }
+        public ICollection<OrderDetail> OrderDetails { get; set; }
+
+        public Orders()
+        {
+            OrderDetails = new List<OrderDetail>();
+        }
     }
 }
 

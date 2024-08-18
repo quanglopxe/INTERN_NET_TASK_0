@@ -15,6 +15,8 @@ namespace XuongMay_BE.Controllers
             _context = context;
         }
 
+
+        //Lấy tất cả danh sách Orders
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -22,10 +24,14 @@ namespace XuongMay_BE.Controllers
             return Ok(dsOrder);
         }
 
+
+        //Lấy Order từ ID
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)
         {
+            //Lấy Order từ ID được nhập
             Orders orderss = _context.Orders.SingleOrDefault(s => s.OrderID == id);
+            //Kiểm tra orderss có được gán giá trị vào hay không?
             if (orderss != null)
             {
                 return Ok(orderss);
@@ -36,11 +42,14 @@ namespace XuongMay_BE.Controllers
             }
         }
 
+
+        //Thêm mới Order
         [HttpPost]
         public IActionResult CreateOrder(OrderModel orders)
         {
             try
             {
+                //Gán giá trị nhập vào từng thuộc tính của order
                 var orderss = new Orders
                 {
                     OrderDate = orders.OrderDate,
@@ -60,11 +69,13 @@ namespace XuongMay_BE.Controllers
 
         }
 
-
+        //Cập nhật Order
         [HttpPut("{id}")]
         public IActionResult UpdateOrder(Guid id, OrderModel model)
         {
+            //Lấy Order từ ID được nhập
             var orderss = _context.Orders.SingleOrDefault(lo => lo.OrderID == id);
+            //Kiểm tra orderss có được gán giá trị vào hay không?
             if (orderss != null)
             {
                 orderss.OrderDate = model.OrderDate;
@@ -81,10 +92,13 @@ namespace XuongMay_BE.Controllers
             }
         }
 
+        //Xóa Order
         [HttpDelete("{id}")]
         public IActionResult DeleteOrder(Guid id)
         {
+            //Lấy Order từ ID được nhập
             var orderss = _context.Orders.SingleOrDefault(lo => lo.OrderID == id);
+            //Kiểm tra orderss có được gán giá trị vào hay không?
             if (orderss != null)
             {
                 _context.Orders.Remove(orderss);

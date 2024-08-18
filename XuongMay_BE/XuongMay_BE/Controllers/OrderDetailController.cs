@@ -62,41 +62,41 @@ namespace XuongMay_BE.Controllers
         }
 
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateOrderDetail(Guid id, OrderDetailModel orders)
-        {
-            var orderss = _context.OrderDetails.SingleOrDefault(lo => lo.OrderDetailID == id);
-            if (orderss != null)
-            {
-                orderss.OrderID = orders.OrderID;
-                orderss.ProductID = orders.ProductID;
-                orderss.SupervisorID = orders.SupervisorID;
-                orderss.Price = orders.Price;
-                orderss.Quantity = orders.Quantity;
-                orderss.TotalPrice = orders.TotalPrice;
-                _context.SaveChanges();
-                return NoContent();
-            }
-            else
-            {
-                return NotFound();
-            }
-        }
+        //[HttpPut("{id}")]
+        //public IActionResult UpdateOrderDetail(Guid id, OrderDetailModel orders)
+        //{
+        //    var orderss = _context.OrderDetails.SingleOrDefault(lo => lo.OrderDetailID == id);
+        //    if (orderss != null)
+        //    {
+        //        orderss.OrderID = orders.OrderID;
+        //        orderss.ProductID = orders.ProductID;
+        //        orderss.SupervisorID = orders.SupervisorID;
+        //        orderss.Price = orders.Price;
+        //        orderss.Quantity = orders.Quantity;
+        //        orderss.TotalPrice = orders.TotalPrice;
+        //        _context.SaveChanges();
+        //        return NoContent();
+        //    }
+        //    else
+        //    {
+        //        return NotFound();
+        //    }
+        //}
 
-        [HttpDelete("{id}")]
-        public IActionResult DeleteOrderDetail(Guid id)
-        {
-            var orderss = _context.OrderDetails.SingleOrDefault(lo => lo.OrderDetailID == id);
-            if (orderss != null)
-            {
-                _context.OrderDetails.Remove(orderss);
-                _context.SaveChanges();
-                return NoContent();
-            }
-            else
-            {
-                return NotFound();
-            }
-        }
+        //[HttpDelete("{id}")]
+        //public IActionResult DeleteOrderDetail(Guid id)
+        //{
+        //    var orderss = _context.OrderDetails.SingleOrDefault(lo => lo.OrderDetailID == id);
+        //    if (orderss != null)
+        //    {
+        //        _context.OrderDetails.Remove(orderss);
+        //        _context.SaveChanges();
+        //        return NoContent();
+        //    }
+        //    else
+        //    {
+        //        return NotFound();
+        //    }
+        //}
     }
 }
