@@ -15,6 +15,6 @@ namespace XuongMay_BE.Data
 
         public Guid LineID { get; set; }
         [ForeignKey("LineID")]
-        public ProductionLines ProductionLines {  get; set; }
+        public ProductionLine ProductionLines {  get; set; }
     }
 }

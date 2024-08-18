@@ -12,7 +12,7 @@ namespace XuongMay_BE.Models
         public int Quantity { get; set; }
 
         [Required]
-        public decimal Price { get; set; }
-        public decimal TotalPrice { get; set; }
+        public double Price { get; set; }
+        public double TotalPrice { get; set; }
     }
 }
