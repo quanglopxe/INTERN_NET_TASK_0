@@ -34,18 +34,14 @@ namespace XuongMay_BE.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.HasIndex("CategoryID1");
-
-                    b.ToTable("Category", (string)null);
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Customer", b =>
                 {
-                    b.Property<int>("CustomerID")
+                    b.Property<Guid>("CustomerID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerID"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Address")
                         .HasMaxLength(255)
@@ -62,71 +58,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasKey("CustomerID");
 
-                    b.ToTable("Customer", (string)null);
-
-                    b.ToTable("Category");
-
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.OrderDetail", b =>
-                {
-                    b.Property<Guid>("OrderDetailID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid>("ProductID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("SupervisorID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("OrderDetailID");
-
-                    b.HasIndex("OrderID");
-
-                    b.HasIndex("ProductID");
-
-                    b.ToTable("OrderDetail");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Orders", b =>
-                {
-                    b.Property<Guid>("OrderID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CustomerID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("DeliveryDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int>("TotalQuantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("OrderID");
-
-                    b.ToTable("Orders");
+                    b.ToTable("Customer");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Employee", b =>
@@ -157,6 +89,65 @@ namespace XuongMay_BE.Migrations
                     b.ToTable("Employee");
                 });
 
+            modelBuilder.Entity("XuongMay_BE.Data.OrderDetail", b =>
+                {
+                    b.Property<Guid>("OrderDetailID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("OrderID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid>("ProductID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("SupervisorID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("OrderDetailID");
+
+                    b.ToTable("OrderDetail");
+                });
+
+            modelBuilder.Entity("XuongMay_BE.Data.Orders", b =>
+                {
+                    b.Property<Guid>("OrderID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CustomerID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DeliveryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("TotalQuantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderID");
+
+                    b.HasIndex("CustomerID");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("XuongMay_BE.Data.Product", b =>
                 {
                     b.Property<Guid>("ProductID")
@@ -180,42 +171,77 @@ namespace XuongMay_BE.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("Product", (string)null);
+                    b.ToTable("Product");
                 });
-
 
             modelBuilder.Entity("XuongMay_BE.Data.ProductionLine", b =>
                 {
-                    b.Property<int>("LineID")
+                    b.Property<Guid>("LineID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LineID"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("LineName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int?>("SupervisorID")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("SupervisorID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("LineID");
 
-                    b.HasIndex("SupervisorID")
-                        .IsUnique()
-                        .HasFilter("[SupervisorID] IS NOT NULL");
+                    b.HasIndex("SupervisorID");
 
-                    b.ToTable("ProductionLine", (string)null);
+                    b.ToTable("ProductionLine");
+                });
+
+            modelBuilder.Entity("XuongMay_BE.Data.ProductionLines", b =>
+                {
+                    b.Property<Guid>("LineID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LineName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("SupervisorID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("LineID");
+
+                    b.HasIndex("SupervisorID");
+
+                    b.ToTable("ProductionLines");
+                });
+
+            modelBuilder.Entity("XuongMay_BE.Data.Stage", b =>
+                {
+                    b.Property<Guid>("StageID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Sequence")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StageName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("StageID");
+
+                    b.ToTable("Stage");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Supervisor", b =>
                 {
-                    b.Property<int>("SupervisorID")
+                    b.Property<Guid>("SupervisorID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupervisorID"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int?>("LineID")
                         .HasColumnType("int");
@@ -227,26 +253,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasKey("SupervisorID");
 
-                    b.ToTable("Supervisor", (string)null);
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.OrderDetail", b =>
-                {
-                    b.HasOne("XuongMay_BE.Data.Orders", "Orders")
-                        .WithMany("OrderDetail")
-                        .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("XuongMay_BE.Data.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Orders");
-
-                    b.Navigation("Product");
+                    b.ToTable("Supervisor");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Employee", b =>
@@ -260,6 +267,17 @@ namespace XuongMay_BE.Migrations
                     b.Navigation("ProductionLines");
                 });
 
+            modelBuilder.Entity("XuongMay_BE.Data.Orders", b =>
+                {
+                    b.HasOne("XuongMay_BE.Data.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
             modelBuilder.Entity("XuongMay_BE.Data.Product", b =>
                 {
                     b.HasOne("XuongMay_BE.Data.Category", "Category")
@@ -271,12 +289,22 @@ namespace XuongMay_BE.Migrations
                     b.Navigation("Category");
                 });
 
-
             modelBuilder.Entity("XuongMay_BE.Data.ProductionLine", b =>
                 {
                     b.HasOne("XuongMay_BE.Data.Supervisor", "Supervisor")
-                        .WithOne("ProductionLine")
-                        .HasForeignKey("XuongMay_BE.Data.ProductionLine", "SupervisorID");
+                        .WithMany()
+                        .HasForeignKey("SupervisorID");
+
+                    b.Navigation("Supervisor");
+                });
+
+            modelBuilder.Entity("XuongMay_BE.Data.ProductionLines", b =>
+                {
+                    b.HasOne("XuongMay_BE.Data.Supervisor", "Supervisor")
+                        .WithMany()
+                        .HasForeignKey("SupervisorID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Supervisor");
                 });
@@ -284,16 +312,6 @@ namespace XuongMay_BE.Migrations
             modelBuilder.Entity("XuongMay_BE.Data.Category", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Orders", b =>
-                {
-                    b.Navigation("OrderDetail");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Supervisor", b =>
-                {
-                    b.Navigation("ProductionLine");
                 });
 #pragma warning restore 612, 618
         }

@@ -15,5 +15,6 @@ namespace XuongMay_BE.Data
 
         public int? LineID { get; set; }
 
+
     }
 }
