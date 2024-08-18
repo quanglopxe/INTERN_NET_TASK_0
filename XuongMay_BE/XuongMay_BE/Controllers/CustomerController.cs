@@ -51,7 +51,7 @@ namespace XuongMay_BE.Controllers
 
         // API GET để tìm khách hàng theo ID
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {      
             var customer = await _context.Customers
                 .FirstOrDefaultAsync(c => c.CustomerID == id);
@@ -80,7 +80,7 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCustomer(int id, Customer customer)
+        public async Task<IActionResult> UpdateCustomer(Guid id, Customer customer)
         {
             // Kiểm tra xem ID từ URL có khớp với ID trong body không
             if (id != customer.CustomerID)
@@ -116,7 +116,7 @@ namespace XuongMay_BE.Controllers
         }
 
 
-        private bool CustomerExists(int id)
+        private bool CustomerExists(Guid id)
         {
             return _context.Customers.Any(e => e.CustomerID == id);
         }

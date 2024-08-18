@@ -12,8 +12,8 @@ using XuongMay_BE.Data;
 namespace XuongMay_BE.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20240818051539_AddDB")]
-    partial class AddDB
+    [Migration("20240818064224_InitDB")]
+    partial class InitDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,11 +42,9 @@ namespace XuongMay_BE.Migrations
 
             modelBuilder.Entity("XuongMay_BE.Data.Customer", b =>
                 {
-                    b.Property<int>("CustomerID")
+                    b.Property<Guid>("CustomerID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerID"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Address")
                         .HasMaxLength(255)
@@ -64,29 +62,6 @@ namespace XuongMay_BE.Migrations
                     b.HasKey("CustomerID");
 
                     b.ToTable("Customer");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.Customers", b =>
-                {
-                    b.Property<Guid>("CustomerID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CustomerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CustomerID");
-
-                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Employee", b =>
@@ -128,14 +103,14 @@ namespace XuongMay_BE.Migrations
                     b.Property<Guid>("SupervisorID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("float");
 
                     b.HasKey("OrderID", "ProductID", "SupervisorID");
 
@@ -223,26 +198,6 @@ namespace XuongMay_BE.Migrations
                     b.ToTable("ProductionLine");
                 });
 
-            modelBuilder.Entity("XuongMay_BE.Data.ProductionLines", b =>
-                {
-                    b.Property<Guid>("LineID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("LineName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("SupervisorID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("LineID");
-
-                    b.HasIndex("SupervisorID");
-
-                    b.ToTable("ProductionLines");
-                });
-
             modelBuilder.Entity("XuongMay_BE.Data.Stage", b =>
                 {
                     b.Property<Guid>("StageID")
@@ -286,7 +241,7 @@ namespace XuongMay_BE.Migrations
 
             modelBuilder.Entity("XuongMay_BE.Data.Employee", b =>
                 {
-                    b.HasOne("XuongMay_BE.Data.ProductionLines", "ProductionLines")
+                    b.HasOne("XuongMay_BE.Data.ProductionLine", "ProductionLines")
                         .WithMany()
                         .HasForeignKey("LineID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -327,7 +282,7 @@ namespace XuongMay_BE.Migrations
 
             modelBuilder.Entity("XuongMay_BE.Data.Orders", b =>
                 {
-                    b.HasOne("XuongMay_BE.Data.Customers", "Customers")
+                    b.HasOne("XuongMay_BE.Data.Customer", "Customers")
                         .WithMany()
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -352,17 +307,6 @@ namespace XuongMay_BE.Migrations
                     b.HasOne("XuongMay_BE.Data.Supervisor", "Supervisor")
                         .WithMany()
                         .HasForeignKey("SupervisorID");
-
-                    b.Navigation("Supervisor");
-                });
-
-            modelBuilder.Entity("XuongMay_BE.Data.ProductionLines", b =>
-                {
-                    b.HasOne("XuongMay_BE.Data.Supervisor", "Supervisor")
-                        .WithMany()
-                        .HasForeignKey("SupervisorID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("Supervisor");
                 });

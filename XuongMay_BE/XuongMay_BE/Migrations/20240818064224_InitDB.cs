@@ -6,17 +6,28 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace XuongMay_BE.Migrations
 {
     /// <inheritdoc />
-    public partial class AddDB : Migration
+    public partial class InitDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Category",
+                columns: table => new
+                {
+                    CategoryID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CategoryName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Category", x => x.CategoryID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Customer",
                 columns: table => new
                 {
-                    CustomerID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CustomerID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CustomerName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Address = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
@@ -24,41 +35,6 @@ namespace XuongMay_BE.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Customer", x => x.CustomerID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Customers",
-                columns: table => new
-                {
-                    CustomerID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CustomerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Customers", x => x.CustomerID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Product",
-                columns: table => new
-                {
-                    ProductID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ProductName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<double>(type: "float", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CategoryID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Product", x => x.ProductID);
-                    table.ForeignKey(
-                        name: "FK_Product_Category_CategoryID",
-                        column: x => x.CategoryID,
-                        principalTable: "Category",
-                        principalColumn: "CategoryID",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -89,6 +65,27 @@ namespace XuongMay_BE.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Product",
+                columns: table => new
+                {
+                    ProductID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ProductName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<double>(type: "float", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CategoryID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Product", x => x.ProductID);
+                    table.ForeignKey(
+                        name: "FK_Product_Category_CategoryID",
+                        column: x => x.CategoryID,
+                        principalTable: "Category",
+                        principalColumn: "CategoryID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Orders",
                 columns: table => new
                 {
@@ -103,9 +100,9 @@ namespace XuongMay_BE.Migrations
                 {
                     table.PrimaryKey("PK_Orders", x => x.OrderID);
                     table.ForeignKey(
-                        name: "FK_Orders_Customers_CustomerID",
+                        name: "FK_Orders_Customer_CustomerID",
                         column: x => x.CustomerID,
-                        principalTable: "Customers",
+                        principalTable: "Customer",
                         principalColumn: "CustomerID",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -129,25 +126,6 @@ namespace XuongMay_BE.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductionLines",
-                columns: table => new
-                {
-                    LineID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    LineName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SupervisorID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProductionLines", x => x.LineID);
-                    table.ForeignKey(
-                        name: "FK_ProductionLines_Supervisor_SupervisorID",
-                        column: x => x.SupervisorID,
-                        principalTable: "Supervisor",
-                        principalColumn: "SupervisorID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "OrderDetail",
                 columns: table => new
                 {
@@ -155,8 +133,8 @@ namespace XuongMay_BE.Migrations
                     ProductID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SupervisorID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    TotalPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    Price = table.Column<double>(type: "float", nullable: false),
+                    TotalPrice = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -195,9 +173,9 @@ namespace XuongMay_BE.Migrations
                 {
                     table.PrimaryKey("PK_Employee", x => x.EmpID);
                     table.ForeignKey(
-                        name: "FK_Employee_ProductionLines_LineID",
+                        name: "FK_Employee_ProductionLine_LineID",
                         column: x => x.LineID,
-                        principalTable: "ProductionLines",
+                        principalTable: "ProductionLine",
                         principalColumn: "LineID",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -231,19 +209,11 @@ namespace XuongMay_BE.Migrations
                 name: "IX_ProductionLine_SupervisorID",
                 table: "ProductionLine",
                 column: "SupervisorID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProductionLines_SupervisorID",
-                table: "ProductionLines",
-                column: "SupervisorID");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Customer");
-
             migrationBuilder.DropTable(
                 name: "Employee");
 
@@ -251,13 +221,10 @@ namespace XuongMay_BE.Migrations
                 name: "OrderDetail");
 
             migrationBuilder.DropTable(
-                name: "ProductionLine");
-
-            migrationBuilder.DropTable(
                 name: "Stage");
 
             migrationBuilder.DropTable(
-                name: "ProductionLines");
+                name: "ProductionLine");
 
             migrationBuilder.DropTable(
                 name: "Orders");
@@ -269,7 +236,10 @@ namespace XuongMay_BE.Migrations
                 name: "Supervisor");
 
             migrationBuilder.DropTable(
-                name: "Customers");
+                name: "Customer");
+
+            migrationBuilder.DropTable(
+                name: "Category");
         }
     }
 }
