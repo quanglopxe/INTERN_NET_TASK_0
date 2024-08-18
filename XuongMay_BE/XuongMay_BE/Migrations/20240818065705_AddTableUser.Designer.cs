@@ -12,8 +12,8 @@ using XuongMay_BE.Data;
 namespace XuongMay_BE.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20240818051539_AddDB")]
-    partial class AddDB
+    [Migration("20240818065705_AddTableUser")]
+    partial class AddTableUser
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -282,6 +282,29 @@ namespace XuongMay_BE.Migrations
                     b.HasKey("SupervisorID");
 
                     b.ToTable("Supervisor");
+                });
+
+            modelBuilder.Entity("XuongMay_BE.Data.User", b =>
+                {
+                    b.Property<Guid>("UserID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ConfirmPassword")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserID");
+
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.Employee", b =>

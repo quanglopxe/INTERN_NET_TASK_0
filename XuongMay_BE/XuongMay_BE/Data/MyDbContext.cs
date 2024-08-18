@@ -22,6 +22,8 @@ namespace XuongMay_BE.Data
 
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
+        public DbSet<User> Users { get; set; }
+
         #endregion
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
