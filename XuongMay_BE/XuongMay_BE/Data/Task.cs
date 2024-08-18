@@ -16,11 +16,11 @@ namespace XuongMay_BE.Data
         [ForeignKey("StageID")]
         public Stage Stages { get; set; }
 
-        public int AssignedTo { get; set; }
+        public Guid AssignedTo { get; set; }
         [ForeignKey("EmpID")]
         public Employee Employees { get; set; }
 
-        public int AssignedBy { get; set; }
+        public Guid AssignedBy { get; set; }
         [ForeignKey("SupervisorID")]
         public Supervisor Supervisors { get; set; }
 

@@ -242,11 +242,11 @@ namespace XuongMay_BE.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("AssignedBy")
-                        .HasColumnType("int");
+                    b.Property<Guid>("AssignedBy")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("AssignedTo")
-                        .HasColumnType("int");
+                    b.Property<Guid>("AssignedTo")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("EmpID")
                         .HasColumnType("uniqueidentifier");
