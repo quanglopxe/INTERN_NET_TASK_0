@@ -41,3 +41,7 @@ XuongMay_BE/.vs/
 bin/
 obj/
 .vs/
+# Visual Studio cache/options directory
+.vs/
+*.dtbcache.v2
+*.futdcache.v2
