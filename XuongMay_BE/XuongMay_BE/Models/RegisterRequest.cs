@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using XuongMay_BE.Data;
 
 namespace XuongMay_BE.Models
 {
@@ -13,7 +14,7 @@ namespace XuongMay_BE.Models
         [Required]
         public string ConfirmPassword { get; set; }
         [Required]
-        public string Roles { get; set; }
+        public UserRole Role { get; set; }
 
     }
 }

@@ -48,7 +48,7 @@ namespace XuongMay_BE.Controllers
                     Name = model.Name,
                     UserName = model.UserName,
                     Password = model.Password,
-                    Roles = model.Roles,
+                    Role = model.Role,
                 };
                 var dsUser = _context.Users.Where(x => x.UserName == newbie.UserName).FirstOrDefault();
                 //Kiểm tra có tồn tại UserName này trong dsUser chưa
@@ -102,7 +102,7 @@ namespace XuongMay_BE.Controllers
                     new Claim("Username", userInfo.UserName),
                     new Claim("ID", userInfo.UserID.ToString()),
                     //role
-                    new Claim(ClaimTypes.Role, userInfo.Roles),
+                    new Claim(ClaimTypes.Role, userInfo.Role.ToString()),
 
                     new Claim("TokenID", Guid.NewGuid().ToString())
                 }),
