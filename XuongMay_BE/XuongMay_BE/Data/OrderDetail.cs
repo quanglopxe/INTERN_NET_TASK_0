@@ -1,8 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace XuongMay_BE.Data
+﻿namespace XuongMay_BE.Data
 {
     public class OrderDetail
     {
@@ -12,11 +8,11 @@ namespace XuongMay_BE.Data
         public int Quantity { get; set; }
         public double Price { get; set; }
         public double TotalPrice { get; set; }
-        public Orders Orders { get; set; }
+        public Orders? Orders { get; set; }
 
-        public Product Product { get; set; }
+        public Product? Product { get; set; }
 
-        public Supervisor Supervisor { get; set; }
+        public Supervisor? Supervisor { get; set; }
 
     }
 }

@@ -22,8 +22,15 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var listCustomer = _context.Customers.ToList();
-            return Ok(listCustomer);
+            try
+            {
+                var listCustomer = _context.Customers.ToList();
+                return Ok(listCustomer);
+            }
+            catch 
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving customers.");
+            }
         }
 
         // API POST để tạo khách hàng mới
@@ -32,6 +39,11 @@ namespace XuongMay_BE.Controllers
         {
             try
             {
+                if (model == null || !ModelState.IsValid)
+                {
+                    return BadRequest("Invalid customer data."); 
+                }
+
                 var customer = new Customer()
                 {
                     CustomerID = model.CustomerID,
@@ -41,79 +53,86 @@ namespace XuongMay_BE.Controllers
                 };
                 _context.Customers.Add(customer);
                 _context.SaveChanges();
-                return Ok(customer);
+                return StatusCode(StatusCodes.Status201Created, customer);
             }
             catch
             {
-                return BadRequest();
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while creating the customer.");
             }
         }
 
         // API GET để tìm khách hàng theo ID
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
-        {      
-            var customer = await _context.Customers
-                .FirstOrDefaultAsync(c => c.CustomerID == id);
-            if (customer == null)
+        {
+            try
             {
-                return NotFound(); 
-            }
+                var customer = await _context.Customers.FirstOrDefaultAsync(c => c.CustomerID == id);
 
-            return Ok(customer); 
+                if (customer == null)
+                {
+                    return NotFound($"Customer with ID {id} not found.");
+                }
+
+                return Ok(customer); 
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving the customer.");
+            }
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomer(Guid id)
         {
-            // Tìm kiếm customer theo ID
-            var customer = await _context.Customers.FindAsync(id);
-
-            if (customer == null)
-            {
-                return NotFound();
-            }
-
-            // Xóa customer
-            _context.Customers.Remove(customer);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCustomer(Guid id, Customer customer)
-        {
-            // Kiểm tra xem ID từ URL có khớp với ID trong body không
-            if (id != customer.CustomerID)
-            {
-                return BadRequest("ID mismatch");
-            }
-
-            // Kiểm tra tính hợp lệ của mô hình
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            _context.Entry(customer).State = EntityState.Modified;
-
             try
             {
+                var customer = await _context.Customers.FindAsync(id);
+
+                if (customer == null)
+                {
+                    return NotFound($"Customer with ID {id} not found."); 
+                }
+                _context.Customers.Remove(customer);
                 await _context.SaveChangesAsync();
+                return Ok("Customer deleted successfully."); 
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while deleting the customer.");
+            }
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCustomer(Guid id, CustomerModel model)
+        {
+            try
+            {
+                // Tìm kiếm Customer theo ID
+                var customer = await _context.Customers.FirstOrDefaultAsync(c => c.CustomerID == id);
+                if (customer == null)
+                {
+                    return NotFound($"Customer with ID {id} not found."); // 404 Not Found
+                }
+
+                // Cập nhật thông tin Customer
+                customer.CustomerName = model.CustomerName;
+                customer.Phone = model.Phone;
+                customer.Address = model.Address;
+
+                
+                await _context.SaveChangesAsync();
+
+                return NoContent(); 
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CustomerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return StatusCode(StatusCodes.Status500InternalServerError, "A concurrency error occurred while updating the customer.");
             }
-
-            return NoContent();
+            catch 
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while updating the customer.");
+            }
         }
+
 
 
         private bool CustomerExists(Guid id)

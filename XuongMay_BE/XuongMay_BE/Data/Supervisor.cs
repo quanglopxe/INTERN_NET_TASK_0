@@ -16,6 +16,7 @@ namespace XuongMay_BE.Data
         public int? LineID { get; set; }
 
         public ICollection<OrderDetail> OrderDetails { get; set; }
+        public ICollection<Task> Tasks { get; set; }
 
         public Supervisor()
         {

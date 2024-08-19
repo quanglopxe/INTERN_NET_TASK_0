@@ -16,5 +16,8 @@ namespace XuongMay_BE.Data
         public Guid LineID { get; set; }
         [ForeignKey("LineID")]
         public ProductionLine ProductionLines {  get; set; }
+
+        public ICollection<Task> Tasks { get; set; }
+
     }
 }
