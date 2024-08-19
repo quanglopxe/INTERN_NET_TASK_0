@@ -6,10 +6,7 @@ namespace XuongMay_BE.Models
     {
         [Required]
         public string EmpName { get; set; }
-        [Required]
-        public string Username { get; set; }
-        [Required]
-        public string Password { get; set; }
+
 
     }
 }
