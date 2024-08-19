@@ -732,6 +732,7 @@
   },
   {
     "ContainingType": "XuongMay_BE.Controllers.UsersController",
+<<<<<<< HEAD
     "Method": "UpdateUser",
     "RelativePath": "api/Users/{id}",
     "HttpMethod": "PUT",
@@ -753,6 +754,8 @@
   },
   {
     "ContainingType": "XuongMay_BE.Controllers.UsersController",
+=======
+>>>>>>> 39a587c08c33dfd20a450c48decb3a4ddd1e4745
     "Method": "Login",
     "RelativePath": "api/Users/login",
     "HttpMethod": "POST",
@@ -797,6 +800,11 @@
       },
       {
         "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Roles",
         "Type": "System.String",
         "IsRequired": false
       }

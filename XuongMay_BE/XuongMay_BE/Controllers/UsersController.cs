@@ -48,14 +48,14 @@ namespace XuongMay_BE.Controllers
                     Name = model.Name,
                     UserName = model.UserName,
                     Password = model.Password,
-                    ConfirmPassword = model.ConfirmPassword,
+                    Roles = model.Roles,
                 };
                 var dsUser = _context.Users.Where(x => x.UserName == newbie.UserName).FirstOrDefault();
                 //Kiểm tra có tồn tại UserName này trong dsUser chưa
                 if (dsUser == null)
                 {
                     //Kiểm tra Password và ConfirmPassword có giống không
-                    if (newbie.Password == newbie.ConfirmPassword)
+                    if (newbie.Password == model.ConfirmPassword)
                     {
                         _context.Add(newbie);
                         _context.SaveChanges();
@@ -102,11 +102,11 @@ namespace XuongMay_BE.Controllers
                     new Claim("Username", userInfo.UserName),
                     new Claim("ID", userInfo.UserID.ToString()),
                     //role
-
+                    new Claim(ClaimTypes.Role, userInfo.Roles),
 
                     new Claim("TokenID", Guid.NewGuid().ToString())
                 }),
-                Expires = DateTime.UtcNow.AddMinutes(5),
+                Expires = DateTime.UtcNow.AddMinutes(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secretKeyBytes), SecurityAlgorithms.HmacSha256Signature)
             };
 
@@ -135,5 +135,6 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+
     }
 }
