@@ -732,12 +732,38 @@
   },
   {
     "ContainingType": "XuongMay_BE.Controllers.UsersController",
-    "Method": "CreateUser",
-    "RelativePath": "api/Users",
+    "Method": "Login",
+    "RelativePath": "api/Users/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.UsersController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Users/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
         "Name": "UserName",
         "Type": "System.String",

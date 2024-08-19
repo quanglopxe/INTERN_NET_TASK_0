@@ -537,3 +537,4 @@ G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\refint\XuongMay_BE.dll
 G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.pdb
 G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.genruntimeconfig.cache
 G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\ref\XuongMay_BE.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
