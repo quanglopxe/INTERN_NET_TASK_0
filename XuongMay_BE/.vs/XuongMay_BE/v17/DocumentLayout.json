@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:43:40.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TaskController.cs",
               "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\TaskController.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\TaskController.cs",
