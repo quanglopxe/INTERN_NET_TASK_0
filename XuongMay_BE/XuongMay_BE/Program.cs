@@ -20,6 +20,7 @@ builder.Services.AddDbContext<MyDbContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("MyDB"));
 });
 
+
 // Add AppSettings
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
@@ -43,6 +44,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
+// Add Session
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -54,12 +64,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthentication();
 
-app.UseAuthorization();
+app.UseSession();
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
 
 app.Run();

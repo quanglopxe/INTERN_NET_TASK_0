@@ -56,7 +56,7 @@ namespace XuongMay_BE.Controllers
                     CustomerID = orders.CustomerID,
                     DeliveryDate = orders.DeliveryDate,
                     TotalQuantity = orders.TotalQuantity,
-                    Status = orders.Status
+                    Status = (Data.Statuss)orders.Status
                 };
                 _context.Add(orderss);
                 _context.SaveChanges();

@@ -39,20 +39,35 @@ namespace XuongMay_BE.Controllers
         {
             try
             {
-                var task = new Data.Task()
+                //Get UserID from session
+                var userID = HttpContext.Session.GetString("UserId");
+
+                if (string.IsNullOrEmpty(userID))
+                    return Unauthorized("Vui lòng đăng nhập trước khi tạo Order Detail.");
+                else
                 {
-                    OrderID = model.OrderID,
-                    StageID = model.StageID,
-                    AssignedTo = model.AssignedTo,
-                    AssignedBy = model.AssignedBy,
-                    Status = model.Status,
-                    StartTime = model.StartTime,
-                    EndTime = model.EndTime,
-                    Remarks = model.Remarks,
-                };
-                _context.Add(task);
-                _context.SaveChanges();
-                return Ok(task);
+                    //Check if the user is Supervisor
+                    var User = _context.Users.Find(Guid.Parse(userID));
+                    if (User.Role != UserRole.Supervisor)
+                        return Unauthorized("Chỉ có quyền truy cập của Supervisor mới có thể tạo Order Detail.");
+                    else
+                    {
+                        var task = new Data.Task()
+                        {
+                            OrderID = model.OrderID,
+                            StageID = model.StageID,
+                            EmpID = model.EmpID,
+                            SupervisorID = Guid.Parse(userID),
+                            Status = model.Status,
+                            StartTime = model.StartTime,
+                            EndTime = model.EndTime,
+                            Remarks = model.Remarks,
+                        };
+                        _context.Add(task);
+                        _context.SaveChanges();
+                        return Ok(task);
+                    }
+                }
             }
             catch
             {
@@ -62,25 +77,41 @@ namespace XuongMay_BE.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, TaskModel model)
         {
-            var task = _context.Tasks.FirstOrDefault(ca => ca.TaskID == id);
-            if (task != null)
-            {
-                task.OrderID = model.OrderID;
-                task.StageID = model.StageID;
-                task.AssignedTo = model.AssignedTo;
-                task.AssignedBy = model.AssignedBy;
-                task.Status = model.Status;
-                task.StartTime = model.StartTime;
-                task.EndTime = model.EndTime;
-                task.Remarks = model.Remarks;
+            //Get UserID from session
+            var userID = HttpContext.Session.GetString("UserId");
 
-                _context.SaveChanges();
-                return NoContent();
-            }
+            if (string.IsNullOrEmpty(userID))
+                return Unauthorized("Vui lòng đăng nhập trước khi tạo Order Detail.");
             else
             {
-                return NotFound();
+                //Check if the user is Supervisor
+                var User = _context.Users.Find(Guid.Parse(userID));
+                if (User.Role != UserRole.Supervisor)
+                    return Unauthorized("Chỉ có quyền truy cập của Supervisor mới có thể tạo Order Detail.");
+                else
+                {
+                    var task = _context.Tasks.FirstOrDefault(ca => ca.TaskID == id);
+                    if (task != null)
+                    {
+                        task.OrderID = model.OrderID;
+                        task.StageID = model.StageID;
+                        task.EmpID = model.EmpID;
+                        task.SupervisorID = Guid.Parse(userID);
+                        task.Status = model.Status;
+                        task.StartTime = model.StartTime;
+                        task.EndTime = model.EndTime;
+                        task.Remarks = model.Remarks;
+
+                        _context.SaveChanges();
+                        return NoContent();
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
+                }
             }
+            
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)

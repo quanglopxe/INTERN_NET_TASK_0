@@ -33,8 +33,7 @@ namespace XuongMay_BE.Controllers
             {
                 var supervisor = new Supervisor()
                 {
-                    SupervisorName = model.SupervisorName,
-                    LineID = model.LineID
+                    SupervisorName = model.SupervisorName,                    
                 };
                 _context.Supervisors.Add(supervisor);
                 _context.SaveChanges();

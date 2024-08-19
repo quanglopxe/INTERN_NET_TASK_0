@@ -1,12 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using XuongMay_BE.Data;
 
 namespace XuongMay_BE.Models
 {
 
-    public enum Statuss
-    {
-        New = 0, Payment = 1, Complete = 2, Cancel = -1
-    }
     public class OrderModel
     {
         [Required]
@@ -15,7 +12,7 @@ namespace XuongMay_BE.Models
         public Guid CustomerID { get; set; }
 
         public int TotalQuantity { get; set; }
-        public string Status { get; set; }
+        public Statuss Status { get; set; }
 
         [Required]
         public DateTime DeliveryDate { get; set; }
