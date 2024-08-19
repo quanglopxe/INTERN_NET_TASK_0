@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
@@ -37,6 +38,7 @@ namespace XuongMay_BE.Controllers
         }
 
         [HttpPost]
+        //[Authorize(Roles = AppRole.Seller)]
         public IActionResult CreateOrderDetail(OrderDetailModel orders)
         {
             try

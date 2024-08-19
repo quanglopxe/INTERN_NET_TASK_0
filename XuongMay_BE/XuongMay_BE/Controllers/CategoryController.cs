@@ -55,6 +55,7 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpPut("{id}")]
+        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult UpdateByID(Guid id, CategoryModel model)
         {
             var category = _context.Categories.FirstOrDefault(ca => ca.CategoryID == id);
@@ -70,6 +71,7 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpDelete("{id}")]
+        //[Authorize(Roles = AppRole.Admin)]
         public async Task<IActionResult> Delete(Guid id)
         {
             // Tìm kiếm category theo ID

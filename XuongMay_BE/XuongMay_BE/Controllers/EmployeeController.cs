@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace XuongMay_BE.Controllers
@@ -36,6 +37,7 @@ namespace XuongMay_BE.Controllers
         }
 
         [HttpPost]
+        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult createEmp(EmployeeModel model)
         {
             try
@@ -55,6 +57,7 @@ namespace XuongMay_BE.Controllers
         }
 
         [HttpPut("{id}")]
+        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult UpdateByID(Guid id, EmployeeModel model)
         {
             var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);

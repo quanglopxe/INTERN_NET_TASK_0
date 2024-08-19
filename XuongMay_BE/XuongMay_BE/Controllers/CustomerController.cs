@@ -4,6 +4,7 @@ using XuongMay_BE.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
@@ -28,6 +29,7 @@ namespace XuongMay_BE.Controllers
 
         // API POST để tạo khách hàng mới
         [HttpPost]
+        //[Authorize(Roles = AppRole.Seller)]
         public IActionResult Create(CustomerModel model)
         {
             try
@@ -63,6 +65,7 @@ namespace XuongMay_BE.Controllers
             return Ok(customer); 
         }
         [HttpDelete("{id}")]
+        //[Authorize(Roles = AppRole.Seller)]
         public async Task<IActionResult> DeleteCustomer(Guid id)
         {
             // Tìm kiếm customer theo ID
@@ -80,6 +83,7 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
         [HttpPut("{id}")]
+        //[Authorize(Roles = AppRole.Seller)]
         public async Task<IActionResult> UpdateCustomer(Guid id, Customer customer)
         {
             // Kiểm tra xem ID từ URL có khớp với ID trong body không

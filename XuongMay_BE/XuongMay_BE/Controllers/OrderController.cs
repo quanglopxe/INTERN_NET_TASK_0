@@ -46,7 +46,7 @@ namespace XuongMay_BE.Controllers
 
         //Thêm mới Order
         [HttpPost]
-        //[Authorize(Roles = AppRole.Customer)]
+        //[Authorize(Roles = AppRole.Seller)]
         public IActionResult CreateOrder(OrderModel orders)
         {
             try
@@ -73,6 +73,7 @@ namespace XuongMay_BE.Controllers
 
         //Cập nhật Order
         [HttpPut("{id}")]
+        //[Authorize(Roles = AppRole.Seller)]
         public IActionResult UpdateOrder(Guid id, OrderModel model)
         {
             //Lấy Order từ ID được nhập
@@ -96,6 +97,7 @@ namespace XuongMay_BE.Controllers
 
         //Xóa Order
         [HttpDelete("{id}")]
+        //[Authorize(Roles = AppRole.Seller)]
         public IActionResult DeleteOrder(Guid id)
         {
             //Lấy Order từ ID được nhập
