@@ -21,8 +21,15 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var listProduct = _context.Products.ToList();
-            return Ok(listProduct);
+            try
+            {
+                var listProduct = _context.Products.ToList();
+                return Ok(listProduct);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving production lines.");
+            }
         }
         [HttpGet("{id}")]
         public IActionResult GetByID(Guid id)
@@ -34,7 +41,7 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return NotFound();
+                return NotFound($"Product with ID {id} not found.");
             }
         }
         [HttpPost]
@@ -55,7 +62,7 @@ namespace XuongMay_BE.Controllers
             }
             catch
             {
-                return BadRequest();
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while creating product.");
             }
         }
         [HttpPut("{id}")]
@@ -73,18 +80,20 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return NotFound();
+                return NotFound($"Product with ID {id} not found.");
             }
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
+            try
+            {
             // Tìm kiếm product theo ID
             var product = await _context.Products.FindAsync(id);
 
             if (product == null)
             {
-                return NotFound();
+                return NotFound($"Product with ID {id} not found.");
             }
 
             // Xóa customer
@@ -92,6 +101,12 @@ namespace XuongMay_BE.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+
+            }
+            catch    
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while deleting the product:");
+            }
         }
     }
 }

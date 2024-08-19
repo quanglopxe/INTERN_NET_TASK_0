@@ -23,8 +23,15 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var dsOrder = _context.Orders.ToList();
-            return Ok(dsOrder);
+            try
+            {
+                var dsOrder = _context.Orders.ToList();
+                return Ok(dsOrder);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving orders: {ex.Message}");
+            }
         }
 
 
@@ -32,16 +39,25 @@ namespace XuongMay_BE.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)
         {
-            //Lấy Order từ ID được nhập
-            Orders orderss = _context.Orders.SingleOrDefault(s => s.OrderID == id);
-            //Kiểm tra orderss có được gán giá trị vào hay không?
-            if (orderss != null)
+            try
             {
-                return Ok(orderss);
+                //Lấy Order từ ID được nhập
+                Orders orderss = _context.Orders.SingleOrDefault(s => s.OrderID == id);
+                //Kiểm tra orderss có được gán giá trị vào hay không?
+                if (orderss != null)
+                {
+                    return Ok(orderss);
+                }
+                else
+                {
+                    return NotFound($"Order with ID {id} not found.");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                return NotFound();
+                // Ghi log lỗi hoặc xử lý thêm nếu cần
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving the order: {ex.Message}");
             }
         }
 
@@ -50,6 +66,7 @@ namespace XuongMay_BE.Controllers
         [HttpPost]
         public IActionResult CreateOrder(OrderModel orders)
         {
+
             try
             {
                 //Gán giá trị nhập vào từng thuộc tính của order
@@ -67,7 +84,7 @@ namespace XuongMay_BE.Controllers
             }
             catch
             {
-                return BadRequest();
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while creating the order");
             }
 
         }
@@ -91,7 +108,7 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return NotFound();
+                return NotFound($"Order with ID {id} not found.");
             }
         }
 
@@ -99,18 +116,26 @@ namespace XuongMay_BE.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteOrder(Guid id)
         {
-            //Lấy Order từ ID được nhập
-            var orderss = _context.Orders.SingleOrDefault(lo => lo.OrderID == id);
-            //Kiểm tra orderss có được gán giá trị vào hay không?
-            if (orderss != null)
+            try
             {
-                _context.Orders.Remove(orderss);
-                _context.SaveChanges();
-                return NoContent();
+                //Lấy Order từ ID được nhập
+                var orderss = _context.Orders.SingleOrDefault(lo => lo.OrderID == id);
+                //Kiểm tra orderss có được gán giá trị vào hay không?
+                if (orderss != null)
+                {
+                    _context.Orders.Remove(orderss);
+                    _context.SaveChanges();
+                    return NoContent();
+                }
+                else
+                {
+                    return NotFound($"Order with ID {id} not found.");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                return NotFound();
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while deleting the order: {ex.Message}");
             }
         }
 

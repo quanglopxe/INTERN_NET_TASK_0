@@ -20,27 +20,45 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult getAll()
         {
-            var lstEmp = _context.Employees.ToList();
-            return Ok(lstEmp);
+            try
+            {
+                var lstEmp = _context.Employees.ToList();
+                return Ok(lstEmp);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving employees: {ex.Message}");
+            }
         }
 
         [HttpGet("{id}")]
         public IActionResult GetByID(Guid id)
         {
-            var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);
-            if (employee != null)
+            try
             {
+                var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);
+
+                if (employee == null)
+                {
+                    return NotFound($"Employee with ID {id} not found.");
+                }
+
                 return Ok(employee);
             }
-            else
+            catch (Exception ex)
             {
-                return NotFound();
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving the employee: {ex.Message}");
             }
         }
 
         [HttpPost]
         public IActionResult createEmp(EmployeeModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             try
             {
                 var emp = new Employee()
@@ -49,27 +67,44 @@ namespace XuongMay_BE.Controllers
                 };
                 _context.Add(emp);
                 _context.SaveChanges();
-                return Ok(emp);
+                return CreatedAtAction(nameof(GetByID), new { id = emp.EmpID }, emp);
             }
-            catch
+            catch (Exception ex)
             {
-                return BadRequest();
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while creating the employee: {ex.Message}");
             }
         }
 
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, EmployeeModel model)
         {
-            var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);
-            if (employee != null)
+            if (!ModelState.IsValid)
             {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);
+
+                if (employee == null)
+                {
+                    return NotFound($"Employee with ID {id} not found.");
+                }
+
                 employee.EmpName = model.EmpName;
+                _context.Entry(employee).State = EntityState.Modified;
                 _context.SaveChanges();
+
                 return NoContent();
             }
-            else
+            catch (DbUpdateConcurrencyException)
             {
-                return NotFound();
+                return StatusCode(StatusCodes.Status409Conflict, $"A concurrency error occurred while updating the employee with ID {id}.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while updating the employee: {ex.Message}");
             }
         }
 

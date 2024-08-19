@@ -8,11 +8,11 @@
         public int Quantity { get; set; }
         public double Price { get; set; }
         public double TotalPrice { get; set; }
-        public Orders Orders { get; set; }
+        public Orders? Orders { get; set; }
 
-        public Product Product { get; set; }
+        public Product? Product { get; set; }
 
-        public Supervisor Supervisor { get; set; }
+        public Supervisor? Supervisor { get; set; }
 
     }
 }

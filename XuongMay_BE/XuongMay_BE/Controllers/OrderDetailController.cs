@@ -21,21 +21,34 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var dsOrder = _context.OrderDetails.ToList();
-            return Ok(dsOrder);
+            try
+            {
+                var dsOrder = _context.OrderDetails.ToList();
+                return Ok(dsOrder);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving order details: {ex.Message}");
+            }
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)
         {
-            var orderss = _context.OrderDetails.SingleOrDefault(lo => lo.OrderID == id);
-            if (orderss != null)
+            try
             {
-                return Ok(orderss);
+                var orderDetail = _context.OrderDetails.SingleOrDefault(lo => lo.OrderID == id);
+
+                if (orderDetail == null)
+                {
+                    return NotFound($"OrderDetail with ID {id} not found.");
+                }
+
+                return Ok(orderDetail);
             }
-            else
+            catch (Exception ex)
             {
-                return NotFound();
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving the order detail: {ex.Message}");
             }
         }
 
@@ -75,7 +88,7 @@ namespace XuongMay_BE.Controllers
             }
             catch
             {
-                return BadRequest();
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while creating the order detail");
             }
 
         }

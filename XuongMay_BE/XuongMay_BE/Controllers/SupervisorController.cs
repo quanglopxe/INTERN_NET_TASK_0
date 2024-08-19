@@ -23,8 +23,15 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var listSupervisor = _context.Supervisors.ToList();
-            return Ok(listSupervisor);
+            try
+            {
+                var listSupervisor = _context.Supervisors.ToList();
+                return Ok(listSupervisor);
+
+            }catch 
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving data.");
+            }
         }
 
         // API POST để tạo Supervisor mới
@@ -39,7 +46,7 @@ namespace XuongMay_BE.Controllers
                 };
                 _context.Supervisors.Add(supervisor);
                 _context.SaveChanges();
-                return Ok(supervisor);
+                return StatusCode(StatusCodes.Status201Created, supervisor);
             }
             catch
             {
@@ -56,7 +63,7 @@ namespace XuongMay_BE.Controllers
 
             if (supervisor == null)
             {
-                return NotFound();
+                return NotFound($"Supervisor with ID {id} not found.");
             }
 
             return Ok(supervisor);
@@ -64,48 +71,57 @@ namespace XuongMay_BE.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSupervisor(Guid id)
         {
-            // Tìm kiếm supervisor theo ID
-            var supervisor = await _context.Supervisors.FindAsync(id);
-
-            if (supervisor == null)
-            {
-                return NotFound();
-            }
-
-            // Xóa supervisor
-            _context.Supervisors.Remove(supervisor);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateSupervisor(Guid id, Supervisor supervisor)
-        {
-            // Kiểm tra xem đối tượng cần cập nhật có tồn tại không
-            if (id != supervisor.SupervisorID)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(supervisor).State = EntityState.Modified;
-
             try
             {
+                var supervisor = await _context.Supervisors.FindAsync(id);
+
+                if (supervisor == null)
+                {
+                    return NotFound($"Supervisor with ID {id} not found."); 
+                }
+
+                _context.Supervisors.Remove(supervisor);
                 await _context.SaveChangesAsync();
+
+                return Ok("Supervisor deleted successfully."); 
+            }
+            catch 
+            {
+                // Log exception
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while deleting the supervisor.");
+            }
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateSupervisor(Guid id, SupervisorModel model)
+        {
+            try
+            {
+                // Tìm kiếm Supervisor theo ID
+                var supervisor = await _context.Supervisors.FirstOrDefaultAsync(s => s.SupervisorID == id);
+                if (supervisor == null)
+                {
+                    return NotFound($"Supervisor with ID {id} not found."); 
+                }
+
+                // Cập nhật thông tin Supervisor
+                supervisor.SupervisorName = model.SupervisorName;
+                supervisor.LineID = model.LineID;
+
+                // Lưu thay đổi vào cơ sở dữ liệu
+                await _context.SaveChangesAsync();
+
+                return NoContent(); 
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!SupervisorExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return StatusCode(StatusCodes.Status500InternalServerError, "A concurrency error occurred while updating the supervisor.");
+            }
+            catch 
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while updating the supervisor.");
             }
 
-            return NoContent();
+
         }
 
         // Kiểm tra xem Supervisor có tồn tại không
