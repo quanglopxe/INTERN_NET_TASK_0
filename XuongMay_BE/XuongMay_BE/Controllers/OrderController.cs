@@ -2,9 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace XuongMay_BE.Controllers
 {
+    [Authorize(Roles = "User")]
     [Route("api/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
@@ -73,7 +76,7 @@ namespace XuongMay_BE.Controllers
                     CustomerID = orders.CustomerID,
                     DeliveryDate = orders.DeliveryDate,
                     TotalQuantity = orders.TotalQuantity,
-                    Status = orders.Status
+                    Status = (Data.Statuss)orders.Status
                 };
                 _context.Add(orderss);
                 _context.SaveChanges();

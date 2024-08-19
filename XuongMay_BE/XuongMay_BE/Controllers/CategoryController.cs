@@ -3,11 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    [Authorize(Roles = "Admin")]
     public class CategoryController : ControllerBase
     {
         private readonly MyDbContext _context;

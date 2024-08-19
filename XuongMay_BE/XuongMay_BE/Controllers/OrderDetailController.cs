@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 
+
 namespace XuongMay_BE.Controllers
 {
+    [Authorize(Roles = "User")]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderDetailController : ControllerBase
@@ -54,18 +57,34 @@ namespace XuongMay_BE.Controllers
         {
             try
             {
-                var orderDetail = new OrderDetail
+                //Get UserID from session
+                var userID = HttpContext.Session.GetString("UserId");
+
+                if (string.IsNullOrEmpty(userID))
+                    return Unauthorized("Vui lòng đăng nhập trước khi tạo Order Detail.");
+                else
                 {
-                    OrderID = orders.OrderID,
-                    ProductID = orders.ProductID,
-                    SupervisorID = orders.SupervisorID,
-                    Price = orders.Price,
-                    Quantity = orders.Quantity,
-                    TotalPrice = orders.TotalPrice,
-                };
-                _context.Add(orderDetail);
-                _context.SaveChanges();
-                return Ok();
+                    //Check if the user is Supervisor
+                    var User = _context.Users.Find(Guid.Parse(userID));                    
+                    if (User.Role != UserRole.Supervisor)
+                        return Unauthorized("Chỉ có quyền truy cập của Supervisor mới có thể tạo Order Detail.");
+                    else
+                    {
+                        
+                        var orderDetail = new OrderDetail
+                        {
+                            OrderID = orders.OrderID,
+                            ProductID = orders.ProductID,
+                            SupervisorID = Guid.Parse(userID),
+                            Price = orders.Price,
+                            Quantity = orders.Quantity,
+                            TotalPrice = orders.Price * orders.Quantity,
+                        };
+                        _context.Add(orderDetail);
+                        _context.SaveChanges();
+                        return Ok();
+                    }
+                }                
             }
             catch
             {
@@ -78,15 +97,14 @@ namespace XuongMay_BE.Controllers
         //[HttpPut("{id}")]
         //public IActionResult UpdateOrderDetail(Guid id, OrderDetailModel orders)
         //{
-        //    var orderss = _context.OrderDetails.SingleOrDefault(lo => lo.OrderDetailID == id);
+        //    var orderss = _context.OrderDetails.SingleOrDefault(lo => lo.OrderID == id);
         //    if (orderss != null)
         //    {
         //        orderss.OrderID = orders.OrderID;
-        //        orderss.ProductID = orders.ProductID;
-        //        orderss.SupervisorID = orders.SupervisorID;
+        //        orderss.ProductID = orders.ProductID;                
         //        orderss.Price = orders.Price;
         //        orderss.Quantity = orders.Quantity;
-        //        orderss.TotalPrice = orders.TotalPrice;
+        //        orderss.TotalPrice = orders.Price * orders.Quantity;
         //        _context.SaveChanges();
         //        return NoContent();
         //    }

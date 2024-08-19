@@ -4,9 +4,11 @@ using XuongMay_BE.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase

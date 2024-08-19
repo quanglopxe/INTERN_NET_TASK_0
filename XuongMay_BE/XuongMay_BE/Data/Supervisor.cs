@@ -13,7 +13,9 @@ namespace XuongMay_BE.Data
         [StringLength(100)]
         public string SupervisorName { get; set; }
 
-        public int? LineID { get; set; }
+        public Guid UserID { get; set; }
+        [ForeignKey("UserID")]
+        public User Users { get; set; }
 
         public ICollection<OrderDetail> OrderDetails { get; set; }
         public ICollection<Task> Tasks { get; set; }

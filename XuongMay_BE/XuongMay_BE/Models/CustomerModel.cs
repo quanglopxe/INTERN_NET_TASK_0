@@ -16,5 +16,7 @@ namespace XuongMay_BE.Models
 
         [StringLength(255)]
         public string? Address { get; set; }
+        [Required]
+        public Guid UserID { get; set; }
     }
 }
