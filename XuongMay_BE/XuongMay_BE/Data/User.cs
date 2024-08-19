@@ -10,11 +10,13 @@ namespace XuongMay_BE.Data
         [Key]
         public Guid UserID { get; set; }
         [Required]
+        public string Name { get; set; }
+        [Required]
         public string UserName { get; set; }
         [Required]
         public string Password { get; set; }
         [Required]
-        //public string ConfirmPassword { get; set; }
-        public string Authorities { get; set; }
+        public string Roles { get; set; }
+        
     }
 }

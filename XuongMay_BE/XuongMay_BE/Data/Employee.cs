@@ -10,9 +10,6 @@ namespace XuongMay_BE.Data
         public Guid EmpID { get; set; }
         [Required]
         public string EmpName { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-
         public Guid LineID { get; set; }
         [ForeignKey("LineID")]
         public ProductionLine ProductionLines {  get; set; }

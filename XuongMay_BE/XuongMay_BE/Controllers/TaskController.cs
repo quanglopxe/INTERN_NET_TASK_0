@@ -4,8 +4,10 @@ using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace XuongMay_BE.Controllers
 {
+    [Authorize(Roles = "User")]
     [Route("api/[controller]")]
     [ApiController]
     public class TaskController : ControllerBase
@@ -36,7 +38,6 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpPost]
-        //[Authorize(Roles = AppRole.Supervisor)]
         public IActionResult Create(TaskModel model)
         {
             try
@@ -62,7 +63,6 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpPut("{id}")]
-        //[Authorize(Roles = AppRole.Supervisor)]
         public IActionResult UpdateByID(Guid id, TaskModel model)
         {
             var task = _context.Tasks.FirstOrDefault(ca => ca.TaskID == id);
@@ -86,7 +86,6 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpDelete("{id}")]
-        //[Authorize(Roles = AppRole.Supervisor)]
         public async Task<IActionResult> Delete(Guid id)
         {
             // Tìm kiếm task theo ID

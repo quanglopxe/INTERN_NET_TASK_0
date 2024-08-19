@@ -537,6 +537,7 @@ G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\refint\XuongMay_BE.dll
 G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.pdb
 G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\XuongMay_BE.genruntimeconfig.cache
 G:\INTERN NET\XuongMay_BE\XuongMay_BE\obj\Debug\net8.0\ref\XuongMay_BE.dll
+G:\INTERN NET\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\appsettings.Development.json
 D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\appsettings.json
 D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\libman.json
@@ -549,6 +550,7 @@ D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Deb
 D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Azure.Core.dll
 D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Azure.Identity.dll
 D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Humanizer.dll
+D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
 D:\HuynhHuuDuc_2001207422\Task\INTERN_NET_TASK_0\XuongMay_BE\XuongMay_BE\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll

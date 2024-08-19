@@ -1,13 +1,15 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    [Authorize(Roles = "Admin")]
     public class CategoryController : ControllerBase
     {
         private readonly MyDbContext _context;
@@ -36,7 +38,6 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpPost]
-        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult Create(CategoryModel model)
         {
             try
@@ -55,7 +56,6 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpPut("{id}")]
-        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult UpdateByID(Guid id, CategoryModel model)
         {
             var category = _context.Categories.FirstOrDefault(ca => ca.CategoryID == id);
@@ -71,7 +71,6 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpDelete("{id}")]
-        //[Authorize(Roles = AppRole.Admin)]
         public async Task<IActionResult> Delete(Guid id)
         {
             // Tìm kiếm category theo ID

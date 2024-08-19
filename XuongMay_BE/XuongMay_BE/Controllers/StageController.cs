@@ -4,8 +4,10 @@ using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace XuongMay_BE.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class StageController : ControllerBase
@@ -35,7 +37,6 @@ namespace XuongMay_BE.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult createStage(StageModel model)
         {
             try
@@ -57,7 +58,6 @@ namespace XuongMay_BE.Controllers
         }
 
         [HttpPut("{id}")]
-        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult UpdateByID(Guid id, StageModel model)
         {
             var stage = _context.Stage.FirstOrDefault(st => st.StageID == id);

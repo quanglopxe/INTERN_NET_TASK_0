@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
-using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductionLineController : ControllerBase
@@ -28,7 +29,6 @@ namespace XuongMay_BE.Controllers
 
         // API PoST để tạo ProductionLine mới
         [HttpPost]
-        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult Create(ProductionLineModel model)
         {
             try
@@ -63,7 +63,6 @@ namespace XuongMay_BE.Controllers
             return Ok(productionLine);
         }
         [HttpDelete("{id}")]
-        //[Authorize(Roles = AppRole.Admin)]
         public async Task<IActionResult> DeleteProductionLine(int id)
         {
             // Tìm kiếm production line theo ID
@@ -81,7 +80,6 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
         [HttpPut("{id}")]
-        //[Authorize(Roles = AppRole.Admin)]
         public async Task<IActionResult> UpdateProductionLine(Guid id, ProductionLine productionLine)
         {
             // Kiểm tra xem đối tượng cần cập nhật có tồn tại không

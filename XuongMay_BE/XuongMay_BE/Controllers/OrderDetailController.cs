@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
-using Microsoft.AspNetCore.Authorization;
+
 
 namespace XuongMay_BE.Controllers
 {
+    [Authorize(Roles = "User")]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderDetailController : ControllerBase
@@ -38,7 +40,6 @@ namespace XuongMay_BE.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = AppRole.Seller)]
         public IActionResult CreateOrderDetail(OrderDetailModel orders)
         {
             try

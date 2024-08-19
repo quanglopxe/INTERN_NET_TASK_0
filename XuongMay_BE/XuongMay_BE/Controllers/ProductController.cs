@@ -4,8 +4,10 @@ using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace XuongMay_BE.Controllers
-{
+{ 
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
@@ -36,7 +38,6 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpPost]
-        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult Create(ProductModel model)
         {
             try
@@ -58,7 +59,6 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpPut("{id}")]
-        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult UpdateByID(Guid id, ProductModel model)
         {
             var product = _context.Products.FirstOrDefault(ca => ca.ProductID == id);
@@ -77,7 +77,6 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpDelete("{id}")]
-        //[Authorize(Roles = AppRole.Admin)]
         public async Task<IActionResult> Delete(Guid id)
         {
             // Tìm kiếm product theo ID

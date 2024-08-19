@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
-using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class SupervisorController : ControllerBase
@@ -28,7 +29,6 @@ namespace XuongMay_BE.Controllers
 
         // API POST để tạo Supervisor mới
         [HttpPost]
-        //[Authorize(Roles = AppRole.Admin)]
         public IActionResult Create(SupervisorModel model)
         {
             try
@@ -63,7 +63,6 @@ namespace XuongMay_BE.Controllers
             return Ok(supervisor);
         }
         [HttpDelete("{id}")]
-        //[Authorize(Roles = AppRole.Admin)]
         public async Task<IActionResult> DeleteSupervisor(Guid id)
         {
             // Tìm kiếm supervisor theo ID
@@ -81,7 +80,6 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
         [HttpPut("{id}")]
-        //[Authorize(Roles = AppRole.Admin)]
         public async Task<IActionResult> UpdateSupervisor(Guid id, Supervisor supervisor)
         {
             // Kiểm tra xem đối tượng cần cập nhật có tồn tại không
