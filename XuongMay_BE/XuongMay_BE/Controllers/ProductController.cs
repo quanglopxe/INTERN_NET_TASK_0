@@ -2,9 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace XuongMay_BE.Controllers
-{
+{ 
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
