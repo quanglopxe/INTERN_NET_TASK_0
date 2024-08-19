@@ -4,6 +4,13 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace XuongMay_BE.Data
 {
+    public enum UserRole
+    {
+        Supervisor,
+        Employee,
+        Customer,
+        Admin
+    }
     [Table("User")]
     public class User
     {
@@ -17,6 +24,7 @@ namespace XuongMay_BE.Data
         public string Password { get; set; }
         [Required]
         public string ConfirmPassword { get; set; }
-        
+        [Required]
+        public UserRole Role { get; set; }
     }
 }

@@ -56,7 +56,12 @@ namespace XuongMay_BE.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("CustomerID");
+
+                    b.HasIndex("UserID");
 
                     b.ToTable("Customer");
                 });
@@ -74,9 +79,17 @@ namespace XuongMay_BE.Migrations
                     b.Property<Guid>("LineID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("ProductionLinesLineID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("EmpID");
 
-                    b.HasIndex("LineID");
+                    b.HasIndex("ProductionLinesLineID");
+
+                    b.HasIndex("UserID");
 
                     b.ToTable("Employee");
                 });
@@ -125,10 +138,9 @@ namespace XuongMay_BE.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
+                    b.Property<int>("Status")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("int");
 
                     b.Property<int>("TotalQuantity")
                         .HasColumnType("int");
@@ -215,15 +227,17 @@ namespace XuongMay_BE.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("LineID")
-                        .HasColumnType("int");
-
                     b.Property<string>("SupervisorName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("SupervisorID");
+
+                    b.HasIndex("UserID");
 
                     b.ToTable("Supervisor");
                 });
@@ -232,12 +246,6 @@ namespace XuongMay_BE.Migrations
                 {
                     b.Property<Guid>("TaskID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("AssignedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("AssignedTo")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("EmpID")
@@ -250,7 +258,6 @@ namespace XuongMay_BE.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Remarks")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("StageID")
@@ -259,9 +266,8 @@ namespace XuongMay_BE.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("SupervisorID")
                         .HasColumnType("uniqueidentifier");
@@ -276,7 +282,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasIndex("SupervisorID");
 
-                    b.ToTable("Task");
+                    b.ToTable("Tasks");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.User", b =>
@@ -297,6 +303,9 @@ namespace XuongMay_BE.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -306,15 +315,34 @@ namespace XuongMay_BE.Migrations
                     b.ToTable("User");
                 });
 
+            modelBuilder.Entity("XuongMay_BE.Data.Customer", b =>
+                {
+                    b.HasOne("XuongMay_BE.Data.User", "Users")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Users");
+                });
+
             modelBuilder.Entity("XuongMay_BE.Data.Employee", b =>
                 {
                     b.HasOne("XuongMay_BE.Data.ProductionLine", "ProductionLines")
                         .WithMany()
-                        .HasForeignKey("LineID")
+                        .HasForeignKey("ProductionLinesLineID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("XuongMay_BE.Data.User", "Users")
+                        .WithMany()
+                        .HasForeignKey("UserID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ProductionLines");
+
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("XuongMay_BE.Data.OrderDetail", b =>
@@ -336,7 +364,7 @@ namespace XuongMay_BE.Migrations
                     b.HasOne("XuongMay_BE.Data.Supervisor", "Supervisor")
                         .WithMany("OrderDetails")
                         .HasForeignKey("SupervisorID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired()
                         .HasConstraintName("FK_OrderDetail_Supervisor");
 
@@ -378,30 +406,41 @@ namespace XuongMay_BE.Migrations
                     b.Navigation("Supervisor");
                 });
 
+            modelBuilder.Entity("XuongMay_BE.Data.Supervisor", b =>
+                {
+                    b.HasOne("XuongMay_BE.Data.User", "Users")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Users");
+                });
+
             modelBuilder.Entity("XuongMay_BE.Data.Task", b =>
                 {
                     b.HasOne("XuongMay_BE.Data.Employee", "Employees")
                         .WithMany("Tasks")
                         .HasForeignKey("EmpID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("XuongMay_BE.Data.Orders", "Orders")
                         .WithMany("Tasks")
                         .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("XuongMay_BE.Data.Stage", "Stages")
                         .WithMany("Tasks")
                         .HasForeignKey("StageID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("XuongMay_BE.Data.Supervisor", "Supervisors")
                         .WithMany("Tasks")
                         .HasForeignKey("SupervisorID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Employees");

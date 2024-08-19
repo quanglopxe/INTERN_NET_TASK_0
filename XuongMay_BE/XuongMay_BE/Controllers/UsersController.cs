@@ -85,9 +85,9 @@ namespace XuongMay_BE.Controllers
             {
                 return BadRequest("Sai tên đăng nhập hoặc mật khẩu");                
             }
-
+            HttpContext.Session.SetString("UserId", user.UserID.ToString());
             //cấp token
-            return Ok(GenerateToken(user));
+            return Ok(new { token = GenerateToken(user) });
         }
 
         private string GenerateToken(User userInfo)
@@ -106,12 +106,34 @@ namespace XuongMay_BE.Controllers
 
                     new Claim("TokenID", Guid.NewGuid().ToString())
                 }),
-                Expires = DateTime.UtcNow.AddMinutes(1),
+                Expires = DateTime.UtcNow.AddMinutes(5),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secretKeyBytes), SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = jwtSecurityTokenHandler.CreateToken(tokenDescriptor);
             return jwtSecurityTokenHandler.WriteToken(token);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateUser(Guid id, User model)
+        {
+            //Lấy User từ ID được nhập
+            var user = _context.Users.SingleOrDefault(lo => lo.UserID == id);
+            //Kiểm tra user có được gán giá trị vào hay không
+            if (user != null)
+            {
+                user.Name = model.Name;
+                user.UserName = model.UserName;
+                user.Password = model.Password;
+                user.ConfirmPassword = model.ConfirmPassword;
+                user.Role = model.Role;
+                _context.SaveChanges();
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }
