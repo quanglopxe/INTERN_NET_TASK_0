@@ -11,7 +11,7 @@ namespace XuongMay_BE.Data
 
         [Required]
         [StringLength(100)]
-        public string CustomerName { get; set; }
+        public string? CustomerName { get; set; }
 
         [StringLength(255)]
         public string? Phone { get; set; }

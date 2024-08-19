@@ -15,8 +15,15 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult getAll()
         {
-            var lstStage = _context.Stage.ToList();
-            return Ok(lstStage);
+            try
+            {
+                var lstStage = _context.Stage.ToList();
+                return Ok(lstStage);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving stages: {ex.Message}");
+            }
         }
 
         [HttpGet("{id}")]
@@ -29,13 +36,18 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return NotFound();
+                return NotFound($"Stage with ID {id} not found.");
             }
         }
 
         [HttpPost]
         public IActionResult createStage(StageModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             try
             {
                 var stage = new Stage()
@@ -50,13 +62,18 @@ namespace XuongMay_BE.Controllers
             }
             catch
             {
-                return BadRequest();
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while creating the stage");
             }
         }
 
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, StageModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var stage = _context.Stage.FirstOrDefault(st => st.StageID == id);
             if (stage != null)
             {
@@ -66,7 +83,7 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return NotFound();
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while updating the stage");
             }
         }
     }
