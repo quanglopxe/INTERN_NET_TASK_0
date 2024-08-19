@@ -1,34 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj": {}
+    "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj": {}
   },
   "projects": {
-    "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj": {
+    "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj",
+        "projectUniqueName": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj",
         "projectName": "XuongMay_BE",
-        "projectPath": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj",
-        "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
-        "outputPath": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\obj\\",
+        "projectPath": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj",
+        "packagesPath": "C:\\Users\\Quang\\.nuget\\packages\\",
+        "outputPath": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Quang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -56,13 +49,10 @@
               "target": "Package",
               "version": "[8.0.8, )"
             },
-<<<<<<< HEAD
-=======
             "Microsoft.AspNetCore.Authorization": {
               "target": "Package",
               "version": "[8.0.8, )"
             },
->>>>>>> 39a587c08c33dfd20a450c48decb3a4ddd1e4745
             "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -113,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
