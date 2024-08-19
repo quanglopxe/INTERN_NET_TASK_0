@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
@@ -45,6 +46,7 @@ namespace XuongMay_BE.Controllers
 
         //Thêm mới Order
         [HttpPost]
+        //[Authorize(Roles = AppRole.Customer)]
         public IActionResult CreateOrder(OrderModel orders)
         {
             try

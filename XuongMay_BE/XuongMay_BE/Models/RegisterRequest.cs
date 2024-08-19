@@ -10,6 +10,9 @@ namespace XuongMay_BE.Models
         public string Password { get; set; }
         [Required]
         public string ConfirmPassword { get; set; }
+        [Required]
+        public string Authorities { get; set; }
+
 
     }
 }

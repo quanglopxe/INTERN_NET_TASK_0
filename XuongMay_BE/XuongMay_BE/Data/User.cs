@@ -14,6 +14,7 @@ namespace XuongMay_BE.Data
         [Required]
         public string Password { get; set; }
         [Required]
-        public string ConfirmPassword { get; set; }
+        //public string ConfirmPassword { get; set; }
+        public string Authorities { get; set; }
     }
 }

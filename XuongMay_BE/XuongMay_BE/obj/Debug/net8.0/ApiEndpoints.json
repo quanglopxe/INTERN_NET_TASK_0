@@ -733,7 +733,7 @@
   {
     "ContainingType": "XuongMay_BE.Controllers.UsersController",
     "Method": "CreateUser",
-    "RelativePath": "api/Users",
+    "RelativePath": "api/Users/CreateUser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -750,6 +750,11 @@
       },
       {
         "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Authorities",
         "Type": "System.String",
         "IsRequired": false
       }
