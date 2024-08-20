@@ -48,7 +48,7 @@ namespace XuongMay_BE.Controllers
 
         // API GET để tìm ProductionLine theo ID
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             var productionLine = await _context.ProductionLines
                 .FirstOrDefaultAsync(pl => pl.LineID == id);
@@ -78,7 +78,7 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProductionLine(int id, ProductionLine productionLine)
+        public async Task<IActionResult> UpdateProductionLine(Guid id, ProductionLine productionLine)
         {
             // Kiểm tra xem đối tượng cần cập nhật có tồn tại không
             if (id != productionLine.LineID)
@@ -107,8 +107,45 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
 
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagCategProductLine(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.ProductionLines.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var pro = await _context.ProductionLines
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = pro,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
+        }
+
         // Kiểm tra xem Production Line có tồn tại không
-        private bool ProductionLineExists(int id)
+        private bool ProductionLineExists(Guid id)
         {
             return _context.ProductionLines.Any(e => e.LineID == id);
         }

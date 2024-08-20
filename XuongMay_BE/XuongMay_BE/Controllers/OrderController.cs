@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 
@@ -15,6 +16,8 @@ namespace XuongMay_BE.Controllers
             _context = context;
         }
 
+
+        //Lấy tất cả danh sách Orders
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -22,10 +25,14 @@ namespace XuongMay_BE.Controllers
             return Ok(dsOrder);
         }
 
+
+        //Lấy Order từ ID
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)
         {
+            //Lấy Order từ ID được nhập
             Orders orderss = _context.Orders.SingleOrDefault(s => s.OrderID == id);
+            //Kiểm tra orderss có được gán giá trị vào hay không?
             if (orderss != null)
             {
                 return Ok(orderss);
@@ -36,11 +43,14 @@ namespace XuongMay_BE.Controllers
             }
         }
 
+
+        //Thêm mới Order
         [HttpPost]
         public IActionResult CreateOrder(OrderModel orders)
         {
             try
             {
+                //Gán giá trị nhập vào từng thuộc tính của order
                 var orderss = new Orders
                 {
                     OrderDate = orders.OrderDate,
@@ -60,11 +70,13 @@ namespace XuongMay_BE.Controllers
 
         }
 
-
+        //Cập nhật Order
         [HttpPut("{id}")]
         public IActionResult UpdateOrder(Guid id, OrderModel model)
         {
+            //Lấy Order từ ID được nhập
             var orderss = _context.Orders.SingleOrDefault(lo => lo.OrderID == id);
+            //Kiểm tra orderss có được gán giá trị vào hay không?
             if (orderss != null)
             {
                 orderss.OrderDate = model.OrderDate;
@@ -81,10 +93,13 @@ namespace XuongMay_BE.Controllers
             }
         }
 
+        //Xóa Order
         [HttpDelete("{id}")]
         public IActionResult DeleteOrder(Guid id)
         {
+            //Lấy Order từ ID được nhập
             var orderss = _context.Orders.SingleOrDefault(lo => lo.OrderID == id);
+            //Kiểm tra orderss có được gán giá trị vào hay không?
             if (orderss != null)
             {
                 _context.Orders.Remove(orderss);
@@ -95,6 +110,43 @@ namespace XuongMay_BE.Controllers
             {
                 return NotFound();
             }
+        }
+
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagOrder(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Orders.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var order = await _context.Orders
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = order,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
         }
 
     }

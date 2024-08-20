@@ -51,7 +51,7 @@ namespace XuongMay_BE.Controllers
 
         // API GET để tìm khách hàng theo ID
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {      
             var customer = await _context.Customers
                 .FirstOrDefaultAsync(c => c.CustomerID == id);
@@ -63,7 +63,7 @@ namespace XuongMay_BE.Controllers
             return Ok(customer); 
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCustomer(int id)
+        public async Task<IActionResult> DeleteCustomer(Guid id)
         {
             // Tìm kiếm customer theo ID
             var customer = await _context.Customers.FindAsync(id);
@@ -80,7 +80,7 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCustomer(int id, Customer customer)
+        public async Task<IActionResult> UpdateCustomer(Guid id, Customer customer)
         {
             // Kiểm tra xem ID từ URL có khớp với ID trong body không
             if (id != customer.CustomerID)
@@ -115,8 +115,44 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
 
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagCustomer(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Customers.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+            
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
 
-        private bool CustomerExists(int id)
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var cus = await _context.Customers
+                .Skip((page - 1) * pageSize) 
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = cus,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
+        }
+
+        private bool CustomerExists(Guid id)
         {
             return _context.Customers.Any(e => e.CustomerID == id);
         }

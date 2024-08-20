@@ -5,7 +5,7 @@ namespace XuongMay_BE.Models
     public class CustomerModel
     {
         [Required]
-        public int CustomerID { get; set; }
+        public Guid CustomerID { get; set; }
 
         [Required]
         [StringLength(100)]

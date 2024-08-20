@@ -26,11 +26,6 @@
     "ReturnTypes": []
   },
   {
-<<<<<<< HEAD
-    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
-    "Method": "getAll",
-    "RelativePath": "api/Employee",
-=======
     "ContainingType": "XuongMay_BE.Controllers.CategoryController",
     "Method": "GetByID",
     "RelativePath": "api/Category/{id}",
@@ -68,10 +63,46 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "XuongMay_BE.Controllers.CategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/Category/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.CategoryController",
+    "Method": "PagCategory",
+    "RelativePath": "api/Category/api/Category",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "XuongMay_BE.Controllers.CustomerController",
     "Method": "GetAll",
     "RelativePath": "api/Customer",
->>>>>>> 4aefa86d418632ebba2fedfd8ac8af66429d7c87
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -79,32 +110,20 @@
     "ReturnTypes": []
   },
   {
-<<<<<<< HEAD
-    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
-    "Method": "createEmp",
-    "RelativePath": "api/Employee",
-=======
     "ContainingType": "XuongMay_BE.Controllers.CustomerController",
     "Method": "Create",
     "RelativePath": "api/Customer",
->>>>>>> 4aefa86d418632ebba2fedfd8ac8af66429d7c87
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "model",
-<<<<<<< HEAD
-        "Type": "XuongMay_BE.Models.EmployeeModel",
-=======
         "Type": "XuongMay_BE.Models.CustomerModel",
->>>>>>> 4aefa86d418632ebba2fedfd8ac8af66429d7c87
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
-<<<<<<< HEAD
-=======
   },
   {
     "ContainingType": "XuongMay_BE.Controllers.CustomerController",
@@ -116,7 +135,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -132,7 +151,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -148,13 +167,118 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       },
       {
         "Name": "customer",
         "Type": "XuongMay_BE.Data.Customer",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.CustomerController",
+    "Method": "PagCustomer",
+    "RelativePath": "api/Customer/api/Customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
+    "Method": "getAll",
+    "RelativePath": "api/Employee",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
+    "Method": "createEmp",
+    "RelativePath": "api/Employee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "XuongMay_BE.Models.EmployeeModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
+    "Method": "GetByID",
+    "RelativePath": "api/Employee/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
+    "Method": "UpdateByID",
+    "RelativePath": "api/Employee/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "XuongMay_BE.Models.EmployeeModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.EmployeeController",
+    "Method": "PagEmployee",
+    "RelativePath": "api/Employee/api/Employee",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -203,37 +327,21 @@
   },
   {
     "ContainingType": "XuongMay_BE.Controllers.OrderDetailController",
-    "Method": "UpdateOrderDetail",
-    "RelativePath": "api/OrderDetail/{id}",
-    "HttpMethod": "PUT",
+    "Method": "PagOrderDetail",
+    "RelativePath": "api/OrderDetail/api/OrderDetail",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
       },
       {
-        "Name": "orders",
-        "Type": "XuongMay_BE.Models.OrderDetailModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "XuongMay_BE.Controllers.OrderDetailController",
-    "Method": "DeleteOrderDetail",
-    "RelativePath": "api/OrderDetail/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -318,6 +426,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "XuongMay_BE.Controllers.OrdersController",
+    "Method": "PagOrder",
+    "RelativePath": "api/Orders/api/Orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "XuongMay_BE.Controllers.ProductController",
     "Method": "GetAll",
     "RelativePath": "api/Product",
@@ -381,6 +510,43 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "XuongMay_BE.Controllers.ProductController",
+    "Method": "Delete",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.ProductController",
+    "Method": "PagProduct",
+    "RelativePath": "api/Product/api/Product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "XuongMay_BE.Controllers.ProductionLineController",
     "Method": "GetAll",
     "RelativePath": "api/ProductionLine",
@@ -416,7 +582,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -448,13 +614,118 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       },
       {
         "Name": "productionLine",
         "Type": "XuongMay_BE.Data.ProductionLine",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.ProductionLineController",
+    "Method": "PagCategProductLine",
+    "RelativePath": "api/ProductionLine/api/ProductionLine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.StageController",
+    "Method": "getAll",
+    "RelativePath": "api/Stage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.StageController",
+    "Method": "createStage",
+    "RelativePath": "api/Stage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "XuongMay_BE.Models.StageModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.StageController",
+    "Method": "GetByID",
+    "RelativePath": "api/Stage/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.StageController",
+    "Method": "UpdateByID",
+    "RelativePath": "api/Stage/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "XuongMay_BE.Models.StageModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.StageController",
+    "Method": "PagStage",
+    "RelativePath": "api/Stage/api/Stage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -495,7 +766,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -511,7 +782,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -527,7 +798,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       },
       {
@@ -537,6 +808,162 @@
       }
     ],
     "ReturnTypes": []
->>>>>>> 4aefa86d418632ebba2fedfd8ac8af66429d7c87
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.SupervisorController",
+    "Method": "PagSupervisor",
+    "RelativePath": "api/Supervisor/api/Supervisor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.TaskController",
+    "Method": "GetAll",
+    "RelativePath": "api/Task",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.TaskController",
+    "Method": "Create",
+    "RelativePath": "api/Task",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "XuongMay_BE.Models.TaskModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.TaskController",
+    "Method": "GetByID",
+    "RelativePath": "api/Task/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.TaskController",
+    "Method": "UpdateByID",
+    "RelativePath": "api/Task/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "XuongMay_BE.Models.TaskModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.TaskController",
+    "Method": "Delete",
+    "RelativePath": "api/Task/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.TaskController",
+    "Method": "PagTask",
+    "RelativePath": "api/Task/api/Task",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.UsersController",
+    "Method": "GetAll",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.UsersController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

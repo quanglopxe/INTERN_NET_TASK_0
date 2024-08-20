@@ -42,7 +42,11 @@ namespace XuongMay_BE.Controllers
             {
                 var emp = new Employee()
                 {
-                    EmpName = model.EmpName
+                    EmpID = model.EmpID,
+                    EmpName = model.EmpName,
+                    Username = model.Username,
+                    Password = model.Password,
+                    LineID = model.LineID,
                 };
                 _context.Add(emp);
                 _context.SaveChanges();
@@ -69,6 +73,44 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagEmployee(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Employees.CountAsync(); // Đếm tổng số sản phẩm
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize); // Tính tổng số trang
+
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var emp = await _context.Employees
+                .Skip((page - 1) * pageSize)  // Bỏ qua các mục không thuộc trang hiện tại
+                .Take(pageSize)               // Lấy số lượng mục trên mỗi trang
+                .ToListAsync();
+
+            var result = new
+            {
+                data = emp,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
+        }
+
 
     }
 }

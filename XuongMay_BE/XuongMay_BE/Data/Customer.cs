@@ -7,7 +7,7 @@ namespace XuongMay_BE.Data
     public class Customer
     {
         [Key]
-        public int CustomerID { get; set; }
+        public Guid CustomerID { get; set; }
 
         [Required]
         [StringLength(100)]

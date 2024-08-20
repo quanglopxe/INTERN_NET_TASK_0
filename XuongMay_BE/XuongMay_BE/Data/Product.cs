@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace XuongMay_BE.Data
@@ -11,11 +12,18 @@ namespace XuongMay_BE.Data
         [Required]
         public string ProductName { get; set; }
         [Required]
-        [Range(0,double.MaxValue)]
+        [Range(0, double.MaxValue)]
         public double Price { get; set; }
         public string? Description { get; set; }
         public Guid CategoryID { get; set; }
         [ForeignKey("CategoryID")]
         public Category Category { get; set; }
+
+        public ICollection<OrderDetail> OrderDetails { get; set; }
+
+        public Product()
+        {
+            OrderDetails = new HashSet<OrderDetail>();
+        }
     }
 }

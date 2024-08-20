@@ -48,7 +48,7 @@ namespace XuongMay_BE.Controllers
 
         // API GET để tìm Supervisor theo ID
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             var supervisor = await _context.Supervisors
                 .FirstOrDefaultAsync(s => s.SupervisorID == id);
@@ -61,7 +61,7 @@ namespace XuongMay_BE.Controllers
             return Ok(supervisor);
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteSupervisor(int id)
+        public async Task<IActionResult> DeleteSupervisor(Guid id)
         {
             // Tìm kiếm supervisor theo ID
             var supervisor = await _context.Supervisors.FindAsync(id);
@@ -78,7 +78,7 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateSupervisor(int id, Supervisor supervisor)
+        public async Task<IActionResult> UpdateSupervisor(Guid id, Supervisor supervisor)
         {
             // Kiểm tra xem đối tượng cần cập nhật có tồn tại không
             if (id != supervisor.SupervisorID)
@@ -107,8 +107,45 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
 
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagSupervisor(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Supervisors.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var sup = await _context.Supervisors
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = sup,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
+        }
+
         // Kiểm tra xem Supervisor có tồn tại không
-        private bool SupervisorExists(int id)
+        private bool SupervisorExists(Guid id)
         {
             return _context.Supervisors.Any(e => e.SupervisorID == id);
         }

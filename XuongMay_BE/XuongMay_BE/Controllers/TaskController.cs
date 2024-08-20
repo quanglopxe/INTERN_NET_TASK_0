@@ -8,10 +8,10 @@ namespace XuongMay_BE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class TaskController : ControllerBase
     {
         private readonly MyDbContext _context;
-        public ProductController(MyDbContext context)
+        public TaskController(MyDbContext context)
         {
             _context = context;
         }
@@ -19,16 +19,16 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var listProduct = _context.Products.ToList();
-            return Ok(listProduct);
+            var listTask = _context.Task.ToList();
+            return Ok(listTask);
         }
         [HttpGet("{id}")]
         public IActionResult GetByID(Guid id)
         {
-            var product = _context.Products.FirstOrDefault(ca => ca.ProductID == id);
-            if (product != null)
+            var task = _context.Task.FirstOrDefault(ca => ca.TaskID == id);
+            if (task != null)
             {
-                return Ok(product);
+                return Ok(task);
             }
             else
             {
@@ -36,20 +36,24 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Create(ProductModel model)
+        public IActionResult Create(TaskModel model)
         {
             try
             {
-                var product = new Product()
+                var task = new Data.Task()
                 {
-                    ProductName = model.ProductName,
-                    Price = model.Price,
-                    Description = model.Description,
-                    CategoryID = model.CategoryID,
+                    OrderID = model.OrderID,
+                    StageID = model.StageID,
+                    AssignedTo = model.AssignedTo,
+                    AssignedBy = model.AssignedBy,
+                    Status = model.Status,
+                    StartTime = model.StartTime,
+                    EndTime = model.EndTime,
+                    Remarks = model.Remarks,
                 };
-                _context.Add(product);
+                _context.Add(task);
                 _context.SaveChanges();
-                return Ok(product);
+                return Ok(task);
             }
             catch
             {
@@ -57,15 +61,20 @@ namespace XuongMay_BE.Controllers
             }
         }
         [HttpPut("{id}")]
-        public IActionResult UpdateByID(Guid id, ProductModel model)
+        public IActionResult UpdateByID(Guid id, TaskModel model)
         {
-            var product = _context.Products.FirstOrDefault(ca => ca.ProductID == id);
-            if (product != null)
+            var task = _context.Task.FirstOrDefault(ca => ca.TaskID == id);
+            if (task != null)
             {
-                product.ProductName = model.ProductName;
-                product.Price = model.Price;
-                product.Description = model.Description;
-                product.CategoryID = model.CategoryID;
+                task.OrderID = model.OrderID;
+                task.StageID = model.StageID;
+                task.AssignedTo = model.AssignedTo;
+                task.AssignedBy = model.AssignedBy;
+                task.Status = model.Status;
+                task.StartTime = model.StartTime;
+                task.EndTime = model.EndTime;
+                task.Remarks = model.Remarks;
+
                 _context.SaveChanges();
                 return NoContent();
             }
@@ -77,25 +86,25 @@ namespace XuongMay_BE.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            // Tìm kiếm product theo ID
-            var product = await _context.Products.FindAsync(id);
+            // Tìm kiếm task theo ID
+            var task = await _context.Task.FindAsync(id);
 
-            if (product == null)
+            if (task == null)
             {
                 return NotFound();
             }
 
             // Xóa customer
-            _context.Products.Remove(product);
+            _context.Task.Remove(task);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
         [HttpGet("api/[controller]")]
-        public async Task<IActionResult> PagProduct(int page = 1, int pageSize = 10)
+        public async Task<IActionResult> PagTask(int page = 1, int pageSize = 10)
         {
-            var totalItems = await _context.Products.CountAsync();
+            var totalItems = await _context.Task.CountAsync();
             var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
 
             if (page > totalPages)
@@ -109,14 +118,14 @@ namespace XuongMay_BE.Controllers
                 totalPages = 1;
             }
 
-            var pro = await _context.Products
+            var task = await _context.Task
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
 
             var result = new
             {
-                data = pro,
+                data = task,
                 pagination = new
                 {
                     currentPage = page,

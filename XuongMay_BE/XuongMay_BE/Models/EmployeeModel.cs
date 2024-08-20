@@ -5,11 +5,16 @@ namespace XuongMay_BE.Models
     public class EmployeeModel
     {
         [Required]
+        public Guid EmpID { get; set; }
+
+        [Required]
+        [StringLength(100)]
         public string EmpName { get; set; }
-        [Required]
+
         public string Username { get; set; }
-        [Required]
+
         public string Password { get; set; }
+        public Guid LineID { get; set; }
 
     }
 }
