@@ -150,8 +150,8 @@
         "IsRequired": true
       },
       {
-        "Name": "customer",
-        "Type": "XuongMay_BE.Data.Customer",
+        "Name": "model",
+        "Type": "XuongMay_BE.Models.CustomerModel",
         "IsRequired": true
       }
     ],
@@ -472,7 +472,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -492,8 +492,8 @@
         "IsRequired": true
       },
       {
-        "Name": "productionLine",
-        "Type": "XuongMay_BE.Data.ProductionLine",
+        "Name": "model",
+        "Type": "XuongMay_BE.Models.ProductionLineModel",
         "IsRequired": true
       }
     ],
@@ -634,8 +634,8 @@
         "IsRequired": true
       },
       {
-        "Name": "supervisor",
-        "Type": "XuongMay_BE.Data.Supervisor",
+        "Name": "model",
+        "Type": "XuongMay_BE.Models.SupervisorModel",
         "IsRequired": true
       }
     ],

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace XuongMay_BE.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Supervisor")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductionLineController : ControllerBase

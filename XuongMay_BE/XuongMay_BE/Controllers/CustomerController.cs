@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
-    
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase

@@ -7,7 +7,7 @@ using XuongMay_BE.Models;
 
 namespace XuongMay_BE.Controllers
 {
-    [Authorize(Roles = "User")]
+    [Authorize(Roles = "Supervisor")]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderDetailController : ControllerBase

@@ -5,10 +5,10 @@ namespace XuongMay_BE.Data
 {
     public enum UserRole
     {
-        Supervisor,
-        Employee,
-        Customer,
-        Admin
+        Supervisor = 1,
+        Employee = 2,
+        Customer = 3,
+        Admin = 0
     }
     [Table("User")]
     public class User

@@ -105,7 +105,7 @@ namespace XuongMay_BE.Controllers
 
                 // Cập nhật thông tin Supervisor
                 supervisor.SupervisorName = model.SupervisorName;
-                supervisor.LineID = model.LineID;
+                //supervisor.LineID = model.LineID;
 
                 // Lưu thay đổi vào cơ sở dữ liệu
                 await _context.SaveChangesAsync();

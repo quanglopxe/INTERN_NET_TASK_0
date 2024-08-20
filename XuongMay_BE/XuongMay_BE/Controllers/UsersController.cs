@@ -48,6 +48,7 @@ namespace XuongMay_BE.Controllers
                     Name = model.Name,
                     UserName = model.UserName,
                     Password = model.Password,
+                    ConfirmPassword = model.ConfirmPassword,
                     Role = model.Role,
                 };
                 var dsUser = _context.Users.Where(x => x.UserName == newbie.UserName).FirstOrDefault();
