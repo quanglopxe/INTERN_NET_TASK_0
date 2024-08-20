@@ -51,7 +51,8 @@ namespace XuongMay_BE.Controllers
                     CustomerID = model.CustomerID,
                     CustomerName = model.CustomerName,
                     Phone = model.Phone,
-                    Address = model.Address
+                    Address = model.Address,
+                    UserID = model.UserID,
                 };
                 _context.Customers.Add(customer);
                 _context.SaveChanges();
