@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace XuongMay_BE.Migrations
 {
     /// <inheritdoc />
-    public partial class initTable : Migration
+    public partial class test : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -29,7 +29,7 @@ namespace XuongMay_BE.Migrations
                 {
                     StageID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     StageName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Sequence = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -45,7 +45,6 @@ namespace XuongMay_BE.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ConfirmPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -82,7 +81,7 @@ namespace XuongMay_BE.Migrations
                     CustomerName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Address = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    UserID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    UserID = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -91,8 +90,7 @@ namespace XuongMay_BE.Migrations
                         name: "FK_Customer_User_UserID",
                         column: x => x.UserID,
                         principalTable: "User",
-                        principalColumn: "UserID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "UserID");
                 });
 
             migrationBuilder.CreateTable(
@@ -101,7 +99,7 @@ namespace XuongMay_BE.Migrations
                 {
                     SupervisorID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SupervisorName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    UserID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    UserID = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -110,8 +108,7 @@ namespace XuongMay_BE.Migrations
                         name: "FK_Supervisor_User_UserID",
                         column: x => x.UserID,
                         principalTable: "User",
-                        principalColumn: "UserID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "UserID");
                 });
 
             migrationBuilder.CreateTable(
@@ -194,7 +191,7 @@ namespace XuongMay_BE.Migrations
                     EmpID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     EmpName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LineID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     ProductionLinesLineID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
@@ -210,8 +207,7 @@ namespace XuongMay_BE.Migrations
                         name: "FK_Employee_User_UserID",
                         column: x => x.UserID,
                         principalTable: "User",
-                        principalColumn: "UserID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "UserID");
                 });
 
             migrationBuilder.CreateTable(
