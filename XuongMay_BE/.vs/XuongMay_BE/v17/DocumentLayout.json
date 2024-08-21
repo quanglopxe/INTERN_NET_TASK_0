@@ -83,16 +83,8 @@
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240821090806_update_Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:XuongMay_BE\\Migrations\\20240821090806_update_Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\data\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\data\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240821085556_update_Emp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:XuongMay_BE\\Migrations\\20240821085556_update_Emp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\data\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -183,6 +175,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\migrations\\20240821044156_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\migrations\\20240821044156_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\migrations\\20240821090806_update_order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\migrations\\20240821090806_update_order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\migrations\\20240821085556_update_emp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\migrations\\20240821085556_update_emp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -204,8 +204,7 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\TaskController.cs",
               "ViewState": "AQIAAEUAAAAAAAAAAAAqwFYAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.802Z"
             },
             {
               "$type": "Document",
@@ -217,8 +216,7 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\Task.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAEwCIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.802Z"
             },
             {
               "$type": "Document",
@@ -230,8 +228,7 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\User.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAAABgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.849Z"
             },
             {
               "$type": "Document",
@@ -243,8 +240,7 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\MyDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAiwAoAAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.802Z"
             },
             {
               "$type": "Document",
@@ -256,8 +252,7 @@
               "RelativeToolTip": "XuongMay_BE\\Program.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAqwDIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.786Z"
             },
             {
               "$type": "Document",
@@ -269,8 +264,7 @@
               "RelativeToolTip": "XuongMay_BE\\Models\\OrderDetailModel.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAwwAcAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.833Z"
             },
             {
               "$type": "Document",
@@ -282,8 +276,7 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\OrderDetailController.cs",
               "ViewState": "AQIAADYAAAAAAAAAAAAqwEMAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.786Z"
             },
             {
               "$type": "Document",
@@ -308,8 +301,7 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\Supervisor.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAApwBQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.786Z"
             },
             {
               "$type": "Document",
@@ -321,8 +313,7 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\UsersController.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAuwFsAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.88Z"
             },
             {
               "$type": "Document",
@@ -334,8 +325,7 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\OrderController.cs",
               "ViewState": "AQIAADsAAAAAAAAAAAAcwGMAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.896Z"
             },
             {
               "$type": "Document",
@@ -347,8 +337,7 @@
               "RelativeToolTip": "XuongMay_BE\\Models\\TaskModel.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.818Z"
             },
             {
               "$type": "Document",
@@ -360,8 +349,7 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\OrderDetail.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.833Z"
             },
             {
               "$type": "Document",
@@ -373,8 +361,7 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\SupervisorController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAYwFMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.88Z"
             },
             {
               "$type": "Document",
@@ -386,8 +373,7 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\StageController.cs",
               "ViewState": "AQIAADwAAAAAAAAAAAAAADoAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:56:28.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:56:28.995Z"
             },
             {
               "$type": "Document",
@@ -399,8 +385,7 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\ProductionLineController.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAAAkwFIAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T07:04:49.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T07:04:49.73Z"
             },
             {
               "$type": "Document",
@@ -412,8 +397,7 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\ProductController.cs",
               "ViewState": "AQIAAE4AAAAAAAAAAAAowGEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T09:25:01.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T09:25:01.468Z"
             },
             {
               "$type": "Document",
@@ -425,8 +409,7 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\EmployeeController.cs",
               "ViewState": "AQIAAGUAAAAAAAAAAAAswDwAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.927Z"
             },
             {
               "$type": "Document",
@@ -438,12 +421,11 @@
               "RelativeToolTip": "XuongMay_BE\\Controllers\\CustomerController.cs",
               "ViewState": "AQIAAGgAAAAAAAAAAAAswFQAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.911Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "Orders.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Orders.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Orders.cs",
@@ -451,12 +433,11 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\Orders.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAQwBsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.896Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 22,
               "Title": "ProductionLine.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\ProductionLine.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Data\\ProductionLine.cs",
@@ -464,8 +445,7 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\ProductionLine.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAuwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.88Z"
             },
             {
               "$type": "Document",
@@ -477,12 +457,11 @@
               "RelativeToolTip": "XuongMay_BE\\Models\\OrderModel.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.896Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "Employee.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Employee.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Employee.cs",
@@ -490,12 +469,11 @@
               "RelativeToolTip": "XuongMay_BE\\Data\\Employee.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAA+wBIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.818Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 23,
               "Title": "SupervisorModel.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\SupervisorModel.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Models\\SupervisorModel.cs",
@@ -503,12 +481,11 @@
               "RelativeToolTip": "XuongMay_BE\\Models\\SupervisorModel.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.865Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 44,
               "Title": "20240821090806_update_Order.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240821090806_update_Order.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240821090806_update_Order.cs",
@@ -516,12 +493,11 @@
               "RelativeToolTip": "XuongMay_BE\\Migrations\\20240821090806_update_Order.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T09:08:06.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T09:08:06.25Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 45,
               "Title": "20240821085556_update_Emp.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240821085556_update_Emp.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240821085556_update_Emp.cs",
@@ -529,12 +505,11 @@
               "RelativeToolTip": "XuongMay_BE\\Migrations\\20240821085556_update_Emp.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T08:55:56.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T08:55:56.439Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 24,
               "Title": "EmployeeModel.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\EmployeeModel.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Models\\EmployeeModel.cs",
@@ -542,12 +517,11 @@
               "RelativeToolTip": "XuongMay_BE\\Models\\EmployeeModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.865Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 25,
               "Title": "CustomerModel.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\CustomerModel.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Models\\CustomerModel.cs",
@@ -555,12 +529,11 @@
               "RelativeToolTip": "XuongMay_BE\\Models\\CustomerModel.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAAwBEAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T17:21:48.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T17:21:48.865Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 26,
               "Title": "Customer.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Customer.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Customer.cs",
@@ -572,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 43,
               "Title": "20240821044156_test.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240821044156_test.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240821044156_test.cs",
@@ -584,7 +557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 27,
               "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
@@ -594,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 28,
               "Title": "appsettings.json",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\appsettings.json",
               "RelativeDocumentMoniker": "XuongMay_BE\\appsettings.json",
@@ -606,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 29,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -616,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 30,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Models\\RegisterRequest.cs",
@@ -628,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 39,
               "Title": "20240819155259_initDB.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240819155259_initDB.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240819155259_initDB.cs",
@@ -640,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 31,
               "Title": "20240819155149_initDB.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240819155149_initDB.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240819155149_initDB.cs",
@@ -652,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 32,
               "Title": "20240819152751_initDB.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240819152751_initDB.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240819152751_initDB.cs",
@@ -664,7 +637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 33,
               "Title": "20240819152652_initDB.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240819152652_initDB.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240819152652_initDB.cs",
@@ -676,7 +649,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 34,
               "Title": "20240819152112_initDB.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240819152112_initDB.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240819152112_initDB.cs",
@@ -688,7 +661,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 35,
               "Title": "20240819151707_initDB.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240819151707_initDB.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240819151707_initDB.cs",
@@ -700,7 +673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 36,
               "Title": "20240819151016_update_UserTable_To_DB.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240819151016_update_UserTable_To_DB.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240819151016_update_UserTable_To_DB.cs",
@@ -712,7 +685,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 40,
               "Title": "Product.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Product.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Product.cs",
@@ -724,7 +697,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 37,
               "Title": "20240819132032_updateDB.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240819132032_updateDB.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240819132032_updateDB.cs",
@@ -736,7 +709,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 41,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\LoginRequest.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Models\\LoginRequest.cs",
@@ -748,7 +721,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 38,
               "Title": "20240819084531_update_Employee.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Migrations\\20240819084531_update_Employee.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Migrations\\20240819084531_update_Employee.cs",
@@ -759,7 +732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 42,
               "Title": "AppSettings.cs",
               "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\AppSettings.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Models\\AppSettings.cs",
