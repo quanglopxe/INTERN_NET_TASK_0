@@ -61,7 +61,7 @@ namespace XuongMay_BE.Controllers
                     {
                         _context.Add(newbie);
                         _context.SaveChanges();
-                        return Ok(newbie);
+                        return StatusCode(StatusCodes.Status201Created, newbie);
                     }
                     else
                     {
@@ -75,7 +75,7 @@ namespace XuongMay_BE.Controllers
             }
             catch
             {
-                return BadRequest();
+                return StatusCode(StatusCodes.Status500InternalServerError, "Đã xảy ra lỗi khi tạo người dùng.");  // 500 Internal Server Error
             }
 
         }
@@ -133,7 +133,7 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return NotFound();
+                return NotFound("Không tìm thấy người dùng với ID này.");  // 404 Not Found
             }
         }
         [HttpGet("api/[controller]")]
