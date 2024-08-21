@@ -18,5 +18,8 @@ namespace XuongMay_BE.Data
 
         [StringLength(255)]
         public string? Address { get; set; }
+        public Guid? UserID { get; set; }
+        [ForeignKey("UserID")]
+        public User Users { get; set; }
     }
 }

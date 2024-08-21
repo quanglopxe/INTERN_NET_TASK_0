@@ -4,9 +4,11 @@ using XuongMay_BE.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
@@ -114,13 +116,12 @@ namespace XuongMay_BE.Controllers
 
             return NoContent();
         }
-
         [HttpGet("api/[controller]")]
         public async Task<IActionResult> PagCustomer(int page = 1, int pageSize = 10)
         {
             var totalItems = await _context.Customers.CountAsync();
             var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
-            
+
             if (page > totalPages)
             {
                 page = totalPages;
@@ -133,7 +134,7 @@ namespace XuongMay_BE.Controllers
             }
 
             var cus = await _context.Customers
-                .Skip((page - 1) * pageSize) 
+                .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
 
@@ -156,5 +157,6 @@ namespace XuongMay_BE.Controllers
         {
             return _context.Customers.Any(e => e.CustomerID == id);
         }
+
     }
 }

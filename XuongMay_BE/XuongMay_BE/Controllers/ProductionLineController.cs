@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
@@ -6,6 +7,7 @@ using XuongMay_BE.Models;
 
 namespace XuongMay_BE.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductionLineController : ControllerBase
@@ -106,7 +108,6 @@ namespace XuongMay_BE.Controllers
 
             return NoContent();
         }
-
         [HttpGet("api/[controller]")]
         public async Task<IActionResult> PagCategProductLine(int page = 1, int pageSize = 10)
         {
@@ -143,7 +144,6 @@ namespace XuongMay_BE.Controllers
 
             return Ok(result);
         }
-
         // Kiểm tra xem Production Line có tồn tại không
         private bool ProductionLineExists(Guid id)
         {

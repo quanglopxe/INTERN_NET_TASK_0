@@ -3,12 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 
 namespace XuongMay_BE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class EmployeeController : ControllerBase
     {
         private readonly MyDbContext _context;
@@ -42,11 +45,7 @@ namespace XuongMay_BE.Controllers
             {
                 var emp = new Employee()
                 {
-                    EmpID = model.EmpID,
-                    EmpName = model.EmpName,
-                    Username = model.Username,
-                    Password = model.Password,
-                    LineID = model.LineID,
+                    EmpName = model.EmpName
                 };
                 _context.Add(emp);
                 _context.SaveChanges();
@@ -73,7 +72,6 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
-
         [HttpGet("api/[controller]")]
         public async Task<IActionResult> PagEmployee(int page = 1, int pageSize = 10)
         {
@@ -110,7 +108,5 @@ namespace XuongMay_BE.Controllers
 
             return Ok(result);
         }
-
-
     }
 }

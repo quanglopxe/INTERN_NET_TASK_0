@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
@@ -6,6 +7,7 @@ using XuongMay_BE.Models;
 
 namespace XuongMay_BE.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class SupervisorController : ControllerBase
@@ -33,8 +35,7 @@ namespace XuongMay_BE.Controllers
             {
                 var supervisor = new Supervisor()
                 {
-                    SupervisorName = model.SupervisorName,
-                    LineID = model.LineID
+                    SupervisorName = model.SupervisorName,                    
                 };
                 _context.Supervisors.Add(supervisor);
                 _context.SaveChanges();
@@ -143,7 +144,6 @@ namespace XuongMay_BE.Controllers
 
             return Ok(result);
         }
-
         // Kiểm tra xem Supervisor có tồn tại không
         private bool SupervisorExists(Guid id)
         {

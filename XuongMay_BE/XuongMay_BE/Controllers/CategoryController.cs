@@ -1,13 +1,16 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace XuongMay_BE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    [Authorize(Roles = "Admin")]
     public class CategoryController : ControllerBase
     {
         private readonly MyDbContext _context;
@@ -85,11 +88,10 @@ namespace XuongMay_BE.Controllers
 
             return NoContent();
         }
-
         [HttpGet("api/[controller]")]
         public async Task<IActionResult> PagCategory(int page = 1, int pageSize = 10)
         {
-            var totalItems = await _context.Categories.CountAsync(); 
+            var totalItems = await _context.Categories.CountAsync();
             var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
 
             // Đảm bảo không vượt quá số trang tối đa

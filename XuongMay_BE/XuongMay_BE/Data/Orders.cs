@@ -27,7 +27,7 @@ namespace XuongMay_BE.Data
         public int TotalQuantity { get; set; }
 
         [MaxLength(100)]
-        public string Status { get; set; }
+        public Statuss Status { get; set; }
 
         [Required]
         public DateTime DeliveryDate { get; set; }

@@ -3,7 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace XuongMay_BE.Data
 {
-    [Table("Task")]
+    public enum Status
+    {
+        New = 0, Doing = 1, Complete = 2, Cancel = -1
+    }    
     public class Task
     {
         [Key]
@@ -16,20 +19,20 @@ namespace XuongMay_BE.Data
         [ForeignKey("StageID")]
         public Stage Stages { get; set; }
 
-        public Guid AssignedTo { get; set; }
+        public Guid EmpID { get; set; }
         [ForeignKey("EmpID")]
         public Employee Employees { get; set; }
 
-        public Guid AssignedBy { get; set; }
+        public Guid SupervisorID { get; set; }
         [ForeignKey("SupervisorID")]
         public Supervisor Supervisors { get; set; }
 
         [Required]
-        public string Status { get; set; }
+        public Status Status { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         
-        public string Remarks { get; set; }
+        public string? Remarks { get; set; }
 
 
     }

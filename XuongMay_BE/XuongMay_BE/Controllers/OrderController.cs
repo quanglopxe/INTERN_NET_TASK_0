@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace XuongMay_BE.Controllers
 {
+    [Authorize(Roles = "User")]
     [Route("api/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
@@ -31,7 +34,7 @@ namespace XuongMay_BE.Controllers
         public IActionResult GetById(Guid id)
         {
             //Lấy Order từ ID được nhập
-            Orders orderss = _context.Orders.SingleOrDefault(s => s.OrderID == id);
+            var orderss = _context.Orders.SingleOrDefault(s => s.OrderID == id);
             //Kiểm tra orderss có được gán giá trị vào hay không?
             if (orderss != null)
             {
@@ -57,7 +60,7 @@ namespace XuongMay_BE.Controllers
                     CustomerID = orders.CustomerID,
                     DeliveryDate = orders.DeliveryDate,
                     TotalQuantity = orders.TotalQuantity,
-                    Status = orders.Status
+                    Status = (Data.Statuss)orders.Status
                 };
                 _context.Add(orderss);
                 _context.SaveChanges();
@@ -111,7 +114,6 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
-
         [HttpGet("api/[controller]")]
         public async Task<IActionResult> PagOrder(int page = 1, int pageSize = 10)
         {

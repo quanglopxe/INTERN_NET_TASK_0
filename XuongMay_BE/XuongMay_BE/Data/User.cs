@@ -1,19 +1,28 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace XuongMay_BE.Data
 {
+    public enum UserRole
+    {
+        Supervisor = 0,
+        Employee = 1,
+        Customer = 2,
+        Admin = 3
+    }
     [Table("User")]
     public class User
     {
         [Key]
         public Guid UserID { get; set; }
         [Required]
+        public string Name { get; set; }
+        [Required]
         public string UserName { get; set; }
         [Required]
-        public string Password { get; set; }
+        public string Password { get; set; }        
         [Required]
-        public string ConfirmPassword { get; set; }
+        public UserRole Role { get; set; }
+
     }
 }

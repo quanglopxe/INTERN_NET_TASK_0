@@ -9,13 +9,12 @@ namespace XuongMay_BE.Data
         [Key]
         public Guid EmpID { get; set; }
         [Required]
-        [StringLength(100)]
         public string EmpName { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-
         public Guid LineID { get; set; }
         [ForeignKey("LineID")]
+        public Guid? UserID { get; set; }
+        [ForeignKey("UserID")]
+        public User Users { get; set; }
         public ProductionLine ProductionLines {  get; set; }
 
         public ICollection<Task> Tasks { get; set; }
