@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace XuongMay_BE.Controllers
@@ -18,15 +19,8 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult getAll()
         {
-            try
-            {
-                var lstStage = _context.Stage.ToList();
-                return Ok(lstStage);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving stages: {ex.Message}");
-            }
+            var lstStage = _context.Stage.ToList();
+            return Ok(lstStage);
         }
 
         [HttpGet("{id}")]
@@ -39,18 +33,13 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return NotFound($"Stage with ID {id} not found.");
+                return NotFound();
             }
         }
 
         [HttpPost]
         public IActionResult createStage(StageModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             try
             {
                 var stage = new Stage()
@@ -65,18 +54,13 @@ namespace XuongMay_BE.Controllers
             }
             catch
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while creating the stage");
+                return BadRequest();
             }
         }
 
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, StageModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             var stage = _context.Stage.FirstOrDefault(st => st.StageID == id);
             if (stage != null)
             {
@@ -86,8 +70,45 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while updating the stage");
+                return NotFound();
             }
+        }
+
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagStage(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Stage.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var stage = await _context.Stage
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = stage,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
         }
     }
 }

@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "szkjOXN5UqZP7IE0/R/9VmQTovw1P4Nhgsw9vLEMh6JHjcxKEqtmtK9gCelGpweDA6YU4D2bFEmzu8P5jjbspw==",
+=======
+  "dgSpecHash": "LnAhJuhXIEQqUm7wJdOFDvnfIvflqFlHgJNBYYVU+92KO5ZNTcpfwn41MsCWgQ5jUFthl5B5R1Ni3GLombzRjQ==",
+>>>>>>> c546b0891882ea161b57e5681ad5925086ff2647
   "success": true,
   "projectFilePath": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\Desktop\\Trung\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj",
   "expectedPackageFiles": [

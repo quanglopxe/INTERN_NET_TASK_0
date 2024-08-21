@@ -4,13 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace XuongMay_BE.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Supervisor, Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductionLineController : ControllerBase
@@ -22,22 +19,15 @@ namespace XuongMay_BE.Controllers
             _context = context;
         }
 
-        // API GET để lấy toàn bộ ProductionLine 
+        // API GET để tìm toàn bộ ProductionLine 
         [HttpGet]
         public IActionResult GetAll()
         {
-            try
-            {
-                var listProductionLine = _context.ProductionLines.ToList();
-                return Ok(listProductionLine);
-            }
-            catch
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving production lines.");
-            }
+            var listProductionLine = _context.ProductionLines.ToList();
+            return Ok(listProductionLine);
         }
 
-        // API POST để tạo ProductionLine mới
+        // API PoST để tạo ProductionLine mới
         [HttpPost]
         public IActionResult Create(ProductionLineModel model)
         {
@@ -50,11 +40,11 @@ namespace XuongMay_BE.Controllers
                 };
                 _context.ProductionLines.Add(productionLine);
                 _context.SaveChanges();
-                return StatusCode(StatusCodes.Status201Created, productionLine); 
+                return Ok(productionLine);
             }
             catch
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while creating the production line.");
+                return BadRequest();
             }
         }
 
@@ -62,91 +52,103 @@ namespace XuongMay_BE.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
-            try
-            {
-                var productionLine = await _context.ProductionLines
-                    .FirstOrDefaultAsync(pl => pl.LineID == id);
+            var productionLine = await _context.ProductionLines
+                .FirstOrDefaultAsync(pl => pl.LineID == id);
 
-                if (productionLine == null)
-                {
-                    return NotFound($"Production line with ID {id} not found.");
-                }
-
-                return Ok(productionLine);
-            }
-            catch
+            if (productionLine == null)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving the production line.");
+                return NotFound();
             }
+
+            return Ok(productionLine);
         }
-
-        // API DELETE để xóa ProductionLine theo ID
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProductionLine(Guid id)
+        public async Task<IActionResult> DeleteProductionLine(int id)
         {
-            try
+            // Tìm kiếm production line theo ID
+            var productionLine = await _context.ProductionLines.FindAsync(id);
+
+            if (productionLine == null)
             {
-                var productionLine = await _context.ProductionLines.FindAsync(id);
-
-                if (productionLine == null)
-                {
-                    return NotFound($"Production line with ID {id} not found."); // 404 Not Found
-                }
-
-                _context.ProductionLines.Remove(productionLine);
-                await _context.SaveChangesAsync();
-
-                return NoContent();
+                return NotFound();
             }
-            catch
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while deleting the production line.");
-            }
+
+            // Xóa production line
+            _context.ProductionLines.Remove(productionLine);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
-
-        // API PUT để cập nhật ProductionLine theo ID
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProductionLine(Guid id, ProductionLineModel model)
+        public async Task<IActionResult> UpdateProductionLine(Guid id, ProductionLine productionLine)
         {
+            // Kiểm tra xem đối tượng cần cập nhật có tồn tại không
+            if (id != productionLine.LineID)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(productionLine).State = EntityState.Modified;
+
             try
             {
-                var productionLine = await _context.ProductionLines.FirstOrDefaultAsync(pl => pl.LineID == id);
-
-                if (productionLine == null)
-                {
-                    return NotFound($"Production line with ID {id} not found."); 
-                }
-
-                productionLine.LineName = model.LineName;
-                productionLine.SupervisorID = model.SupervisorID;
-
-                _context.Entry(productionLine).State = EntityState.Modified;
-
                 await _context.SaveChangesAsync();
-
-                return NoContent(); 
             }
             catch (DbUpdateConcurrencyException)
             {
                 if (!ProductionLineExists(id))
                 {
-                    return NotFound($"Production line with ID {id} not found."); 
+                    return NotFound();
                 }
                 else
                 {
-                    return StatusCode(StatusCodes.Status500InternalServerError, "A concurrency error occurred while updating the production line.");
+                    throw;
                 }
             }
-            catch
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while updating the production line.");
-            }
-        }
 
+            return NoContent();
+        }
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagCategProductLine(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.ProductionLines.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var pro = await _context.ProductionLines
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = pro,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
+        }
         // Kiểm tra xem Production Line có tồn tại không
         private bool ProductionLineExists(Guid id)
         {
             return _context.ProductionLines.Any(e => e.LineID == id);
         }
+
     }
 }

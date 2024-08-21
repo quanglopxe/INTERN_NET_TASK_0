@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace XuongMay_BE.Controllers
@@ -21,15 +22,8 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            try
-            {
-                var listProduct = _context.Products.ToList();
-                return Ok(listProduct);
-            }
-            catch
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving production lines.");
-            }
+            var listProduct = _context.Products.ToList();
+            return Ok(listProduct);
         }
         [HttpGet("{id}")]
         public IActionResult GetByID(Guid id)
@@ -41,7 +35,7 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return NotFound($"Product with ID {id} not found.");
+                return NotFound();
             }
         }
         [HttpPost]
@@ -62,7 +56,7 @@ namespace XuongMay_BE.Controllers
             }
             catch
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while creating product.");
+                return BadRequest();
             }
         }
         [HttpPut("{id}")]
@@ -80,20 +74,18 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return NotFound($"Product with ID {id} not found.");
+                return NotFound();
             }
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            try
-            {
             // Tìm kiếm product theo ID
             var product = await _context.Products.FindAsync(id);
 
             if (product == null)
             {
-                return NotFound($"Product with ID {id} not found.");
+                return NotFound();
             }
 
             // Xóa customer
@@ -101,12 +93,42 @@ namespace XuongMay_BE.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagProduct(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Products.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
 
-            }
-            catch    
+            if (page > totalPages)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while deleting the product:");
+                page = totalPages;
             }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var pro = await _context.Products
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = pro,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
         }
     }
 }

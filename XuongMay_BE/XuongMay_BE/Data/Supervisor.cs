@@ -13,7 +13,7 @@ namespace XuongMay_BE.Data
         [StringLength(100)]
         public string SupervisorName { get; set; }
 
-        public Guid UserID { get; set; }
+        public Guid? UserID { get; set; }
         [ForeignKey("UserID")]
         public User Users { get; set; }
 

@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace XuongMay_BE.Controllers
 {
@@ -22,34 +22,20 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            try
-            {
-                var listCategory = _context.Categories.ToList();
-                return Ok(listCategory);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving categories: {ex.Message}");
-            }
+            var listCategory = _context.Categories.ToList();
+            return Ok(listCategory);
         }
         [HttpGet("{id}")]
         public IActionResult GetByID(Guid id)
         {
-            try
+            var category = _context.Categories.FirstOrDefault(ca => ca.CategoryID == id);
+            if (category != null)
             {
-                var category = _context.Categories.FirstOrDefault(ca => ca.CategoryID == id);
-                if (category != null)
-                {
-                    return Ok(category);
-                }
-                else
-                {
-                    return NotFound($"Category with ID {id} not found.");
-                }
+                return Ok(category);
             }
-            catch (Exception ex)
+            else
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving the category: {ex.Message}");
+                return NotFound();
             }
         }
         [HttpPost]
@@ -63,58 +49,82 @@ namespace XuongMay_BE.Controllers
                 };
                 _context.Add(category);
                 _context.SaveChanges();
-                return CreatedAtAction(nameof(GetByID), new { id = category.CategoryID }, category);
+                return Ok(category);
             }
-            catch (DbUpdateException ex)
+            catch
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while creating the category: {ex.Message}");
+                return BadRequest();
             }
         }
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, CategoryModel model)
         {
-            try
+            var category = _context.Categories.FirstOrDefault(ca => ca.CategoryID == id);
+            if (category != null)
             {
-                var category = _context.Categories.FirstOrDefault(ca => ca.CategoryID == id);
-                if (category != null)
-                {
-                    category.CategoryName = model.CategoryName;
-                    _context.SaveChanges();
-                    return NoContent();
-                }
-                else
-                {
-                    return NotFound($"Category with ID {id} not found.");
-                }
+                category.CategoryName = model.CategoryName;
+                _context.SaveChanges();
+                return NoContent();
             }
-            catch (DbUpdateException ex)
+            else
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while updating the category: {ex.Message}");
+                return NotFound();
             }
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            try
-            {
             // Tìm kiếm category theo ID
             var category = await _context.Categories.FindAsync(id);
 
             if (category == null)
             {
-                return NotFound($"Category with ID {id} not found.");
+                return NotFound();
             }
 
             // Xóa customer
             _context.Categories.Remove(category);
             await _context.SaveChangesAsync();
-                 return Ok("Category deleted successfully.");
-            }
-            catch
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while deleting the category");
 
+            return NoContent();
+        }
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagCategory(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Categories.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+            // Đảm bảo không vượt quá số trang tối đa
+            if (page > totalPages)
+            {
+                page = totalPages;
             }
+
+            // trường hợp không có sản phẩm
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var cat = await _context.Categories
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = cat,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
         }
     }
 }

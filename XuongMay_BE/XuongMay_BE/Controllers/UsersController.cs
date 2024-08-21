@@ -45,9 +45,11 @@ namespace XuongMay_BE.Controllers
                 //Gán giá trị nhập vào từng thuộc tính của order
                 var newbie = new User()
                 {
+                    UserID = Guid.NewGuid(),
                     Name = model.Name,
                     UserName = model.UserName,
                     Password = model.Password,
+                    ConfirmPassword = model.ConfirmPassword,
                     Role = model.Role,
                 };
                 var dsUser = _context.Users.Where(x => x.UserName == newbie.UserName).FirstOrDefault();
@@ -124,8 +126,7 @@ namespace XuongMay_BE.Controllers
             {
                 user.Name = model.Name;
                 user.UserName = model.UserName;
-                user.Password = model.Password;
-                user.ConfirmPassword = model.ConfirmPassword;
+                user.Password = model.Password;                
                 user.Role = model.Role;
                 _context.SaveChanges();
                 return NoContent();
@@ -134,6 +135,42 @@ namespace XuongMay_BE.Controllers
             {
                 return NotFound("Không tìm thấy người dùng với ID này.");  // 404 Not Found
             }
+        }
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagUser(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Users.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var task = await _context.Users
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = task,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
         }
 
     }

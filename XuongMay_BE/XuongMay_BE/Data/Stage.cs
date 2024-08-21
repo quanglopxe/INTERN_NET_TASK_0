@@ -7,8 +7,8 @@ namespace XuongMay_BE.Data
         [Key]
         public Guid StageID { get; set; }
         [Required]
-        public string? StageName { get; set; }
-        public string? Description { get; set; }
+        public string StageName { get; set; }
+        public string Description { get; set; }
         public int Sequence { get; set; }
         public ICollection<Task> Tasks { get; set; }
 
