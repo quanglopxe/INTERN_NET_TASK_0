@@ -7,7 +7,9 @@ namespace XuongMay_BE.Models
         [Required]
         public string EmpName { get; set; }
         [Required]
-        public Guid UserID { get; set; }
+        public Guid LineID { get; set; }
+        [Required]
+        public Guid? UserID { get; set; }
 
     }
 }
