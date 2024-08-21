@@ -327,6 +327,27 @@
   },
   {
     "ContainingType": "XuongMay_BE.Controllers.OrderDetailController",
+    "Method": "UpdateOrderDetail",
+    "RelativePath": "api/OrderDetail/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "orders",
+        "Type": "XuongMay_BE.Models.OrderDetailModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMay_BE.Controllers.OrderDetailController",
     "Method": "PagOrderDetail",
     "RelativePath": "api/OrderDetail/api/OrderDetail",
     "HttpMethod": "GET",

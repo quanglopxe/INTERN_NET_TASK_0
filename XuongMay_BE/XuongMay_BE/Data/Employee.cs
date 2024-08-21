@@ -12,11 +12,11 @@ namespace XuongMay_BE.Data
         public string EmpName { get; set; }
         public Guid LineID { get; set; }
         [ForeignKey("LineID")]
+        public ProductionLine ProductionLines { get; set; }
         public Guid? UserID { get; set; }
         [ForeignKey("UserID")]
         public User Users { get; set; }
-        public ProductionLine ProductionLines {  get; set; }
-
+        
         public ICollection<Task> Tasks { get; set; }
 
     }

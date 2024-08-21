@@ -7,8 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 
 namespace XuongMay_BE.Controllers
-{
-    [Authorize(Roles = "Admin")]
+{    
     [Route("api/[controller]")]
     [ApiController]
     public class StageController : ControllerBase
@@ -36,7 +35,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult createStage(StageModel model)
         {
@@ -57,7 +56,7 @@ namespace XuongMay_BE.Controllers
                 return BadRequest();
             }
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, StageModel model)
         {

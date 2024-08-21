@@ -10,7 +10,7 @@ namespace XuongMay_BE.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    [Authorize(Roles = "Admin")]
+    
     public class CategoryController : ControllerBase
     {
         private readonly MyDbContext _context;
@@ -38,6 +38,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Create(CategoryModel model)
         {
@@ -56,6 +57,7 @@ namespace XuongMay_BE.Controllers
                 return BadRequest();
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, CategoryModel model)
         {
@@ -71,6 +73,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {

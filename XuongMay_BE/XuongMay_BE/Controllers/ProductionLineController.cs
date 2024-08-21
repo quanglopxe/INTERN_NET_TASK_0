@@ -6,8 +6,7 @@ using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 
 namespace XuongMay_BE.Controllers
-{
-    [Authorize(Roles = "Supervisor, Admin")]
+{    
     [Route("api/[controller]")]
     [ApiController]
     public class ProductionLineController : ControllerBase
@@ -28,6 +27,7 @@ namespace XuongMay_BE.Controllers
         }
 
         // API PoST để tạo ProductionLine mới
+        [Authorize(Roles = "Supervisor, Admin")]
         [HttpPost]
         public IActionResult Create(ProductionLineModel model)
         {
@@ -62,6 +62,7 @@ namespace XuongMay_BE.Controllers
 
             return Ok(productionLine);
         }
+        [Authorize(Roles = "Supervisor, Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProductionLine(int id)
         {
@@ -79,6 +80,7 @@ namespace XuongMay_BE.Controllers
 
             return NoContent();
         }
+        [Authorize(Roles = "Supervisor, Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProductionLine(Guid id, ProductionLine productionLine)
         {

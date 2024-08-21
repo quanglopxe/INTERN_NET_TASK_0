@@ -7,8 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 
 namespace XuongMay_BE.Controllers
-{ 
-    [Authorize(Roles = "Admin")]
+{     
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
@@ -38,6 +37,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Create(ProductModel model)
         {
@@ -59,6 +59,7 @@ namespace XuongMay_BE.Controllers
                 return BadRequest();
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, ProductModel model)
         {
@@ -77,6 +78,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {

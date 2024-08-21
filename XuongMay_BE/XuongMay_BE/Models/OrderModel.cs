@@ -8,7 +8,8 @@ namespace XuongMay_BE.Models
     {
         [Required]
         public DateTime OrderDate { get; set; }
-
+        [Required]
+        public string OrderRequire { get; set; }
         public Guid CustomerID { get; set; }
 
         public int TotalQuantity { get; set; }
