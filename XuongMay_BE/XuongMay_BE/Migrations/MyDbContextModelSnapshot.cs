@@ -56,7 +56,7 @@ namespace XuongMay_BE.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<Guid>("UserID")
+                    b.Property<Guid?>("UserID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("CustomerID");
@@ -82,7 +82,7 @@ namespace XuongMay_BE.Migrations
                     b.Property<Guid>("ProductionLinesLineID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("UserID")
+                    b.Property<Guid?>("UserID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("EmpID");
@@ -206,6 +206,7 @@ namespace XuongMay_BE.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Sequence")
@@ -231,7 +232,7 @@ namespace XuongMay_BE.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<Guid>("UserID")
+                    b.Property<Guid?>("UserID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("SupervisorID");
@@ -290,10 +291,6 @@ namespace XuongMay_BE.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ConfirmPassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -318,9 +315,7 @@ namespace XuongMay_BE.Migrations
                 {
                     b.HasOne("XuongMay_BE.Data.User", "Users")
                         .WithMany()
-                        .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserID");
 
                     b.Navigation("Users");
                 });
@@ -335,9 +330,7 @@ namespace XuongMay_BE.Migrations
 
                     b.HasOne("XuongMay_BE.Data.User", "Users")
                         .WithMany()
-                        .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserID");
 
                     b.Navigation("ProductionLines");
 
@@ -409,9 +402,7 @@ namespace XuongMay_BE.Migrations
                 {
                     b.HasOne("XuongMay_BE.Data.User", "Users")
                         .WithMany()
-                        .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserID");
 
                     b.Navigation("Users");
                 });

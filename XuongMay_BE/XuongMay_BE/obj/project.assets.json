@@ -8347,24 +8347,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Quang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\Desktop\\Trung\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj",
+      "projectUniqueName": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj",
       "projectName": "XuongMay_BE",
-      "projectPath": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\Desktop\\Trung\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj",
-      "packagesPath": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\Desktop\\Trung\\XuongMay_BE\\XuongMay_BE\\obj\\",
+      "projectPath": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\XuongMay_BE.csproj",
+      "packagesPath": "C:\\Users\\Quang\\.nuget\\packages\\",
+      "outputPath": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Quang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8384,6 +8379,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -8454,7 +8454,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
