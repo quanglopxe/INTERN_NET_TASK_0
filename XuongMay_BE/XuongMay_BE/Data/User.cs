@@ -8,7 +8,7 @@ namespace XuongMay_BE.Data
         Supervisor = 1,
         Employee = 2,
         Customer = 3,
-        Admin = 0
+        Admin = 0        
     }
     [Table("User")]
     public class User
@@ -20,9 +20,7 @@ namespace XuongMay_BE.Data
         [Required]
         public string UserName { get; set; }
         [Required]
-        public string Password { get; set; }
-        [Required]
-        public string ConfirmPassword { get; set; }
+        public string Password { get; set; }        
         [Required]
         public UserRole Role { get; set; }
 

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace XuongMay_BE.Controllers
@@ -23,15 +24,8 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            try
-            {
-                var dsOrder = _context.Orders.ToList();
-                return Ok(dsOrder);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving orders: {ex.Message}");
-            }
+            var dsOrder = _context.Orders.ToList();
+            return Ok(dsOrder);
         }
 
 
@@ -39,25 +33,16 @@ namespace XuongMay_BE.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)
         {
-            try
+            //Lấy Order từ ID được nhập
+            var orderss = _context.Orders.SingleOrDefault(s => s.OrderID == id);
+            //Kiểm tra orderss có được gán giá trị vào hay không?
+            if (orderss != null)
             {
-                //Lấy Order từ ID được nhập
-                Orders orderss = _context.Orders.SingleOrDefault(s => s.OrderID == id);
-                //Kiểm tra orderss có được gán giá trị vào hay không?
-                if (orderss != null)
-                {
-                    return Ok(orderss);
-                }
-                else
-                {
-                    return NotFound($"Order with ID {id} not found.");
-                }
-
+                return Ok(orderss);
             }
-            catch (Exception ex)
+            else
             {
-                // Ghi log lỗi hoặc xử lý thêm nếu cần
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving the order: {ex.Message}");
+                return NotFound();
             }
         }
 
@@ -66,7 +51,6 @@ namespace XuongMay_BE.Controllers
         [HttpPost]
         public IActionResult CreateOrder(OrderModel orders)
         {
-
             try
             {
                 //Gán giá trị nhập vào từng thuộc tính của order
@@ -84,7 +68,7 @@ namespace XuongMay_BE.Controllers
             }
             catch
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while creating the order");
+                return BadRequest();
             }
 
         }
@@ -108,7 +92,7 @@ namespace XuongMay_BE.Controllers
             }
             else
             {
-                return NotFound($"Order with ID {id} not found.");
+                return NotFound();
             }
         }
 
@@ -116,27 +100,55 @@ namespace XuongMay_BE.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteOrder(Guid id)
         {
-            try
+            //Lấy Order từ ID được nhập
+            var orderss = _context.Orders.SingleOrDefault(lo => lo.OrderID == id);
+            //Kiểm tra orderss có được gán giá trị vào hay không?
+            if (orderss != null)
             {
-                //Lấy Order từ ID được nhập
-                var orderss = _context.Orders.SingleOrDefault(lo => lo.OrderID == id);
-                //Kiểm tra orderss có được gán giá trị vào hay không?
-                if (orderss != null)
-                {
-                    _context.Orders.Remove(orderss);
-                    _context.SaveChanges();
-                    return NoContent();
-                }
-                else
-                {
-                    return NotFound($"Order with ID {id} not found.");
-                }
+                _context.Orders.Remove(orderss);
+                _context.SaveChanges();
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagOrder(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Orders.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
 
-            }
-            catch (Exception ex)
+            if (page > totalPages)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while deleting the order: {ex.Message}");
+                page = totalPages;
             }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var order = await _context.Orders
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = order,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
         }
 
     }

@@ -1,77 +1,81 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\",
+  "WorkspaceRootPath": "G:\\INTERN NET\\XuongMay_BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\data\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\data\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\models\\orderdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\models\\orderdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\stagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\stagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\supervisorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\supervisorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\supervisorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\productionlinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\data\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\data\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\models\\orderdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\models\\orderdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\stagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\stagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\productionlinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\productionlinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|d:\\huynhhuuduc_2001207422\\task\\intern_net_task_0\\xuongmay_be\\xuongmay_be\\data\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|g:\\intern net\\xuongmay_be\\xuongmay_be\\data\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D959905B-17FD-490C-9337-21E1EB668A86}|XuongMay_BE\\XuongMay_BE.csproj|solutionrelative:xuongmay_be\\data\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -82,232 +86,239 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Data\\Customer.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Customer.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Data\\Customer.cs",
-              "RelativeToolTip": "XuongMay_BE\\Data\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T09:27:22.004Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\appsettings.json",
+              "RelativeDocumentMoniker": "XuongMay_BE\\appsettings.json",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\appsettings.json",
+              "RelativeToolTip": "XuongMay_BE\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-21T04:18:42.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderDetailModel.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Models\\OrderDetailModel.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Models\\OrderDetailModel.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Models\\OrderDetailModel.cs",
-              "RelativeToolTip": "XuongMay_BE\\Models\\OrderDetailModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "StageController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\StageController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\StageController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\StageController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\StageController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAADUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T09:23:20.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T04:10:19.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\EmployeeController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T04:10:19.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\OrderController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T04:10:19.467Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "EmployeeModel.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Models\\EmployeeModel.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Models\\EmployeeModel.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Models\\EmployeeModel.cs",
-              "RelativeToolTip": "XuongMay_BE\\Models\\EmployeeModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "OrderDetailController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\OrderDetailController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\OrderDetailController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\OrderDetailController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\OrderDetailController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T09:22:55.298Z",
+              "WhenOpened": "2024-08-21T04:10:19.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\CustomerController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\CustomerController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T04:10:19.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SupervisorController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\SupervisorController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\SupervisorController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\SupervisorController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\SupervisorController.cs",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAAAG8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T04:10:19.493Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\User.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Data\\User.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\User.cs",
+              "RelativeToolTip": "XuongMay_BE\\Data\\User.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAoAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T04:10:19.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CustomerModel.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Models\\CustomerModel.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\CustomerModel.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Models\\CustomerModel.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Models\\CustomerModel.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\CustomerModel.cs",
               "RelativeToolTip": "XuongMay_BE\\Models\\CustomerModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T09:18:07.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StageController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\StageController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\StageController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\StageController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\StageController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAADUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:45:26.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\EmployeeController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:44:51.022Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T04:10:19.454Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\OrderController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "Title": "EmployeeModel.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\EmployeeModel.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Models\\EmployeeModel.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\EmployeeModel.cs",
+              "RelativeToolTip": "XuongMay_BE\\Models\\EmployeeModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:44:52.579Z"
+              "WhenOpened": "2024-08-21T04:10:19.449Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderDetailController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\OrderDetailController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\OrderDetailController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\OrderDetailController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\OrderDetailController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "OrderDetailModel.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\OrderDetailModel.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Models\\OrderDetailModel.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Models\\OrderDetailModel.cs",
+              "RelativeToolTip": "XuongMay_BE\\Models\\OrderDetailModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:44:54.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T04:10:19.446Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\CustomerController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEMAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Customer.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Customer.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Customer.cs",
+              "RelativeToolTip": "XuongMay_BE\\Data\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:44:49.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:45:39.927Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TaskController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\TaskController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\TaskController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\TaskController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\TaskController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:45:37.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Data\\User.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Data\\User.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Data\\User.cs",
-              "RelativeToolTip": "XuongMay_BE\\Data\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:49:45.544Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T04:10:19.373Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "SupervisorController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\SupervisorController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\SupervisorController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\SupervisorController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\SupervisorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\UsersController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:45:28.121Z"
+              "WhenOpened": "2024-08-21T04:10:19.48Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "ProductionLineController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\ProductionLineController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\ProductionLineController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\ProductionLineController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\ProductionLineController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\TaskController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\TaskController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:45:24.695Z"
+              "WhenOpened": "2024-08-21T04:10:19.484Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ProductionLineController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\ProductionLineController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\ProductionLineController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\ProductionLineController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\ProductionLineController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:44:56.452Z"
+              "WhenOpened": "2024-08-21T04:10:19.497Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\CategoryController.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "XuongMay_BE\\Controllers\\CategoryController.cs",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\ProductController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\ProductController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:44:46.741Z"
+              "WhenOpened": "2024-08-21T04:10:19.502Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Program.cs",
-              "RelativeDocumentMoniker": "XuongMay_BE\\Program.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Program.cs",
-              "RelativeToolTip": "XuongMay_BE\\Program.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Controllers\\CategoryController.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "XuongMay_BE\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:50:52.736Z"
+              "WhenOpened": "2024-08-21T04:10:19.508Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Program.cs",
+              "RelativeDocumentMoniker": "XuongMay_BE\\Program.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Program.cs",
+              "RelativeToolTip": "XuongMay_BE\\Program.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T04:10:19.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Orders.cs",
-              "DocumentMoniker": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Data\\Orders.cs",
+              "DocumentMoniker": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Orders.cs",
               "RelativeDocumentMoniker": "XuongMay_BE\\Data\\Orders.cs",
-              "ToolTip": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\Data\\Orders.cs",
+              "ToolTip": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\Data\\Orders.cs",
               "RelativeToolTip": "XuongMay_BE\\Data\\Orders.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T04:49:53.525Z"
+              "WhenOpened": "2024-08-21T04:10:19.519Z"
             }
           ]
         }
