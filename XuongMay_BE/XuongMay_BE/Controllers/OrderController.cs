@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace XuongMay_BE.Controllers
 {
-    [Authorize(Roles = "User")]
+    [Authorize(Roles = "Customer, Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase

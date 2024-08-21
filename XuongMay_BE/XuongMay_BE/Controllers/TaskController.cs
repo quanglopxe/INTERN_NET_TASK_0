@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace XuongMay_BE.Controllers
 {
-    [Authorize(Roles = "User")]
+    [Authorize(Roles = "Supervisor, Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class TaskController : ControllerBase

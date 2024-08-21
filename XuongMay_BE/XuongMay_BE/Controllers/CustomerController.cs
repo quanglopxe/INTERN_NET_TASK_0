@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
-    
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
@@ -39,7 +39,8 @@ namespace XuongMay_BE.Controllers
                     CustomerID = model.CustomerID,
                     CustomerName = model.CustomerName,
                     Phone = model.Phone,
-                    Address = model.Address
+                    Address = model.Address,
+                    UserID = model.UserID,
                 };
                 _context.Customers.Add(customer);
                 _context.SaveChanges();

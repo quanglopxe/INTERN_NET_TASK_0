@@ -79,33 +79,36 @@ namespace XuongMay_BE.Controllers
             return NoContent();
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateSupervisor(Guid id, Supervisor supervisor)
+        public async Task<IActionResult> UpdateSupervisor(Guid id, SupervisorModel model)
         {
-            // Kiểm tra xem đối tượng cần cập nhật có tồn tại không
-            if (id != supervisor.SupervisorID)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(supervisor).State = EntityState.Modified;
-
             try
             {
+                // Tìm kiếm Supervisor theo ID
+                var supervisor = await _context.Supervisors.FirstOrDefaultAsync(s => s.SupervisorID == id);
+                if (supervisor == null)
+                {
+                    return NotFound($"Supervisor with ID {id} not found.");
+                }
+
+                // Cập nhật thông tin Supervisor
+                supervisor.SupervisorName = model.SupervisorName;
+                supervisor.UserID = model.UserID;
+
+                // Lưu thay đổi vào cơ sở dữ liệu
                 await _context.SaveChangesAsync();
+
+                return NoContent();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!SupervisorExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return StatusCode(StatusCodes.Status500InternalServerError, "A concurrency error occurred while updating the supervisor.");
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while updating the supervisor.");
             }
 
-            return NoContent();
+
         }
 
         [HttpGet("api/[controller]")]
