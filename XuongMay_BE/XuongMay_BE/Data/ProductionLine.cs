@@ -11,7 +11,7 @@ namespace XuongMay_BE.Data
 
         [Required]
         [StringLength(100)]
-        public string? LineName { get; set; }
+        public string LineName { get; set; }
 
         public Guid? SupervisorID { get; set; }
 

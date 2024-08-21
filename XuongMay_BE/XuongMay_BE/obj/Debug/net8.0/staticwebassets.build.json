@@ -1,6 +1,10 @@
 {
   "Version": 1,
-  "Hash": "mnNgVQm9TGaNOTXSw7vXyFXQ21xD0PDr9pGFDFwWEGI=",
+<<<<<<< HEAD
+  "Hash": "n2qeul7wkwyrML7EC2JTAt9e9AoeefPA43UgDJP0dN8=",
+=======
+  "Hash": "SlhyvM+ptFtzoWUV5i0Tl+oTjTifFB9b/5rEBuYg3yw=",
+>>>>>>> c546b0891882ea161b57e5681ad5925086ff2647
   "Source": "XuongMay_BE",
   "BasePath": "_content/XuongMay_BE",
   "Mode": "Default",
@@ -9,10 +13,17 @@
   "DiscoveryPatterns": [],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Quang\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Quang\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\",
+=======
+      "Identity": "C:\\Users\\huynh\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\huynh\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\",
+>>>>>>> c546b0891882ea161b57e5681ad5925086ff2647
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "AssetKind": "All",
@@ -25,13 +36,23 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Quang\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
+<<<<<<< HEAD
+      "OriginalItemSpec": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Quang\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\QuickGrid.razor.js",
+      "Identity": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\QuickGrid.razor.js",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Quang\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\",
+=======
+      "OriginalItemSpec": "C:\\Users\\huynh\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\huynh\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\QuickGrid.razor.js",
+      "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\huynh\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\",
+>>>>>>> c546b0891882ea161b57e5681ad5925086ff2647
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "QuickGrid.razor.js",
       "AssetKind": "All",
@@ -44,13 +65,23 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Quang\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\QuickGrid.razor.js"
+<<<<<<< HEAD
+      "OriginalItemSpec": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\XuongMay_BE.styles.css",
+      "Identity": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\Desktop\\Trung\\XuongMay_BE\\XuongMay_BE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\XuongMay_BE.styles.css",
       "SourceId": "XuongMay_BE",
       "SourceType": "Computed",
-      "ContentRoot": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\Desktop\\Trung\\XuongMay_BE\\XuongMay_BE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+=======
+      "OriginalItemSpec": "C:\\Users\\huynh\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\QuickGrid.razor.js"
+    },
+    {
+      "Identity": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\XuongMay_BE.styles.css",
+      "SourceId": "XuongMay_BE",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+>>>>>>> c546b0891882ea161b57e5681ad5925086ff2647
       "BasePath": "_content/XuongMay_BE",
       "RelativePath": "XuongMay_BE.styles.css",
       "AssetKind": "All",
@@ -63,7 +94,11 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "G:\\INTERN NET\\XuongMay_BE\\XuongMay_BE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\XuongMay_BE.styles.css"
+<<<<<<< HEAD
+      "OriginalItemSpec": "C:\\Users\\defaultuser0.LAPTOP-POTNR7PE\\Desktop\\Trung\\XuongMay_BE\\XuongMay_BE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\XuongMay_BE.styles.css"
+=======
+      "OriginalItemSpec": "D:\\HuynhHuuDuc_2001207422\\Task\\INTERN_NET_TASK_0\\XuongMay_BE\\XuongMay_BE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\XuongMay_BE.styles.css"
+>>>>>>> c546b0891882ea161b57e5681ad5925086ff2647
     }
   ]
 }

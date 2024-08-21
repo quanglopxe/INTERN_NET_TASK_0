@@ -20,45 +20,27 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult getAll()
         {
-            try
-            {
-                var lstEmp = _context.Employees.ToList();
-                return Ok(lstEmp);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving employees: {ex.Message}");
-            }
+            var lstEmp = _context.Employees.ToList();
+            return Ok(lstEmp);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetByID(Guid id)
         {
-            try
+            var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);
+            if (employee != null)
             {
-                var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);
-
-                if (employee == null)
-                {
-                    return NotFound($"Employee with ID {id} not found.");
-                }
-
                 return Ok(employee);
             }
-            catch (Exception ex)
+            else
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving the employee: {ex.Message}");
+                return NotFound();
             }
         }
 
         [HttpPost]
         public IActionResult createEmp(EmployeeModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             try
             {
                 var emp = new Employee()
@@ -67,46 +49,64 @@ namespace XuongMay_BE.Controllers
                 };
                 _context.Add(emp);
                 _context.SaveChanges();
-                return CreatedAtAction(nameof(GetByID), new { id = emp.EmpID }, emp);
+                return Ok(emp);
             }
-            catch (Exception ex)
+            catch
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while creating the employee: {ex.Message}");
+                return BadRequest();
             }
         }
 
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, EmployeeModel model)
         {
-            if (!ModelState.IsValid)
+            var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);
+            if (employee != null)
             {
-                return BadRequest(ModelState);
-            }
-
-            try
-            {
-                var employee = _context.Employees.FirstOrDefault(emp => emp.EmpID == id);
-
-                if (employee == null)
-                {
-                    return NotFound($"Employee with ID {id} not found.");
-                }
-
                 employee.EmpName = model.EmpName;
-                _context.Entry(employee).State = EntityState.Modified;
                 _context.SaveChanges();
-
                 return NoContent();
             }
-            catch (DbUpdateConcurrencyException)
+            else
             {
-                return StatusCode(StatusCodes.Status409Conflict, $"A concurrency error occurred while updating the employee with ID {id}.");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while updating the employee: {ex.Message}");
+                return NotFound();
             }
         }
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagEmployee(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Employees.CountAsync(); // Đếm tổng số sản phẩm
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize); // Tính tổng số trang
 
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var emp = await _context.Employees
+                .Skip((page - 1) * pageSize)  // Bỏ qua các mục không thuộc trang hiện tại
+                .Take(pageSize)               // Lấy số lượng mục trên mỗi trang
+                .ToListAsync();
+
+            var result = new
+            {
+                data = emp,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
+        }
     }
 }

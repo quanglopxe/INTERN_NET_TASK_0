@@ -1,13 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 
 
 namespace XuongMay_BE.Controllers
 {
-    [Authorize(Roles = "User")]
+    [Authorize(Roles = "Supervisor, Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderDetailController : ControllerBase
@@ -21,34 +22,21 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            try
-            {
-                var dsOrder = _context.OrderDetails.ToList();
-                return Ok(dsOrder);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving order details: {ex.Message}");
-            }
+            var dsOrder = _context.OrderDetails.ToList();
+            return Ok(dsOrder);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)
         {
-            try
+            var orderss = _context.OrderDetails.SingleOrDefault(lo => lo.OrderID == id);
+            if (orderss != null)
             {
-                var orderDetail = _context.OrderDetails.SingleOrDefault(lo => lo.OrderID == id);
-
-                if (orderDetail == null)
-                {
-                    return NotFound($"OrderDetail with ID {id} not found.");
-                }
-
-                return Ok(orderDetail);
+                return Ok(orderss);
             }
-            catch (Exception ex)
+            else
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while retrieving the order detail: {ex.Message}");
+                return NotFound();
             }
         }
 
@@ -88,7 +76,7 @@ namespace XuongMay_BE.Controllers
             }
             catch
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while creating the order detail");
+                return BadRequest();
             }
 
         }
@@ -129,5 +117,42 @@ namespace XuongMay_BE.Controllers
         //        return NotFound();
         //    }
         //}
+
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagOrderDetail(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.OrderDetails.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var od = await _context.OrderDetails
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = od,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
+        }
     }
 }

@@ -23,15 +23,8 @@ namespace XuongMay_BE.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            try
-            {
-                var listSupervisor = _context.Supervisors.ToList();
-                return Ok(listSupervisor);
-
-            }catch 
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving data.");
-            }
+            var listSupervisor = _context.Supervisors.ToList();
+            return Ok(listSupervisor);
         }
 
         // API POST để tạo Supervisor mới
@@ -46,7 +39,7 @@ namespace XuongMay_BE.Controllers
                 };
                 _context.Supervisors.Add(supervisor);
                 _context.SaveChanges();
-                return StatusCode(StatusCodes.Status201Created, supervisor);
+                return Ok(supervisor);
             }
             catch
             {
@@ -63,7 +56,7 @@ namespace XuongMay_BE.Controllers
 
             if (supervisor == null)
             {
-                return NotFound($"Supervisor with ID {id} not found.");
+                return NotFound();
             }
 
             return Ok(supervisor);
@@ -71,25 +64,19 @@ namespace XuongMay_BE.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSupervisor(Guid id)
         {
-            try
+            // Tìm kiếm supervisor theo ID
+            var supervisor = await _context.Supervisors.FindAsync(id);
+
+            if (supervisor == null)
             {
-                var supervisor = await _context.Supervisors.FindAsync(id);
-
-                if (supervisor == null)
-                {
-                    return NotFound($"Supervisor with ID {id} not found."); 
-                }
-
-                _context.Supervisors.Remove(supervisor);
-                await _context.SaveChangesAsync();
-
-                return Ok("Supervisor deleted successfully."); 
+                return NotFound();
             }
-            catch 
-            {
-                // Log exception
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while deleting the supervisor.");
-            }
+
+            // Xóa supervisor
+            _context.Supervisors.Remove(supervisor);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateSupervisor(Guid id, SupervisorModel model)
@@ -100,23 +87,23 @@ namespace XuongMay_BE.Controllers
                 var supervisor = await _context.Supervisors.FirstOrDefaultAsync(s => s.SupervisorID == id);
                 if (supervisor == null)
                 {
-                    return NotFound($"Supervisor with ID {id} not found."); 
+                    return NotFound($"Supervisor with ID {id} not found.");
                 }
 
                 // Cập nhật thông tin Supervisor
                 supervisor.SupervisorName = model.SupervisorName;
-                supervisor.LineID = model.LineID;
+                supervisor.UserID = model.UserID;
 
                 // Lưu thay đổi vào cơ sở dữ liệu
                 await _context.SaveChangesAsync();
 
-                return NoContent(); 
+                return NoContent();
             }
             catch (DbUpdateConcurrencyException)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "A concurrency error occurred while updating the supervisor.");
             }
-            catch 
+            catch
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while updating the supervisor.");
             }
@@ -124,6 +111,42 @@ namespace XuongMay_BE.Controllers
 
         }
 
+        [HttpGet("api/[controller]")]
+        public async Task<IActionResult> PagSupervisor(int page = 1, int pageSize = 10)
+        {
+            var totalItems = await _context.Supervisors.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+            if (page > totalPages)
+            {
+                page = totalPages;
+            }
+
+            if (totalPages == 0)
+            {
+                page = 1;
+                totalPages = 1;
+            }
+
+            var sup = await _context.Supervisors
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new
+            {
+                data = sup,
+                pagination = new
+                {
+                    currentPage = page,
+                    totalPages = totalPages,
+                    totalItems = totalItems,
+                    itemsPerPage = pageSize
+                }
+            };
+
+            return Ok(result);
+        }
         // Kiểm tra xem Supervisor có tồn tại không
         private bool SupervisorExists(Guid id)
         {
