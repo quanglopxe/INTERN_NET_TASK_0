@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
-{
-    [Authorize(Roles = "Admin")]
+{    
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
@@ -27,8 +26,8 @@ namespace XuongMay_BE.Controllers
             var listCustomer = _context.Customers.ToList();
             return Ok(listCustomer);
         }
-
         // API POST để tạo khách hàng mới
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Create(CustomerModel model)
         {
@@ -65,6 +64,7 @@ namespace XuongMay_BE.Controllers
 
             return Ok(customer); 
         }
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomer(Guid id)
         {
@@ -82,6 +82,7 @@ namespace XuongMay_BE.Controllers
 
             return NoContent();
         }
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCustomer(Guid id, Customer customer)
         {

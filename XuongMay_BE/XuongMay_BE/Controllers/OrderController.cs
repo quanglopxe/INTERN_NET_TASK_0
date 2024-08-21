@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace XuongMay_BE.Controllers
 {
-    [Authorize(Roles = "Customer, Admin")]
+    
     [Route("api/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
@@ -46,7 +46,7 @@ namespace XuongMay_BE.Controllers
             }
         }
 
-
+        [Authorize(Roles = "Customer, Admin")]
         //Thêm mới Order
         [HttpPost]
         public IActionResult CreateOrder(OrderModel orders)
@@ -57,10 +57,11 @@ namespace XuongMay_BE.Controllers
                 var orderss = new Orders
                 {
                     OrderDate = orders.OrderDate,
+                    OrderRequire = orders.OrderRequire,
                     CustomerID = orders.CustomerID,
                     DeliveryDate = orders.DeliveryDate,
                     TotalQuantity = orders.TotalQuantity,
-                    Status = (Data.Statuss)orders.Status
+                    Status = orders.Status
                 };
                 _context.Add(orderss);
                 _context.SaveChanges();
@@ -72,7 +73,7 @@ namespace XuongMay_BE.Controllers
             }
 
         }
-
+        [Authorize(Roles = "Customer, Admin")]
         //Cập nhật Order
         [HttpPut("{id}")]
         public IActionResult UpdateOrder(Guid id, OrderModel model)
@@ -83,6 +84,7 @@ namespace XuongMay_BE.Controllers
             if (orderss != null)
             {
                 orderss.OrderDate = model.OrderDate;
+                orderss.OrderRequire = model.OrderRequire;
                 orderss.CustomerID = model.CustomerID;
                 orderss.DeliveryDate = model.DeliveryDate;
                 orderss.TotalQuantity = model.TotalQuantity;
@@ -95,7 +97,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
-
+        [Authorize(Roles = "Customer, Admin")]
         //Xóa Order
         [HttpDelete("{id}")]
         public IActionResult DeleteOrder(Guid id)

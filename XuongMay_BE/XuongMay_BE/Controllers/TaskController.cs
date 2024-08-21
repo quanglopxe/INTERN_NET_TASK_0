@@ -4,11 +4,11 @@ using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
-
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace XuongMay_BE.Controllers
-{
-    [Authorize(Roles = "Supervisor, Admin")]
+{    
     [Route("api/[controller]")]
     [ApiController]
     public class TaskController : ControllerBase
@@ -38,6 +38,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+        [Authorize(Roles = "Supervisor, Admin")]
         [HttpPost]
         public IActionResult Create(TaskModel model)
         {
@@ -56,20 +57,34 @@ namespace XuongMay_BE.Controllers
                         return Unauthorized("Chỉ có quyền truy cập của Supervisor mới có thể tạo Order Detail.");
                     else
                     {
+                        var Supervisor = _context.Supervisors.FirstOrDefault(s => s.UserID == Guid.Parse(userID));
+                        var SupID = Guid.Empty;
+                        if (Supervisor != null)
+                            SupID = Supervisor.SupervisorID;
                         var task = new Data.Task()
                         {
+                            TaskID = Guid.NewGuid(),
                             OrderID = model.OrderID,
                             StageID = model.StageID,
                             EmpID = model.EmpID,
-                            SupervisorID = Guid.Parse(userID),
+                            SupervisorID = SupID,
                             Status = model.Status,
                             StartTime = model.StartTime,
                             EndTime = model.EndTime,
                             Remarks = model.Remarks,
                         };
+                        // Configure JsonSerializerOptions to handle reference loops
+                        var options = new JsonSerializerOptions
+                        {
+                            ReferenceHandler = ReferenceHandler.IgnoreCycles,
+                            WriteIndented = true
+                        };
+
                         _context.Add(task);
                         _context.SaveChanges();
-                        return Ok(task);
+                        // Serialize the task using the configured options
+                        var taskJson = JsonSerializer.Serialize(task, options);
+                        return Ok(taskJson);
                     }
                 }
             }
@@ -78,6 +93,7 @@ namespace XuongMay_BE.Controllers
                 return BadRequest();
             }
         }
+        [Authorize(Roles = "Supervisor, Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, TaskModel model)
         {
@@ -100,7 +116,7 @@ namespace XuongMay_BE.Controllers
                         task.OrderID = model.OrderID;
                         task.StageID = model.StageID;
                         task.EmpID = model.EmpID;
-                        task.SupervisorID = Guid.Parse(userID);
+                        //task.SupervisorID = Guid.Parse(userID);
                         task.Status = model.Status;
                         task.StartTime = model.StartTime;
                         task.EndTime = model.EndTime;
@@ -117,6 +133,7 @@ namespace XuongMay_BE.Controllers
             }
             
         }
+        [Authorize(Roles = "Supervisor, Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {

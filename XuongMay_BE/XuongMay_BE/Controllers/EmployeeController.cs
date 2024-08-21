@@ -10,8 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace XuongMay_BE.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-    [Authorize(Roles = "Admin")]
+    [ApiController]   
     public class EmployeeController : ControllerBase
     {
         private readonly MyDbContext _context;
@@ -37,7 +36,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult createEmp(EmployeeModel model)
         {
@@ -45,9 +44,10 @@ namespace XuongMay_BE.Controllers
             {
                 var emp = new Employee()
                 {
+                    EmpID = Guid.NewGuid(),
                     EmpName = model.EmpName,
                     LineID = model.LineID,
-                    UserID = model.UserID
+                    UserID = model.UserID                    
                 };
                 _context.Add(emp);
                 _context.SaveChanges();
@@ -58,7 +58,7 @@ namespace XuongMay_BE.Controllers
                 return BadRequest();
             }
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, EmployeeModel model)
         {

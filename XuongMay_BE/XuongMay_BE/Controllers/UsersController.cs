@@ -13,6 +13,7 @@ using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 using RegisterRequest = XuongMay_BE.Models.RegisterRequest;
 using LoginRequest = XuongMay_BE.Models.LoginRequest;
+using Microsoft.AspNetCore.Authorization;
 
 namespace XuongMay_BE.Controllers
 {
@@ -28,7 +29,7 @@ namespace XuongMay_BE.Controllers
             _context = context;
             _appSettings = optionsMonitor.CurrentValue;
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -88,7 +89,7 @@ namespace XuongMay_BE.Controllers
             }
             HttpContext.Session.SetString("UserId", user.UserID.ToString());
             //cấp token
-            return Ok(new { token = GenerateToken(user) });
+            return Ok(new { token = GenerateToken(user), user });
         }
 
         private string GenerateToken(User userInfo)
@@ -107,14 +108,14 @@ namespace XuongMay_BE.Controllers
 
                     new Claim("TokenID", Guid.NewGuid().ToString())
                 }),
-                Expires = DateTime.UtcNow.AddMinutes(1),
+                Expires = DateTime.UtcNow.AddHours(2),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secretKeyBytes), SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = jwtSecurityTokenHandler.CreateToken(tokenDescriptor);
             return jwtSecurityTokenHandler.WriteToken(token);
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateUser(Guid id, User model)
         {
@@ -135,6 +136,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound("Không tìm thấy người dùng với ID này.");  // 404 Not Found
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpGet("api/[controller]")]
         public async Task<IActionResult> PagUser(int page = 1, int pageSize = 10)
         {

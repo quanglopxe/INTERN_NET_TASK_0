@@ -7,8 +7,7 @@ using XuongMay_BE.Models;
 
 
 namespace XuongMay_BE.Controllers
-{
-    [Authorize(Roles = "Supervisor, Admin")]
+{    
     [Route("api/[controller]")]
     [ApiController]
     public class OrderDetailController : ControllerBase
@@ -39,7 +38,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
-
+        [Authorize(Roles = "Supervisor, Admin")]
         [HttpPost]
         public IActionResult CreateOrderDetail(OrderDetailModel orders)
         {
@@ -58,12 +57,15 @@ namespace XuongMay_BE.Controllers
                         return Unauthorized("Chỉ có quyền truy cập của Supervisor mới có thể tạo Order Detail.");
                     else
                     {
-                        
+                        var Supervisor = _context.Supervisors.FirstOrDefault(s => s.UserID == Guid.Parse(userID));
+                        var SupID = Guid.Empty;
+                        if (Supervisor != null)
+                            SupID = Supervisor.SupervisorID;                        
                         var orderDetail = new OrderDetail
                         {
                             OrderID = orders.OrderID,
                             ProductID = orders.ProductID,
-                            SupervisorID = Guid.Parse(userID),
+                            SupervisorID = SupID,
                             Price = orders.Price,
                             Quantity = orders.Quantity,
                             TotalPrice = orders.Price * orders.Quantity,
@@ -81,26 +83,26 @@ namespace XuongMay_BE.Controllers
 
         }
 
-
-        //[HttpPut("{id}")]
-        //public IActionResult UpdateOrderDetail(Guid id, OrderDetailModel orders)
-        //{
-        //    var orderss = _context.OrderDetails.SingleOrDefault(lo => lo.OrderID == id);
-        //    if (orderss != null)
-        //    {
-        //        orderss.OrderID = orders.OrderID;
-        //        orderss.ProductID = orders.ProductID;                
-        //        orderss.Price = orders.Price;
-        //        orderss.Quantity = orders.Quantity;
-        //        orderss.TotalPrice = orders.Price * orders.Quantity;
-        //        _context.SaveChanges();
-        //        return NoContent();
-        //    }
-        //    else
-        //    {
-        //        return NotFound();
-        //    }
-        //}
+        [Authorize(Roles = "Supervisor, Admin")]
+        [HttpPut("{id}")]
+        public IActionResult UpdateOrderDetail(Guid id, OrderDetailModel orders)
+        {
+            var orderss = _context.OrderDetails.SingleOrDefault(lo => lo.OrderID == id);
+            if (orderss != null)
+            {
+                orderss.OrderID = orders.OrderID;
+                orderss.ProductID = orders.ProductID;
+                orderss.Price = orders.Price;
+                orderss.Quantity = orders.Quantity;
+                orderss.TotalPrice = orders.Price * orders.Quantity;
+                _context.SaveChanges();
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
 
         //[HttpDelete("{id}")]
         //public IActionResult DeleteOrderDetail(Guid id)

@@ -6,8 +6,7 @@ using XuongMay_BE.Data;
 using XuongMay_BE.Models;
 
 namespace XuongMay_BE.Controllers
-{
-    [Authorize(Roles = "Admin")]
+{    
     [Route("api/[controller]")]
     [ApiController]
     public class SupervisorController : ControllerBase
@@ -28,6 +27,7 @@ namespace XuongMay_BE.Controllers
         }
 
         // API POST để tạo Supervisor mới
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Create(SupervisorModel model)
         {
@@ -62,6 +62,8 @@ namespace XuongMay_BE.Controllers
 
             return Ok(supervisor);
         }
+
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSupervisor(Guid id)
         {
@@ -79,6 +81,8 @@ namespace XuongMay_BE.Controllers
 
             return NoContent();
         }
+
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateSupervisor(Guid id, SupervisorModel model)
         {

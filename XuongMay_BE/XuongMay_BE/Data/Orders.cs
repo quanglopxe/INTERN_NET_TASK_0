@@ -17,6 +17,8 @@ namespace XuongMay_BE.Data
 
         [Required]
         public DateTime OrderDate { get; set; }
+        [Required]
+        public string OrderRequire { get; set; }
 
         public Guid CustomerID { get; set; }
         [ForeignKey("CustomerID")]
