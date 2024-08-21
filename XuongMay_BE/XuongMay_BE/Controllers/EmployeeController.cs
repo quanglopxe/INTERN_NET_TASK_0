@@ -45,7 +45,9 @@ namespace XuongMay_BE.Controllers
             {
                 var emp = new Employee()
                 {
-                    EmpName = model.EmpName
+                    EmpName = model.EmpName,
+                    LineID = model.LineID,
+                    UserID = model.UserID
                 };
                 _context.Add(emp);
                 _context.SaveChanges();
@@ -64,6 +66,8 @@ namespace XuongMay_BE.Controllers
             if (employee != null)
             {
                 employee.EmpName = model.EmpName;
+                employee.LineID = model.LineID;
+                employee.UserID = model.UserID;
                 _context.SaveChanges();
                 return NoContent();
             }

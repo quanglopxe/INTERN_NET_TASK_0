@@ -12,6 +12,6 @@ namespace XuongMay_BE.Models
         public string SupervisorName { get; set; }
 
         [Required]
-        public Guid UserID { get; set; }
+        public Guid? UserID { get; set; }
     }
 }
