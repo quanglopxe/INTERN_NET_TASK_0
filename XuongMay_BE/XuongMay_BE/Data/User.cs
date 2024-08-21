@@ -5,10 +5,10 @@ namespace XuongMay_BE.Data
 {
     public enum UserRole
     {
-        Supervisor,
-        Employee,
-        Customer,
-        Admin
+        Supervisor = 0,
+        Employee = 1,
+        Customer = 2,
+        Admin = 3
     }
     [Table("User")]
     public class User
@@ -20,9 +20,7 @@ namespace XuongMay_BE.Data
         [Required]
         public string UserName { get; set; }
         [Required]
-        public string Password { get; set; }
-        [Required]
-        public string ConfirmPassword { get; set; }
+        public string Password { get; set; }        
         [Required]
         public UserRole Role { get; set; }
 

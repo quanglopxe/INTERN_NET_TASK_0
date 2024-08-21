@@ -9,7 +9,7 @@ namespace XuongMay_BE.Data
         [Key]
         public Guid CategoryID { get; set; }
         [Required]
-        public string? CategoryName { get; set; }
+        public string CategoryName { get; set; }
         public virtual ICollection<Product> Products { get; set; }
     }
 }
