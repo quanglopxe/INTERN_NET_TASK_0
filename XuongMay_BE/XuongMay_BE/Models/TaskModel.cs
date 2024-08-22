@@ -11,9 +11,7 @@ namespace XuongMay_BE.Models
         public Guid StageID { get; set; }
         [Required]
         public Guid EmpID { get; set; }
-        [Required]
-        public Guid SupervisorID { get; set; }
-        [Required]
+        [Required]                
         public Status Status { get; set; }
         [Required]
         public DateTime StartTime { get; set; }

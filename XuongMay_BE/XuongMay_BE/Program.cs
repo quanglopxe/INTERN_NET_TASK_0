@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -65,7 +65,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuer = false,
             ValidateAudience = false,
 
-            //k� v�o token            
+            //ký vào token            
             ValidateIssuerSigningKey = true,            
             IssuerSigningKey = new SymmetricSecurityKey(secreKeyBytes),
 
@@ -82,7 +82,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// C?u h�nh d?ch v? ph�n quy?n
+// C?u hình d?ch v? phân quy?n
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
@@ -91,8 +91,12 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("SupervisorOnly", policy => policy.RequireRole("Supervisor"));
 
 });
-
+//cấu hình bộ tuần tự JSON để xử lý các vòng lặp tuần hoàn bằng cách bỏ qua các vòng lặp tham chiếu. (Task)
 builder.Services.AddControllers();
+//    .AddJsonOptions(options =>
+//{ 
+//    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+//});
 
 var app = builder.Build();
 
