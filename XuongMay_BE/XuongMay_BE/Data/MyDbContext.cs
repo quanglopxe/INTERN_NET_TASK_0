@@ -49,6 +49,7 @@ namespace XuongMay_BE.Data
                     .OnDelete(DeleteBehavior.NoAction);
 
             });
+            //Fix lỗi multiple cascade paths bằng fluent API
             modelBuilder.Entity<Task>()
                 .HasOne(t => t.Orders)
                 .WithMany(o => o.Tasks)

@@ -9,7 +9,6 @@ namespace XuongMay_BE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
     
     public class CategoryController : ControllerBase
     {
@@ -18,13 +17,14 @@ namespace XuongMay_BE.Controllers
         {
             _context = context;
         }
-
+        //API lấy tất cả danh sách Category
         [HttpGet]
         public IActionResult GetAll()
         {
             var listCategory = _context.Categories.ToList();
             return Ok(listCategory);
         }
+        //API lấy Category từ ID
         [HttpGet("{id}")]
         public IActionResult GetByID(Guid id)
         {
@@ -38,6 +38,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+        //Kiểm tra quyền Admin mới được thêm Category
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Create(CategoryModel model)
@@ -57,6 +58,7 @@ namespace XuongMay_BE.Controllers
                 return BadRequest();
             }
         }
+        //Kiểm tra quyền Admin mới được sửa Category
         [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, CategoryModel model)
@@ -73,6 +75,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+        //Kiểm tra quyền Admin mới được xóa Category
         [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
@@ -91,6 +94,7 @@ namespace XuongMay_BE.Controllers
 
             return NoContent();
         }
+        //Phân trang Category
         [HttpGet("api/[controller]")]
         public async Task<IActionResult> PagCategory(int page = 1, int pageSize = 10)
         {

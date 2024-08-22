@@ -17,13 +17,14 @@ namespace XuongMay_BE.Controllers
         {
             _context = context;
         }
-
+        //API lấy tất cả danh sách Product
         [HttpGet]
         public IActionResult GetAll()
         {
             var listProduct = _context.Products.ToList();
             return Ok(listProduct);
         }
+        //API lấy Product từ ID
         [HttpGet("{id}")]
         public IActionResult GetByID(Guid id)
         {
@@ -37,6 +38,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+        //Kiểm tra quyền Admin mới được thêm Product
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Create(ProductModel model)
@@ -59,6 +61,7 @@ namespace XuongMay_BE.Controllers
                 return BadRequest();
             }
         }
+        //Kiểm tra quyền Admin mới được sửa Product
         [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, ProductModel model)
@@ -78,6 +81,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
+        //Kiểm tra quyền Admin mới được xóa Product
         [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
@@ -90,12 +94,13 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
 
-            // Xóa customer
+            // Xóa product
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
+        //API phân trang Product
         [HttpGet("api/[controller]")]
         public async Task<IActionResult> PagProduct(int page = 1, int pageSize = 10)
         {
