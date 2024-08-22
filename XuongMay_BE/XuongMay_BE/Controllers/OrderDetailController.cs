@@ -38,7 +38,7 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
-        [Authorize(Roles = "Supervisor, Admin")]
+        [Authorize(Roles = "Supervisor")]
         [HttpPost]
         public IActionResult CreateOrderDetail(OrderDetailModel orders)
         {
@@ -83,7 +83,7 @@ namespace XuongMay_BE.Controllers
 
         }
 
-        [Authorize(Roles = "Supervisor, Admin")]
+        [Authorize(Roles = "Supervisor")]
         [HttpPut("{id}")]
         public IActionResult UpdateOrderDetail(Guid id, OrderDetailModel orders)
         {
