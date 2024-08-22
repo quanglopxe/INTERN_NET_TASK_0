@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace XuongMay_BE.Migrations
 {
     /// <inheritdoc />
-    public partial class test : Migration
+    public partial class AddDbTest : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
