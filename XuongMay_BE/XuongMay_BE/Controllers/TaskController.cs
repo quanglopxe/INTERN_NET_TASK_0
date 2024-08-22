@@ -18,13 +18,14 @@ namespace XuongMay_BE.Controllers
         {
             _context = context;
         }
-
+        //API lấy tất cả danh sách Task
         [HttpGet]
         public IActionResult GetAll()
         {
             var listTask = _context.Tasks.ToList();
             return Ok(listTask);
         }
+        //API lấy Task từ ID
         [HttpGet("{id}")]
         public IActionResult GetByID(Guid id)
         {
@@ -38,7 +39,8 @@ namespace XuongMay_BE.Controllers
                 return NotFound();
             }
         }
-        [Authorize(Roles = "Supervisor, Admin")]
+        //Kiểm tra quyền Supervisor mới được thêm Task
+        [Authorize(Roles = "Supervisor")]
         [HttpPost]
         public IActionResult Create(TaskModel model)
         {
@@ -93,7 +95,8 @@ namespace XuongMay_BE.Controllers
                 return BadRequest();
             }
         }
-        [Authorize(Roles = "Supervisor, Admin")]
+        //Kiểm tra quyền Supervisor mới được sửa Task
+        [Authorize(Roles = "Supervisor")]
         [HttpPut("{id}")]
         public IActionResult UpdateByID(Guid id, TaskModel model)
         {
@@ -133,7 +136,8 @@ namespace XuongMay_BE.Controllers
             }
             
         }
-        [Authorize(Roles = "Supervisor, Admin")]
+        //Kiểm tra quyền Supervisor mới được xóa Task
+        [Authorize(Roles = "Supervisor")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
@@ -151,6 +155,7 @@ namespace XuongMay_BE.Controllers
 
             return NoContent();
         }
+        //API lấy danh sách Task theo trang
         [HttpGet("api/[controller]")]
         public async Task<IActionResult> PagTask(int page = 1, int pageSize = 10)
         {
